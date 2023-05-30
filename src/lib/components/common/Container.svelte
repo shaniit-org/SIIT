@@ -1,13 +1,23 @@
 <script>
-	import 'carbon-components-svelte/css/all.css';
-
+	import Header from '$lib/components/common/Header.svelte';
+	import { Theme } from 'carbon-components-svelte';
 	/**
-	 * @type { import('carbon-components-svelte/types/Theme/Theme.svelte').CarbonTheme}
+	 * @type {'g90' | 'white'}
 	 */
+	let theme = 'g90';
+	let toggleTheme = () => {
+		theme = theme === 'g90' ? 'white' : 'g90';
+	};
 </script>
 
-<div>
-	<slot name="header" />
+<Theme bind:theme />
+<Header {toggleTheme} />
+<div class="content">
 	<slot />
-	<slot name="footer" />
 </div>
+
+<style>
+	.content {
+		margin-top: 3rem;
+	}
+</style>

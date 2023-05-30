@@ -6,14 +6,14 @@
 		SkipToContent,
 		HeaderGlobalAction,
 		HeaderUtilities,
-		HeaderSearch,
-		SideNav,
-		SideNavMenu,
-		SideNavItems,
-		SideNavMenuItem
+		HeaderSearch
 	} from 'carbon-components-svelte';
 	import { navs } from '$lib/site/nav';
 	import { Asleep } from 'carbon-icons-svelte';
+	/**
+        @type {() => void} toggleTheme - toggle theme function
+    */
+	export let toggleTheme;
 	const data = [
 		{
 			href: '/',
@@ -103,6 +103,6 @@
 				events = [...events, { type: 'select', ...e.detail }];
 			}}
 		/>
-		<HeaderGlobalAction aria-label="Theme" icon={Asleep} />
+		<HeaderGlobalAction aria-label="Theme" icon={Asleep} on:click={toggleTheme} />
 	</HeaderUtilities>
 </Header>
