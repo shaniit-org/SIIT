@@ -4,7 +4,7 @@
 
 @layer utilities {
 	.box {
-		@apply p-6 md:p-12;
+		@apply p-6 md:p-12 my-12;
 	}
 	.section-container {
 		@apply max-w-[1200px] mx-auto;

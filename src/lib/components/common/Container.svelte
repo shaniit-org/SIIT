@@ -1,13 +1,12 @@
 <script>
+	import Footer from '$lib/components/common/Footer.svelte';
 	import Header from '$lib/components/common/Header.svelte';
 	import { Theme } from 'carbon-components-svelte';
 	/**
-	 * @type {'g90' | 'white'}
+	 * @type {'g10' | 'white'}
 	 */
-	let theme = 'g90';
-	let toggleTheme = () => {
-		theme = theme === 'g90' ? 'white' : 'g90';
-	};
+	let theme = 'white';
+	let toggleTheme = () => {};
 </script>
 
 <Theme bind:theme />
@@ -15,6 +14,7 @@
 <div class="content">
 	<slot />
 </div>
+<Footer />
 
 <style>
 	.content {
