@@ -61,10 +61,6 @@
 					);
 			  })
 			: [];
-	$: console.log('ref', ref);
-	$: console.log('active', active);
-	$: console.log('value', value);
-	$: console.log('selectedResultIndex', selectedResultIndex);
 	let isSideNavOpen = false;
 
 	/**
