@@ -4,7 +4,7 @@
 	const data = [1, 2, 3, 4, 54, 8, 6, 7];
 </script>
 
-<div class="min-h-screen section-container p-12">
+<div class="min-h-screen section-container box">
 	<div class="flex items-end justify-between gap-6 mb-8">
 		<Search placeholder="Search catalog..." />
 		<div class="flex flex-row gap-1 item-center justify-end">

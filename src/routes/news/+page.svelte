@@ -3,5 +3,5 @@
 	import News from '$lib/components/page/news/news.svelte';
 </script>
 
-<SubHero />
+<SubHero title="Latest News" />
 <News />
