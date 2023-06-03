@@ -24,6 +24,10 @@ export const navs = [
 		path: '/faqs'
 	},
 	{
+		name: 'Fonts',
+		path: '/fonts'
+	},
+	{
 		name: 'About',
 		path: '/about'
 	},
