@@ -16,6 +16,10 @@ export const navs = [
         path: '/events'
     },
     {
+        name: 'Userguides',
+        path: '/userguides'
+    },
+    {
         name: 'About',
         path: '/about'
     },
