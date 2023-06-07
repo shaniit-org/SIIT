@@ -2,7 +2,10 @@
 	import { ImageLoader } from 'carbon-components-svelte';
 </script>
 
-<div class="cursor-pointer hover:bg-theme-muted bg-white flex flex-col">
+<a
+	href="/news/something-spectacular"
+	class="cursor-pointer hover:bg-theme-muted bg-white flex flex-col"
+>
 	<ImageLoader
 		src="https://source.unsplash.com/random/800x600"
 		fadeIn
@@ -18,4 +21,4 @@
 			<span> May 15th, 2023 </span>
 		</div>
 	</div>
-</div>
+</a>
