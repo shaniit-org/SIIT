@@ -29,7 +29,7 @@ export const navs = [
     },
     {
         name: 'NLP',
-        path: '/nlp'
+        path: '/natural-language-processing'
     },
     {
         name: 'About',
