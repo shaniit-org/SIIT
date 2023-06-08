@@ -1,12 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+:root {
+	@apply scroll-smooth;
+}
 @layer utilities {
 	.box {
 		@apply p-6 md:p-12 my-12;
 	}
 	.section-container {
-		@apply max-w-[1200px] mx-auto;
+		@apply max-w-[1300px] mx-auto;
 	}
 }

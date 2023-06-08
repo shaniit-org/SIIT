@@ -32,6 +32,10 @@ export const navs = [
         path: '/natural-language-processing'
     },
     {
+        name: 'Terms',
+        path: '/terms'
+    },
+    {
         name: 'About',
         path: '/about'
     },
