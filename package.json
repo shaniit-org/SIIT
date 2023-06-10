@@ -33,7 +33,9 @@
 	"type": "module",
 	"dependencies": {
 		"@carbon/styles": "^1.30.0",
+		"@sanity/vision": "^3.12.0",
 		"carbon-preprocess-svelte": "^0.9.1",
+		"sanity": "^3.12.0",
 		"svelte-preprocess": "^5.0.4"
 	}
 }
