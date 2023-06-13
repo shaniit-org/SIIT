@@ -2,7 +2,6 @@
 	import ArticleBanner from '$lib/components/common/ArticleBanner.svelte';
 	import {
 		Link,
-		OutboundLink,
 		CodeSnippet,
 		OrderedList,
 		ListItem,
