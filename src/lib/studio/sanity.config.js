@@ -14,10 +14,9 @@ export default defineConfig({
 
 	basePath: '/studio',
 	plugins: [
-		deskTool(),
-		//		deskTool({
-		//			structure: newDeskStructure
-		//		}),
+		deskTool({
+			structure: newDeskStructure
+		}),
 		visionTool()
 	],
 	schema: {
