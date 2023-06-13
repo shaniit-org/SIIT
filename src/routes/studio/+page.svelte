@@ -1,11 +1,15 @@
 <script>
-	export const ssr = false;
 	import { renderStudio } from 'sanity';
+	import { onMount } from 'svelte';
 	import config from '../../lib/studio/sanity.config';
-	renderStudio(document.getElementById('sanity-studio'), config);
+	onMount(() => {
+		renderStudio(document.getElementById('sanity-studio'), config);
+	});
 </script>
 
-<div id="sanity-studio" />
+<div>
+	<div id="sanity-studio" />
+</div>
 
 <style>
 	#sanity-studio {

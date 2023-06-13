@@ -1,20 +1,23 @@
-import { defineConfig } from 'sanity';
-import { newDeskStructure } from './utils/deskStructure';
-import { deskTool } from 'sanity/desk';
 import { visionTool } from '@sanity/vision';
+import { defineConfig } from 'sanity';
+import { deskTool } from 'sanity/desk';
+
 import { schemaTypes } from './schema';
+import { newDeskStructure } from './utils/deskStructure';
 
 export default defineConfig({
 	name: 'default',
 	title: 'ShanIIT',
-	projectId: 'uttlgql7',
+
+	projectId: 'za3lzlmc',
 	dataset: 'production',
 
 	basePath: '/studio',
 	plugins: [
-		deskTool({
-			structure: newDeskStructure
-		}),
+		deskTool(),
+		//		deskTool({
+		//			structure: newDeskStructure
+		//		}),
 		visionTool()
 	],
 	schema: {

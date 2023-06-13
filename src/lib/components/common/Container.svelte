@@ -11,7 +11,7 @@
 
 <Theme bind:theme />
 <Header {toggleTheme} />
-<div class="content">
+<div class="content w-full min-h-screen">
 	<slot />
 </div>
 <Footer />
