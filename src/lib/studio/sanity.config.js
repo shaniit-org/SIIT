@@ -1,4 +1,5 @@
 import { visionTool } from '@sanity/vision';
+import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash';
 import { defineConfig } from 'sanity';
 import { deskTool } from 'sanity/desk';
 
@@ -17,7 +18,8 @@ export default defineConfig({
 		deskTool({
 			structure: newDeskStructure
 		}),
-		visionTool()
+		visionTool(),
+		unsplashImageAsset()
 	],
 	schema: {
 		types: schemaTypes

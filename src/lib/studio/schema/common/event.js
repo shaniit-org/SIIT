@@ -27,6 +27,11 @@ export default {
 			type: 'string'
 		},
 		{
+			title: 'Publish Date',
+			name: 'publishedAt',
+			type: 'date'
+		},
+		{
 			title: 'Slug',
 			name: 'slug',
 			type: 'slug',
@@ -38,26 +43,6 @@ export default {
 			title: 'Body',
 			name: 'body',
 			type: 'blockContent'
-		},
-		{
-			title: 'Pinned',
-			name: 'pinned',
-			type: 'boolean'
-		},
-		{
-			title: 'Categories',
-			name: 'categories',
-			type: 'array',
-			of: [
-				{
-					type: 'reference',
-					to: [
-						{
-							type: 'category'
-						}
-					]
-				}
-			]
 		}
 	]
 };
