@@ -13,27 +13,23 @@ const DEFAULT_WIDTH_STEPS = [400, 600, 850, 1000, 1150]; // arbitrary
 // Based on statcounter's most common screen sizes: https://gs.statcounter.com/screen-resolution-stats
 const DEFAULT_FULL_WIDTH_STEPS = [360, 414, 768, 1366, 1536, 1920];
 
+/**
+ * The image's reference object.
+ * @param {{ image:SanityImage, maxWidth:number | string | undefined, minimumWidthStep: undefined | number | undefined, customWidthSteps:number[] | undefined, sizes:number[] | undefined}} image
+ */
 export default function getImageProps({
-	/**
-	 * The image's reference object.
-	 * Example: {asset: {_ref: string}, hotspot: {...}, crop: {...} }
-	 */
 	image,
-
 	// Number of the largest width it can assume in the design
 	// or "100vw" if it occupies the whole width
 	maxWidth: userMaxWidth,
-
 	/**
 	 * The minimal width difference, in PERCENTAGE (decimal), between the image's srcSet variations.
 	 *
 	 * -> 0.10 (10%) by default.
 	 */
 	minimumWidthStep = DEFAULT_MIN_STEP,
-
 	// List of width sizes to use in the srcSet (NON-RETINA)
 	customWidthSteps,
-
 	// Custom <img> element's `sizes` attribute
 	sizes
 }) {
@@ -67,7 +63,7 @@ export default function getImageProps({
 				// Exclude sizes 10% or more larger than the image itself. Sizes slightly larger
 				// than the image are included to ensure we always get closest to the highest
 				// quality for an image. Sanity's CDN won't scale the image above its limits.
-				size <= imageDimensions.width * 1.1 &&
+				size <= imageDimensions?.width * 1.1 &&
 				// Exclude those larger than maxWidth's retina (x3)
 				size <= maxWidth * 3
 		)
@@ -90,12 +86,12 @@ export default function getImageProps({
 		// Build a `{URL} {SIZE}w, ...` string for the srcset
 		srcset: retinaSizes.map((size) => `${builder.width(size).url()} ${size}w`).join(', '),
 		sizes:
-			props.maxWidth === '100vw'
+			userMaxWidth == '100vw'
 				? '100vw'
 				: sizes || `(max-width: ${maxWidth}px) 100vw, ${maxWidth}px`,
 
 		// Let's also tell the browser what's the size of the image so it can calculate aspect ratios
 		width: retinaSizes[0],
-		height: retinaSizes[0] / imageDimensions.aspectRatio
+		height: imageDimensions && retinaSizes[0] / imageDimensions.aspectRatio
 	};
 }

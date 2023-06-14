@@ -8,11 +8,25 @@
 	 * @type {import('$lib/types').PageData<import('$lib/types/homePage').HomePageData>}
 	 */
 	export let data;
-	console.log(data);
+	const { events, news } = data.data;
+	const { homePage } = data.data;
+	const { sections } = homePage;
 </script>
 
-<Hero />
-<HighLight />
-<News />
-<Donate />
-<Events />
+{#each sections as sec}
+	{#if sec._type === 'Hero'}
+		<Hero data={sec} />
+	{/if}
+	{#if sec._type === 'Highlight'}
+		<HighLight data={sec} />
+	{/if}
+	{#if sec._type === 'News'}
+		<News data={news} />
+	{/if}
+	{#if sec._type === 'Events'}
+		<Events data={events} />
+	{/if}
+	{#if sec._type === 'Donate'}
+		<Donate data={sec} />
+	{/if}
+{/each}

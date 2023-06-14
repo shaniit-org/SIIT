@@ -1,6 +1,9 @@
 <script>
 	import NewsCard from '$lib/components/common/NewsCard.svelte';
-	const items = [2, 3, 4];
+	/**
+	 * @type {import('../../../types/index').News[]}
+	 */
+	export let data;
 </script>
 
 <div class="section-container box">
@@ -12,13 +15,8 @@
 		</p>
 	</div>
 	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-6">
-		{#each items as _}
-			<NewsCard />
-		{/each}
-	</div>
-	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-6">
-		{#each items as _}
-			<NewsCard />
+		{#each data as item}
+			<NewsCard data={item} />
 		{/each}
 	</div>
 </div>

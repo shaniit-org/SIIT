@@ -1,6 +1,9 @@
 <script>
 	import HomeEventCard from '$lib/components/common/HomeEventCard.svelte';
-	const items = [2, 3, 4];
+	/**
+	 * @type {import('../../../types/index').Event[]}
+	 */
+	export let data = [];
 </script>
 
 <div class="section-container box">
@@ -11,8 +14,8 @@
 		</p>
 	</div>
 	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-6">
-		{#each items as _}
-			<HomeEventCard />
+		{#each data as item}
+			<HomeEventCard data={item} />
 		{/each}
 	</div>
 </div>

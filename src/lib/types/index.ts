@@ -3,6 +3,7 @@ export interface News {
 	slug: string;
 	description: string;
 	coverImage: any;
+	publishedAt: string;
 }
 
 export interface NewsDetail extends News {
@@ -15,6 +16,7 @@ export interface Event {
 	slug: string;
 	description: string;
 	coverImage: any;
+	publishedAt: string;
 }
 
 export interface EventDetail extends News {
@@ -25,6 +27,7 @@ export interface Term {
 	title: string;
 	slug: string;
 	description: string;
+	createdAt: string;
 	coverImage: any;
 }
 

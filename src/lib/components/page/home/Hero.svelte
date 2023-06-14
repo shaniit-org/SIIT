@@ -1,14 +1,20 @@
 <script>
+	import SanityImage from '$lib/sanity/image/SanityImage.svelte';
 	import { ClickableTile, ImageLoader } from 'carbon-components-svelte';
+	/**
+	 * @type {import('../../../types/homePage').HomePageHero} - data
+	 */
+	export let data;
 </script>
 
 <div
 	class=" grid grid-rows-[auto_1fr] gap-4 justify-end relative w-full min-h-[60vh] md:min-h-[700px]"
 >
-	<ImageLoader
-		fadeIn
-		src="/images/background.png"
-		class="h-full w-full object-cover absolute z-[-1]"
+	<SanityImage
+		maxWidth={1050}
+		image={data.heroImage}
+		alt={data.title}
+		className="h-full w-full object-cover absolute z-[-1]"
 	/>
 	<ClickableTile class=" max-w-[90%] md:max-w-[400px] h-auto space-y-2 mt-auto row-start-2">
 		<div class="p-4">

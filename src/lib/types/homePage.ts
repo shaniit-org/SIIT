@@ -1,8 +1,15 @@
 import type { News, Event } from '.';
+
 export interface HomePageHero {
 	_type: 'Hero';
 	title: string;
 	heroImage: SanityImage;
+}
+export interface HighLightNews extends News {
+	_type: 'Highlight';
+	title: string;
+	description: string;
+	slug: string;
 }
 
 export interface HomePageNews {
@@ -29,7 +36,12 @@ export interface HomePage {
 	sections: HomePageSections[];
 }
 
-type HomePageSections = HomePageHero | HomePageNews | HomePageEvents | HomePageDonate;
+type HomePageSections =
+	| HomePageHero
+	| HomePageNews
+	| HomePageEvents
+	| HomePageDonate
+	| HighLightNews;
 
 export interface HomePageData {
 	homePage: HomePage;

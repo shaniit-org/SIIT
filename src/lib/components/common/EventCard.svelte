@@ -1,6 +1,10 @@
 <script>
 	import { ImageLoader, Button } from 'carbon-components-svelte';
 	import { Link } from 'carbon-icons-svelte';
+	/*
+	 * @type {import('$lib/types').Event} data
+	 */
+	export let data;
 </script>
 
 <hr />

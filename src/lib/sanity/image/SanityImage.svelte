@@ -1,31 +1,35 @@
 <!-- SanityImage.svelte -->
 <script>
-	import getImageProps from '../utils/getImageProps';
+	import getImageProps from './config';
 
-    let loaded = false
+	let loaded = false;
+	/**
+	 * @type {SanityImage}
+	 */
 	export let image;
-	export let loading = "lazy"
+	export let className = '';
+	export let loading = 'lazy';
+	export let alt = '';
+	export let maxWidth = 600;
 </script>
 
 <img
-  data-loaded={loaded}
-  on:load={() => loaded = true}
-  style="height: auto"
-  {loading}
-  fetchPriority={loading === "eager" ? "high" : undefined}
-  alt={image.alt || " "}
-  {// Pass src, srcset and sizes to the image element
-    ...getImageProps({
-      image,
-      maxWidth: 600
-    })
-  }
+	class={className}
+	data-loaded={loaded}
+	on:load={() => (loaded = true)}
+	alt={alt || ' '}
+	{...getImageProps({
+		image,
+		maxWidth: maxWidth
+	})}
+	{loading}
 />
+
 <style>
-  img {
-    transition: .15s opacity;
-  }
-  img[data-loaded="false"] {
-    opacity: 0;
-  }
+	img {
+		transition: 1s opacity;
+	}
+	img[data-loaded='false'] {
+		opacity: 0;
+	}
 </style>

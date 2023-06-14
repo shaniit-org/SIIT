@@ -19,6 +19,16 @@ export default {
 					type: 'homePage.hero'
 				},
 				{
+					title: 'Pinned News',
+					name: 'Highlight',
+					type: 'reference',
+					to: [
+						{
+							type: 'news'
+						}
+					]
+				},
+				{
 					name: 'News',
 					type: 'homePage.news'
 				},

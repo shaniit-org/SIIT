@@ -4,7 +4,7 @@ import {
 	SanityImageWithAssetStub,
 	SanityReference
 } from '@sanity/image-url/lib/types/types';
-import type { SanityDimensionedImage } from 'astro-sanity-picture/src/types';
+
 declare global {
 	interface PortableText {
 		_key: string;
@@ -20,8 +20,19 @@ declare global {
 		_key: string;
 	}
 
-	type SanityImage = SanityDimensionedImage & { alt?: string };
-
+	type SanityImage = SanityImageWithAssetStub & {
+		image: SanityImageWithAssetStub;
+		asset: SanityReference;
+		crop?: SanityImageCrop;
+		hotspot?: SanityImageHotspot;
+		_type: 'image';
+		_key: string;
+		_sanityAsset: string;
+		_sanityAssetId: string;
+		url: string;
+		metadata: SanityImageMetadata;
+		dimensions: SanityImageDimensions;
+	};
 	export interface BaseMetaData {
 		title?: string;
 		description?: string;
