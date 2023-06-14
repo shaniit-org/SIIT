@@ -106,7 +106,10 @@
 			blanditiis, esse eum neque atque asperiores facere fugit quibusdam doloremque porro! Recusandae
 			explicabo consequuntur quis?
 		</p>
-		<CodeSnippet code="yarn add -D carbon-components-svelte" class="my-6" />
+		<div class="my-6">
+			<CodeSnippet code="yarn add -D carbon-components-svelte" />
+		</div>
+
 		<p class="text-base md:text-lg md:leading-[1.8] my-2">
 			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate iusto aperiam quae.
 			Impedit praesentium omnis nulla, deleniti sapiente dolore, excepturi dolor cupiditate totam,

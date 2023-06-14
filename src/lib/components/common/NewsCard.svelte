@@ -14,8 +14,8 @@
 		alt={data.title}
 		className="aspect-video w-full"
 	/>
-	<div class="flex flex-col justify-between p-4 flex gap-12">
-		<h3 class="text-lg">
+	<div class="flex flex-col justify-between p-4 flex gap-6">
+		<h3 class="text-xl">
 			{data.title}
 		</h3>
 		<div class="flex flex-col">

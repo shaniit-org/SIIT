@@ -12,30 +12,6 @@ export default {
 			title: 'Title',
 			name: 'title',
 			type: 'string'
-		},
-		{
-			title: 'Term of the Day',
-			name: 'termOfTheDay',
-			type: 'reference',
-			to: [
-				{
-					type: 'term',
-					title: 'Term',
-					name: 'term'
-				}
-			]
-		},
-		{
-			title: 'Pinned News',
-			name: 'pinnedNews',
-			type: 'reference',
-			to: [
-				{
-					type: 'term',
-					title: 'Term',
-					name: 'news'
-				}
-			]
 		}
 	]
 };

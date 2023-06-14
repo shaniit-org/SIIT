@@ -1,6 +1,6 @@
 /**
  * @param {SanityImage} image
- * @returns {{width: number, height: number, aspectRatio: number} | undefined}
+ * @returns {{width: number, height: number, aspectRatio: number} }
  */
 export function getImageDimensions(image) {
 	if (!image?.asset?._ref) {

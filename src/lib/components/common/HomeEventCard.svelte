@@ -6,9 +6,9 @@
 	export let data;
 </script>
 
-<div class="cursor-pointer hover:bg-theme-muted bg-white flex flex-col">
+<a href={`/events/${data.slug}`} class="cursor-pointer hover:bg-theme-muted bg-white flex flex-col">
 	<div class="flex flex-col justify-between p-4 flex gap-6">
-		<h3 class="text-lg">
+		<h3 class="text-lg text-theme-dark">
 			{data.title}
 		</h3>
 		<div class="flex flex-col">
@@ -16,4 +16,4 @@
 			<span> {moment(data.publishedAt).format('LL')}</span>
 		</div>
 	</div>
-</div>
+</a>

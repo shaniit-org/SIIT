@@ -19,7 +19,7 @@
 		</div>
 		<div class="flex flex-col gap-12">
 			{#each data as item}
-				<EventCard />
+				<EventCard data={item} />
 			{/each}
 		</div>
 	</div>
