@@ -10,7 +10,12 @@
 
 <div class="bg-white">
 	<div class="relative min-h-[380px] isolate">
-		<SanityImage image={data.coverImage} alt={data.title} className="h-[380px] object-cover" />
+		<SanityImage
+			maxWidth={300}
+			image={data.coverImage}
+			alt={data.title}
+			className="w-full h-[380px] aspect-[9/16] object-cover"
+		/>
 		<div class="absolute top-0 right-0">
 			<Button
 				size="lg"
