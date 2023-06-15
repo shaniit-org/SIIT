@@ -30,6 +30,10 @@
 		<p class="mb-4 leading-loose text-sm">
 			{data.description}
 		</p>
-		<Button class="border border-blue-500 text-blue-500 max-w-max" icon={Link}>Read More</Button>
+		<Button
+			href={`/events/${data.slug}`}
+			class="border border-blue-500 text-blue-500 max-w-max"
+			icon={Link}>Read More</Button
+		>
 	</div>
 </div>
