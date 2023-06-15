@@ -2,23 +2,26 @@
 	import SubHero from '$lib/components/common/SubHero.svelte';
 	import EventCard from '$lib/components/common/EventCard.svelte';
 	import { Select, SelectItem } from 'carbon-components-svelte';
-	const data = [1, 2, 3];
+	import { sortByDate } from '$lib/utils/search-by-title';
+	/**
+	 * @type {{data: import('../../lib/types/').Event[]}} - data
+	 */
+	export let data = { data: [] };
+	let selected = 'Latest';
+	$: res = sortByDate(data.data, selected);
 </script>
 
 <div class="min-h-screen">
 	<SubHero title="Events" />
 	<div class="section-container box mb-12">
 		<div class="mb-8">
-			<Select labelText="Sorted by" class="max-w-max ml-auto min-w-[200px]">
-				<SelectItem value="white" />
-				<SelectItem value="g10" />
-				<SelectItem value="g80" />
-				<SelectItem value="g90" />
-				<SelectItem value="g100" />
+			<Select labelText="Sorted by" bind:selected class="max-w-max ml-auto min-w-[200px]">
+				<SelectItem value="Latest" />
+				<SelectItem value="Oldest" />
 			</Select>
 		</div>
 		<div class="flex flex-col gap-12">
-			{#each data as item}
+			{#each res as item}
 				<EventCard data={item} />
 			{/each}
 		</div>
