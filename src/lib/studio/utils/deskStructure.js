@@ -21,9 +21,14 @@ export function newDeskStructure(S) {
 				id: 'homePage',
 				schemaType: 'homePage'
 			}),
+			documentItem(S, {
+				title: 'Faq',
+				id: 'faqPage',
+				schemaType: 'faqPage'
+			}),
 			S.divider(),
 			...S.documentTypeListItems().filter(
-				(item) => !['site', 'homePage'].includes(item.getId() ?? '')
+				(item) => !['site', 'homePage', 'faqPage'].includes(item.getId() ?? '')
 			)
 		]);
 }

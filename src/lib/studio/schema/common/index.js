@@ -1,4 +1,5 @@
 import baseSeo from './baseSeo';
+import faq from './faq';
 import userguide from './userguide';
 import category from './category';
 import blockContent from './blockContent';
@@ -8,4 +9,16 @@ import news from './news';
 import event from './event';
 import term from './term';
 import banner from './banner';
-export default [userguide, banner, link, news, baseSeo, term, category, blockContent, site, event];
+export default [
+	userguide,
+	faq,
+	banner,
+	link,
+	news,
+	baseSeo,
+	term,
+	category,
+	blockContent,
+	site,
+	event
+];
