@@ -4,15 +4,10 @@ import {
 	SanityImageWithAssetStub,
 	SanityReference
 } from '@sanity/image-url/lib/types/types';
+import type { InputValue } from '@portabletext/svelte/ptTypes';
 
 declare global {
-	interface PortableText {
-		_key: string;
-		_type: string;
-		children: any[];
-		markDefs: any[];
-		style: string;
-	}
+	type PortableText = InputValue;
 
 	interface Link {
 		title: string;
@@ -22,6 +17,7 @@ declare global {
 
 	type SanityImage = SanityImageWithAssetStub & {
 		image: SanityImageWithAssetStub;
+		alt?: string;
 		asset: SanityReference;
 		crop?: SanityImageCrop;
 		hotspot?: SanityImageHotspot;

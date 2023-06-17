@@ -6,8 +6,8 @@ import { sanityClient } from './client';
 export const pageQuery = (query) => query;
 
 /**
- * @param {string} query - Sanity pageQuery
- * @param {import('sanity').QueryParams} [params]- Sanity query params
+ * @param {string } query - Sanity pageQuery
+ * @param {import('sanity').QueryParams | undefined} [params]- Sanity query params
  * @template T
  * @returns {Promise<T>} - Sanity document
  */

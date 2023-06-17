@@ -78,6 +78,7 @@
 			<HeaderNavItem href={nav.path} text={nav.name} />
 		{/each}
 	</HeaderNav>
+	<!--
 	<HeaderUtilities>
 		<HeaderSearch
 			bind:ref
@@ -101,4 +102,5 @@
 		/>
 		<HeaderGlobalAction aria-label="Theme" icon={Asleep} on:click={toggleTheme} />
 	</HeaderUtilities>
+    -->
 </Header>

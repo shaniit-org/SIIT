@@ -1,14 +1,5 @@
 <script>
 	import TermHero from '$lib/components/common/TermHero.svelte';
-	import ArticleBanner from '$lib/components/common/ArticleBanner.svelte';
-	import {
-		Link,
-		CodeSnippet,
-		OrderedList,
-		ListItem,
-		UnorderedList
-	} from 'carbon-components-svelte';
-	import { Link as LinkIcon } from 'carbon-icons-svelte';
 	const data = [1];
 </script>
 

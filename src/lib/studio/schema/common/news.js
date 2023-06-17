@@ -45,6 +45,21 @@ export default {
 			type: 'blockContent'
 		},
 		{
+			title: 'Authors',
+			name: 'authors',
+			type: 'array',
+			of: [
+				{
+					type: 'reference',
+					to: [
+						{
+							type: 'author'
+						}
+					]
+				}
+			]
+		},
+		{
 			title: 'Categories',
 			name: 'categories',
 			type: 'array',

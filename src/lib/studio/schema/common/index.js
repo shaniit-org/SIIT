@@ -1,4 +1,5 @@
 import baseSeo from './baseSeo';
+import author from './author';
 import faq from './faq';
 import userguide from './userguide';
 import category from './category';
@@ -20,5 +21,6 @@ export default [
 	category,
 	blockContent,
 	site,
-	event
+	event,
+	author
 ];

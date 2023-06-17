@@ -1,6 +1,10 @@
 <script>
 	import { Button, ButtonSet } from 'carbon-components-svelte';
 	import { Share } from 'carbon-icons-svelte';
+	/**
+	 *  @type {string}
+	 */
+	export let title = '';
 </script>
 
 <div
@@ -8,7 +12,7 @@
 >
 	<div class="section-container box w-full">
 		<h1 class="text-3xl lg:text-5xl lg:leading-[1.2] my-6">
-			Moving forward: On deprecating carbon components and carbon components react
+			{title}
 		</h1>
 		<div class="flex items-center gap-4">
 			<div class="w-[60px] aspect-square rounded-full bg-gray-800" />
