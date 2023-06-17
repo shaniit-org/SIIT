@@ -2,6 +2,7 @@ export interface Author {
 	name: string;
 	bio: string;
 	story: PortableText;
+	profile: SanityImage;
 }
 
 export interface Article {
@@ -21,6 +22,7 @@ export interface UserGuide extends Article {
 export interface News extends Article {}
 
 export interface NewsDetail extends News {
+	authors: Author[];
 	categories: string[];
 	body: PortableText;
 }

@@ -7,12 +7,11 @@
 	 * @type {{ data : import('../../../lib/types').NewsDetail}} - data
 	 */
 	export let data;
-	let activeId = 0;
 	const { data: news } = data;
 </script>
 
 <div class="min-h-screen">
-	<ArticleBanner title={news.title} />
+	<ArticleBanner title={news.title} authors={news.authors} publishedAt={news.publishedAt} />
 	<div
 		class="p-4 md:p-12 grid grid-cols-1 lg:grid-cols-[1fr_300px] mx-auto section-container gap-4 md:gap-8"
 	>
