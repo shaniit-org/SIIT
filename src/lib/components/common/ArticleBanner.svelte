@@ -1,28 +1,35 @@
 <script>
 	import { Button, ButtonSet } from 'carbon-components-svelte';
 	import moment from 'moment';
-	import { Share, LogoFacebook, LogoTwitter, LogoLinkedin } from 'carbon-icons-svelte';
+	import SanityImage from '$lib/sanity/image/SanityImage.svelte';
+	import { LogoFacebook, LogoTwitter, LogoLinkedin } from 'carbon-icons-svelte';
 	/**
 	 *  @type {string} - title
 	 *  @type {import("../../types").Author[]} - authors
 	 * @type {string} - _createdAt
 	 */
 	export let title = '';
-	export let authors = [1, 2];
+	export let authors = [];
 	export let publishedAt = '';
 </script>
 
 <div
-	class="w-full bg-gradient-to-b from-black to-gray-900 relative text-white min-h-[300px] flex justify-end flex-col"
+	class="w-full bg-gradient-to-b from-black to-gray-900 relative text-white min-h-[300px] flex justify-end flex-col overflow-hidden"
 >
 	<div class="section-container box w-full">
-		<h1 class="text-3xl lg:text-5xl lg:leading-[1.2] my-6">
+		<h1 class="text-4xl font-bold lg:text-5xl lg:leading-[1.2] leading-[1.5] my-6 mb-12">
 			{title}
 		</h1>
-		<div class="flex gap-4">
+		<div class="flex gap-4 md:flex-row flex-col">
 			{#each authors as aut}
-				<div class="flex items-center gap-4">
-					<div class="w-[60px] aspect-square bg-gray-800" />
+				<div class="flex items-center gap-4 flex-row">
+					<div class="w-[60px] aspect-square bg-gray-800 h-[60px]">
+						<SanityImage
+							maxWidth={80}
+							image={aut.profile}
+							className="w-[60px] h-[60px] object-cover"
+						/>
+					</div>
 					<div class="flex flex-col">
 						<span class="uppercase mb-1 text-sm"> {aut.name} </span>
 						<div class="flex items-center gap-4">
@@ -33,22 +40,10 @@
 				</div>
 			{/each}
 		</div>
-		<!--
-		<div class="flex items-center mt-4 absolute bottom-0">
-			<button class="bg-blue-500 hover:bg-blue-500 cursor-pointer text-white hover:text-white p-2">
-				<LogoFacebook size={24} />
-			</button>
-			<button class="bg-blue-500 hover:bg-blue-500 cursor-pointer text-white hover:text-white p-2">
-				<LogoTwitter size={24} />
-			</button>
-			<button class="bg-blue-500 hover:bg-blue-500 cursor-pointer text-white hover:text-white p-2">
-				<LogoLinkedin size={24} />
-			</button>
-		</div>-->
-		<ButtonSet class="absolute bottom-0">
-			<Button icon={LogoFacebook} size="field">Facebook</Button>
-			<Button icon={LogoTwitter} size="field">Twitter</Button>
-			<Button icon={LogoLinkedin} size="field">LinkedIn</Button>
+		<ButtonSet class="mt-8 md:absolute bottom-0 w-full flex flex-wrap w-full">
+			<Button icon={LogoFacebook} size="field" icondescription="share on facebook">Facebook</Button>
+			<Button icon={LogoTwitter} size="field" iconDescription="Share on Twitter">Twitter</Button>
+			<Button icon={LogoLinkedin} size="field" iconDescription="Share on LinkedIn">LinkedIn</Button>
 		</ButtonSet>
 	</div>
 </div>
