@@ -1,15 +1,18 @@
 <script>
-	import { Button, ButtonSet } from 'carbon-components-svelte';
 	import moment from 'moment';
 	import SanityImage from '$lib/sanity/image/SanityImage.svelte';
-	import { LogoFacebook, LogoTwitter, LogoLinkedin } from 'carbon-icons-svelte';
+	import { Share } from 'carbon-icons-svelte';
 	/**
 	 *  @type {string} - title
-	 *  @type {import("../../types").Author[]} - authors
-	 * @type {string} - _createdAt
 	 */
 	export let title = '';
+	/**
+	 *  @type {import("../../types").Author[]} - authors
+	 */
 	export let authors = [];
+	/**
+	 *  @type {string} - _createdat
+	 */
 	export let publishedAt = '';
 </script>
 
@@ -40,10 +43,5 @@
 				</div>
 			{/each}
 		</div>
-		<ButtonSet class="mt-8 md:absolute bottom-0 w-full flex flex-wrap w-full">
-			<Button icon={LogoFacebook} size="field" icondescription="share on facebook">Facebook</Button>
-			<Button icon={LogoTwitter} size="field" iconDescription="Share on Twitter">Twitter</Button>
-			<Button icon={LogoLinkedin} size="field" iconDescription="Share on LinkedIn">LinkedIn</Button>
-		</ButtonSet>
 	</div>
 </div>

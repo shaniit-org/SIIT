@@ -1,34 +1,34 @@
 <script>
+	import { Button } from 'carbon-components-svelte';
 	import { TreeView } from 'carbon-components-svelte';
-	let activeId = 0;
-	let children = [
-		{ id: 0, text: 'AI / Machine learning' },
-		{
-			id: 1,
-			text: 'Analytics',
-			children: [
-				{
-					id: 2,
-					text: 'IBM Analytics Engine',
-					children: [
-						{ id: 3, text: 'Apache Spark' },
-						{ id: 4, text: 'Hadoop' }
-					]
-				},
-				{ id: 5, text: 'IBM Cloud SQL Query' },
-				{ id: 6, text: 'IBM Db2 Warehouse on Cloud' }
-			]
+	import { generate_toc } from '$lib/utils/generate-toc';
+	import { Share } from 'carbon-icons-svelte';
+	/**
+	 * {PortableText} - data
+	 */
+	export let data;
+	const toc = generate_toc(data);
+	/**
+	 * {number | null} - activeId
+	 */
+	let activeId = null;
+
+	$: {
+		if (activeId) {
+			const element = document.getElementById(activeId);
+			element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 		}
-	];
+	}
 </script>
 
-<div>
-	<TreeView
-		{children}
-		bind:activeId
-		labelText="Table of Contents"
-		on:select={({ detail }) => console.log('select', detail)}
-		on:toggle={({ detail }) => console.log('toggle', detail)}
-		on:focus={({ detail }) => console.log('focus', detail)}
-	/>
+<div class="text-md cursor-pointer sticky top-20 flex gap-4 flex-col">
+	<div>
+		<TreeView children={toc} labelText="Table of Contents" bind:activeId />
+	</div>
+	<Button
+		icon={Share}
+		size="field"
+		class="bg-blue-500 max-w-[200px]"
+		iconDescription="share on facebook">Share</Button
+	>
 </div>
