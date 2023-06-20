@@ -8,9 +8,13 @@
 	 */
 	export let image;
 	export let className = '';
+	/**
+	 * @type {'lazy' | 'eager'}
+	 */
 	export let loading = 'lazy';
 	export let alt = '';
 	export let maxWidth = 600;
+	let imageProps = getImageProps({ image, maxWidth });
 </script>
 
 <img
@@ -18,10 +22,7 @@
 	data-loaded={loaded}
 	on:load={() => (loaded = true)}
 	alt={alt || ' '}
-	{...getImageProps({
-		image,
-		maxWidth: maxWidth
-	})}
+	{...imageProps}
 	{loading}
 />
 

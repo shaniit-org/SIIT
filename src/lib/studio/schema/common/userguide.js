@@ -37,11 +37,6 @@ export default {
 			type: 'url'
 		},
 		{
-			title: 'File',
-			name: 'File',
-			type: 'file'
-		},
-		{
 			title: 'Categories',
 			name: 'categories',
 			type: 'array',

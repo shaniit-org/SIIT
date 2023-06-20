@@ -1,34 +1,32 @@
 <script>
 	import { Button } from 'carbon-components-svelte';
-	import { TreeView } from 'carbon-components-svelte';
-	import { generate_toc } from '$lib/utils/generate-toc';
-	import { Share } from 'carbon-icons-svelte';
+	import { Share, Link as LinkIcon } from 'carbon-icons-svelte';
 	/**
-	 * {PortableText} - data
+	 * @type {Array<{title:string; slug:string; _id:string}> } ;
 	 */
-	export let data;
-	const toc = generate_toc(data);
-	/**
-	 * {number | null} - activeId
-	 */
-	let activeId = null;
-
-	$: {
-		if (activeId) {
-			const element = document.getElementById(activeId);
-			element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-		}
-	}
+	export let data = [];
 </script>
 
-<div class="text-md cursor-pointer sticky top-20 flex gap-4 flex-col">
-	<div>
-		<TreeView children={toc} labelText="Table of Contents" bind:activeId />
-	</div>
+<div class="text-md cursor-pointer sticky top-20 flex gap-2 flex-col">
+	<span class="text-lg">Related Articles</span>
+	{#if data.length > 0}
+		<ul class="flex flex-col">
+			{#each data as item}
+				<li class="flex gap-2 group items-center gap-1">
+					<a
+						href="/news/{item.slug}"
+						class="flex items-center gap-2 text-theme-dark hover:text-blue-500 hover:underline"
+						>{item.title}</a
+					>
+					<LinkIcon size={20} class="hidden group-hover:block text-blue-500" />
+				</li>
+			{/each}
+		</ul>
+	{/if}
 	<Button
 		icon={Share}
 		size="field"
-		class="bg-blue-500 max-w-[200px]"
+		class="bg-blue-500 max-w-[200px] mt-12"
 		iconDescription="share on facebook">Share</Button
 	>
 </div>

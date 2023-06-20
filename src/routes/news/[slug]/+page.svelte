@@ -16,7 +16,7 @@
 		class="relative p-4 md:p-12 grid grid-cols-1 lg:grid-cols-[1fr_300px] mx-auto section-container gap-4 md:gap-8"
 	>
 		<div class="md:col-start-2 min-w-[200px] scroll-pt-20">
-			<TableOfContents data={news.body} />
+			<TableOfContents data={news.related} />
 		</div>
 		<div class="md:col-start-1 md:row-start-1">
 			<PortableText value={news.body} />

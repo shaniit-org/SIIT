@@ -45,6 +45,9 @@ export default {
         select: {
             media: 'logo'
         },
+        /**
+         * @param {import('sanity').PreviewProps} props
+         */
         prepare({ media }) {
             return {
                 title: 'Site Config',

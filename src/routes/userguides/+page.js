@@ -1,8 +1,8 @@
 import { getPageData } from '$lib/sanity/query';
 
 const query = `
-*[_type =="userguide"][0...5]{
-           link,
+*[_type =="userguide"]{
+           downloadlink,
           title,
           description,
           coverImage ,

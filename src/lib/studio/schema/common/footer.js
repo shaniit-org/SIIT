@@ -36,6 +36,9 @@ export default [
                 preview: {
                     select: {
                         media: 'icon',
+                        /**
+                         * @param {import('sanity').PreviewProps} props
+                         */
                         prepare({ media }) {
                             return {
                                 title: 'Social',
@@ -64,6 +67,9 @@ export default [
             select: {
                 title: 'title'
             },
+            /**
+             * @param {import('sanity').PreviewProps} props
+             */
             prepare({ title }) {
                 return {
                     title: title

@@ -3,9 +3,10 @@
 	import { Download } from 'carbon-icons-svelte';
 	import SanityImage from '$lib/sanity/image/SanityImage.svelte';
 	/**
-	 * @type {{data:import('../../types').UserGuide}} - data
+	 * @type {import('../../types').UserGuide} - data
 	 */
 	export let data;
+	console.log(data);
 </script>
 
 <div class="bg-white">
@@ -16,15 +17,19 @@
 			alt={data.title}
 			className="w-full h-[380px] aspect-[9/16] object-cover"
 		/>
-		<div class="absolute top-0 right-0">
-			<Button
-				size="lg"
-				icon={Download}
-				aria-label="Download"
-				iconDescription="Download"
-				class="bg-theme-dark"
-			/>
-		</div>
+		{#if data.downloadlink}
+			<div class="absolute top-0 right-0">
+				<Button
+					href={data.downloadlink}
+					target="_blank"
+					size="lg"
+					icon={Download}
+					aria-label="Download"
+					iconDescription="Download"
+					class="bg-theme-dark"
+				/>
+			</div>
+		{/if}
 	</div>
 	<div class="flex flex-col p-4">
 		<h2 class="text-xl mb-1">{data.title}</h2>

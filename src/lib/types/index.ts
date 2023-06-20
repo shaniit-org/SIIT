@@ -1,3 +1,12 @@
+export interface Category {
+	title: string;
+	_id: string;
+}
+export interface RelatedArticle {
+	title: string;
+	slug: string;
+	_id: string;
+}
 export interface Author {
 	name: string;
 	bio: string;
@@ -8,33 +17,37 @@ export interface Author {
 export interface Article {
 	title: string;
 	description: string;
-	coverImage: any;
+	coverImage: SanityImage;
 	publishedAt: string;
 	slug: string;
 }
 
 export interface UserGuide extends Article {
 	file: string;
-	link: string;
+	downloadlink: string;
 	slug: string;
+	categories: Category[];
 }
 
 export interface News extends Article {}
 
 export interface NewsDetail extends News {
 	authors: Author[];
-	categories: string[];
+	categories: Category[];
 	body: PortableText;
+	related?: RelatedArticle[];
 }
 
 export interface Event extends Article {}
 
 export interface EventDetail extends Event {
-	categories: string[];
 	body: PortableText;
+	related?: RelatedArticle[];
+	categories: Category[];
 }
 export interface Term extends Article {}
 
 export interface TermDetail extends Term {
 	body: PortableText;
+	related?: { title: string; slug: string; _id: string }[];
 }
