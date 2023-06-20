@@ -6,7 +6,7 @@
 	 * @type {{ data : import('../../../lib/types').EventDetail}} - data
 	 */
 	export let data;
-	const { data: event } = data;
+	$: ({ data: event } = data);
 </script>
 
 <div class="min-h-screen">

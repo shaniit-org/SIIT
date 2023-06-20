@@ -1,7 +1,6 @@
 <script>
 	import moment from 'moment';
 	import SanityImage from '$lib/sanity/image/SanityImage.svelte';
-	import { Share } from 'carbon-icons-svelte';
 	/**
 	 *  @type {string} - title
 	 */

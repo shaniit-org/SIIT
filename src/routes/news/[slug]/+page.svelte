@@ -7,7 +7,7 @@
 	 * @type {{ data : import('../../../lib/types').NewsDetail}} - data
 	 */
 	export let data;
-	const { data: news } = data;
+	$: ({ data: news } = data);
 </script>
 
 <div class="min-h-screen">
