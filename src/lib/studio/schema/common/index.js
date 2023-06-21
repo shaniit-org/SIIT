@@ -10,9 +10,11 @@ import news from './news';
 import event from './event';
 import term from './term';
 import banner from './banner';
+import keyboard_or_font from './keyboard_or_font';
 
 export default [
 	userguide,
+	keyboard_or_font,
 	faq,
 	banner,
 	link,

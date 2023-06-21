@@ -33,9 +33,15 @@ export function newDeskStructure(S) {
 				id: 'faqPage',
 				schemaType: 'faqPage'
 			}),
+			documentItem(S, {
+				title: 'Keyboard And Font Page',
+				id: 'keyboard_or_font_page',
+				schemaType: 'keyboard_or_font_page'
+			}),
 			S.divider(),
 			...S.documentTypeListItems().filter(
-				(item) => !['site', 'homePage', 'faqPage'].includes(item.getId() ?? '')
+				(item) =>
+					!['site', 'homePage', 'faqPage', 'keyboard_or_font_page'].includes(item.getId() ?? '')
 			)
 		]);
 }

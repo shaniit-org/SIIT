@@ -4,11 +4,6 @@ export default {
 	type: 'document',
 	fields: [
 		{
-			type: 'seo',
-			name: 'seo',
-			title: 'SEO'
-		},
-		{
 			name: 'coverImage',
 			type: 'image',
 			title: 'Cover Image',
