@@ -14,6 +14,7 @@
 		maxWidth={1050}
 		image={data.heroImage}
 		alt={data.title}
+		loading="eager"
 		className="h-full w-full object-cover absolute z-[-1]"
 	/>
 	<ClickableTile class=" max-w-[90%] md:max-w-[400px] h-auto space-y-2 mt-auto row-start-2">
