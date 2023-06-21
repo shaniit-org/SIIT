@@ -10,6 +10,7 @@ import news from './news';
 import event from './event';
 import term from './term';
 import banner from './banner';
+
 export default [
 	userguide,
 	faq,

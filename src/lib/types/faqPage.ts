@@ -1,9 +1,12 @@
 export interface FAQ {
-	question: string;
-	answer: PortableText;
+	qanda: {
+		question: string;
+		answer: PortableText;
+	}[];
+	category: string;
 }
 
 export interface FAQList {
 	category: string;
-	qanda: FAQ[];
+	faqs: FAQ[];
 }
