@@ -1,19 +1,6 @@
 <script>
-	import {
-		Header,
-		HeaderNav,
-		HeaderNavItem,
-		SkipToContent,
-		HeaderGlobalAction,
-		HeaderUtilities,
-		HeaderSearch
-	} from 'carbon-components-svelte';
+	import { Header, HeaderNav, HeaderNavItem, SkipToContent } from 'carbon-components-svelte';
 	import { navs } from '$lib/site/nav';
-	import { Asleep } from 'carbon-icons-svelte';
-	/**
-        @type {() => void} toggleTheme - toggle theme function
-    */
-	export let toggleTheme;
 	const data = [
 		{
 			href: '/',
