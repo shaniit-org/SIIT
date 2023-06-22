@@ -1,13 +1,13 @@
 export interface KeyboardOrFont {
-	title: string;
-	description: string;
-	type: 'keyboard' | 'font';
-	os: OS;
-	downloadlink: string;
+    title: string;
+    description: string;
+    type: 'keyboard' | 'font';
+    os: OS;
+    downloadlink: string;
 }
 
-type OS = 'mac' | 'windows' | 'linux' | 'ios' | 'android';
+type OS = 'mac' | 'windows' | 'linux' | 'ios' | 'android' | 'title';
 
 export type KeyboardOrFontList = Partial<{
-	[key in OS]: KeyboardOrFont[];
+    [key in OS]: KeyboardOrFont[] | string;
 }>;

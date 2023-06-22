@@ -5,12 +5,9 @@
 	/**
 	 * @type {'g10' | 'white'}
 	 */
-	let theme = 'white';
-	let toggleTheme = () => {};
 </script>
 
-<Theme bind:theme />
-<Header {toggleTheme} />
+<Header />
 <div class="font-san content w-full min-h-screen">
 	<slot />
 </div>

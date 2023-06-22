@@ -6,7 +6,6 @@
 	 * @type {import('../../types').UserGuide} - data
 	 */
 	export let data;
-	console.log(data);
 </script>
 
 <div class="bg-white">
