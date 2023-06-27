@@ -1,4 +1,5 @@
 import baseSeo from './baseSeo';
+import rowBanner from './row-banner';
 import author from './author';
 import faq from './faq';
 import userguide from './userguide';
@@ -13,17 +14,18 @@ import banner from './banner';
 import keyboard_or_font from './keyboard_or_font';
 
 export default [
-	userguide,
-	keyboard_or_font,
-	faq,
-	banner,
-	link,
-	news,
-	baseSeo,
-	term,
-	category,
-	blockContent,
-	site,
-	event,
-	author
+    userguide,
+    keyboard_or_font,
+    faq,
+    banner,
+    link,
+    news,
+    baseSeo,
+    term,
+    category,
+    blockContent,
+    site,
+    event,
+    author,
+    rowBanner
 ];

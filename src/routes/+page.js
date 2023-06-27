@@ -31,11 +31,11 @@ const query = `{
  * @type {import('@sveltejs/kit').Load}
  */
 export const load = async () => {
-	/**
-	 * @type {import('$lib/types/homePage').HomePageData}
-	 */
-	const data = await getPageData(query);
-	return {
-		data
-	};
+    /**
+     * @type {import('$lib/types/homePage').HomePageData}
+     */
+    const data = await getPageData(query);
+    return {
+        data
+    };
 };

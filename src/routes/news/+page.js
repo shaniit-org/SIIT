@@ -7,16 +7,16 @@ const query = `
           description,
           coverImage ,
           publishedAt,
-        categories[]->{ title , _id}
+         categories[]->{ title , _id}
 }
 `;
 
 export const load = async () => {
-	/**
-	 * @type {import('$lib/types').News[]} - data
-	 */
-	const data = await getPageData(query);
-	return {
-		data
-	};
+    /**
+     * @type {import('$lib/types').News[]} - data
+     */
+    const data = await getPageData(query);
+    return {
+        data
+    };
 };

@@ -14,9 +14,19 @@ export default {
 			type: 'string'
 		},
 		{
+			title: 'Role',
+			name: 'role',
+			type: 'string'
+		},
+		{
 			title: 'Bio',
 			name: 'bio',
 			type: 'string'
+		},
+		{
+			title: 'IsMember',
+			name: 'isMember',
+			type: 'boolean'
 		},
 		{
 			title: 'Story',
