@@ -20,7 +20,7 @@
 </script>
 
 <SubHero title="Syllable Breaker" />
-<div class="section-container box min-h-screen flex grid-cols-1 md:grid-cols-2 gap-4">
+<div class="section-container box min-h-screen flex flex-col md:flex-row gap-4">
 	<div class="w-full h-full flex flex-col gap-4">
 		<TextArea
 			placeholder="Enter text"
