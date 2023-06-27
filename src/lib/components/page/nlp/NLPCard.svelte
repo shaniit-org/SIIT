@@ -1,14 +1,18 @@
 <script>
 	import { Button } from 'carbon-components-svelte';
 	import { Launch, Tools } from 'carbon-icons-svelte';
+	/**
+	 * @type {import('$lib/types/nlpPage').Tools} - data
+	 */
+	export let data;
+	console.log(data);
 </script>
 
 <div class="bg-white min-h-[160px] flex justify-between flex-col">
 	<div class="flex flex-col p-4">
-		<h2 class="text-xl mb-2">Ubuntu for You</h2>
+		<h2 class="text-xl mb-2">{data.title}</h2>
 		<p class="text-sm">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero exercitationem reprehenderit
-			sed delectus! Delectus provident ipsa et quos eos obcaecati!
+			{data.description}
 		</p>
 	</div>
 	<div class="w-full flex flex-col">
@@ -18,7 +22,9 @@
 			</div>
 			<Button
 				size="lg"
+				href={data.downloadlink}
 				icon={Launch}
+				target="_blank"
 				aria-label="More"
 				iconDescription="More"
 				class="bg-theme-dark "

@@ -39,6 +39,11 @@ export function newDeskStructure(S) {
                 schemaType: 'faqPage'
             }),
             documentItem(S, {
+                title: 'NLP Page',
+                id: 'nlpPage',
+                schemaType: 'nlpPage'
+            }),
+            documentItem(S, {
                 title: 'Keyboard And Font Page',
                 id: 'keyboard_or_font_page',
                 schemaType: 'keyboard_or_font_page'
@@ -46,9 +51,14 @@ export function newDeskStructure(S) {
             S.divider(),
             ...S.documentTypeListItems().filter(
                 (item) =>
-                    !['site', 'homePage', 'faqPage', 'keyboard_or_font_page', 'aboutPage'].includes(
-                        item.getId() ?? ''
-                    )
+                    ![
+                        'site',
+                        'homePage',
+                        'faqPage',
+                        'keyboard_or_font_page',
+                        'nlpPage',
+                        'aboutPage'
+                    ].includes(item.getId() ?? '')
             )
         ]);
 }

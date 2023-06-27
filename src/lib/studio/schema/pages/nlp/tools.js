@@ -1,7 +1,7 @@
 export default {
-    title: 'User Guide',
-    name: 'userguide',
-    type: 'document',
+    title: 'NLP Tool',
+    name: 'nlp_tool',
+    type: 'object',
     fields: [
         {
             name: 'coverImage',
@@ -22,29 +22,9 @@ export default {
             type: 'string'
         },
         {
-            title: 'Publish Date',
-            name: 'publishedAt',
-            type: 'date'
-        },
-        {
             title: 'Download link',
             name: 'downloadlink',
             type: 'url'
-        },
-        {
-            title: 'Categories',
-            name: 'categories',
-            type: 'array',
-            of: [
-                {
-                    type: 'reference',
-                    to: [
-                        {
-                            type: 'category'
-                        }
-                    ]
-                }
-            ]
         }
     ]
 };
