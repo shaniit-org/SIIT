@@ -1,7 +1,7 @@
 import { getPageData } from '$lib/sanity/query';
 
 const query = `
-*[_type =="event"][0...5]{
+*[_type =="event"][0...100]{
           "slug": slug.current,
           title,
           description,
@@ -12,11 +12,11 @@ const query = `
 `;
 
 export const load = async () => {
-	/**
-	 * @type {import('$lib/types').Event[]} - data
-	 */
-	const data = await getPageData(query);
-	return {
-		data
-	};
+    /**
+     * @type {import('$lib/types').Event[]} - data
+     */
+    const data = await getPageData(query);
+    return {
+        data
+    };
 };

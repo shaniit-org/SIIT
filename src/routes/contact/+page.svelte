@@ -3,7 +3,7 @@
 	import { Location, PhoneVoice, Email } from 'carbon-icons-svelte';
 </script>
 
-<SubHero title="Contact us" />
+<SubHero title="Contact Us" />
 <div class="min-h-screen section-container box">
 	<div class="w-full h-full bg-theme-muted aspect-video max-h-[600px]">
 		<iframe

@@ -1,9 +1,19 @@
 <script>
 	import { Tag } from 'carbon-components-svelte';
+
 	/**
     @type string - title 
-*/
+     */
 	export let title;
+	/**
+      @type string - charType 
+     */
+	export let charType;
+
+	/**
+      @type description - description
+     */
+	export let description;
 </script>
 
 <div
@@ -13,11 +23,9 @@
 		<h1 class="text-5xl leading-[1.1] md:text-6xl mb-4">{title}</h1>
 		<div class="flex flex-col gap-2 mt-4">
 			<p class="leading-loose text-sm">
-				ဢႅၼ်းတရၢႆႉၼႆႉ ပဵၼ် ပိူင်သၢင်ႈၵၢၼ်ၸၢၵ်ႈ မူဝ်ႇပၢႆး ဢၼ်လုၵ်ႉတီႈ ၵူႇၵႄႇၶဝ် ၶူင်သၢင်ႈမႃးၼၼ်ႉယဝ်ႉ။
-				ၼၼ်ႉၼႆႉ လႆႈထုၵ်ႇဢဝ်ၸႂ်ႉတီႈ smartphone လႄႈ tablet တင်းၼမ်ယဝ်ႉ။ တူဝ်ယၢင်ႇမၼ်း ၶဝ်ႈပႃး Sony
-				Xperia, Samsung Galaxy လႄႈ Google Nexus One ၸိူဝ်းၼႆႉယဝ်ႉ။
+				{description}
 			</p>
-			<Tag class="max-w-max">IBM Cloud</Tag>
+			<Tag class="max-w-max">{charType}</Tag>
 		</div>
 	</div>
 </div>

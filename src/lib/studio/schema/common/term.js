@@ -32,6 +32,11 @@ export default {
             type: 'string'
         },
         {
+            title: 'Type',
+            name: 'type',
+            type: 'string'
+        },
+        {
             title: 'Slug',
             name: 'slug',
             type: 'slug',
