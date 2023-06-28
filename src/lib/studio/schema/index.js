@@ -6,10 +6,10 @@ import aboutPage from './pages/about/';
 import nlpPage from './pages/nlp';
 
 export const schemaTypes = [
-    ...common,
-    ...homePage,
-    faqPage,
-    keyboard_and_fonts,
-    ...aboutPage,
-    ...nlpPage
+	...common,
+	...homePage,
+	faqPage,
+	keyboard_and_fonts,
+	...aboutPage,
+	...nlpPage
 ];
