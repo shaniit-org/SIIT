@@ -17,7 +17,8 @@ export default defineConfig({
 			structure: newDeskStructure
 		}),
 		visionTool(),
-		unsplashImageAsset()
+		unsplashImageAsset(),
+		codeInput()
 	],
 	schema: {
 		types: schemaTypes

@@ -6,8 +6,11 @@ import List from './List.svelte';
 import Link from './Link.svelte';
 import Strong from './Strong.svelte';
 import Em from './Em.svelte';
+import CodeInput from './CodeInput.svelte';
+
 export const components = {
 	types: {
+		code: CodeInput,
 		image: Image
 	},
 	marks: {

@@ -6,6 +6,14 @@ export default defineType({
 	type: 'array',
 	of: [
 		defineArrayMember({
+			type: 'code',
+			title: 'Code',
+			options: {
+				theme: 'github',
+				darkTheme: 'terminal'
+			}
+		}),
+		defineArrayMember({
 			title: 'Image',
 			type: 'image',
 			fields: [
