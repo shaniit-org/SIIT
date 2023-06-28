@@ -3,7 +3,6 @@
 	import {
 		Accordion,
 		Link,
-		Search,
 		AccordionItem,
 		UnorderedList,
 		ListItem
@@ -16,9 +15,6 @@
 
 <SubHero title="FAQs" />
 <div class="min-h-screen section-container box">
-	<div class="mb-12">
-		<Search placeholder="Search Faqs" />
-	</div>
 	<Accordion>
 		{#each data.data.faqs as item}
 			<AccordionItem>

@@ -11,11 +11,11 @@ const query = `*[_type =="faqPage"][0]{
    }
 }`;
 export const load = async () => {
-	/**
-	 * @type {import('$lib/types/faqPage').FAQList}
-	 */
-	const data = await getPageData(query);
-	return {
-		data
-	};
+    /**
+     * @type {import('$lib/types/faqPage').FAQList}
+     */
+    const data = await getPageData(query);
+    return {
+        data
+    };
 };

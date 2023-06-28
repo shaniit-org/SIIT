@@ -12,11 +12,11 @@ const query = `
 `;
 
 export const load = async () => {
-	/**
-	 * @type {import('$lib/types').UserGuide[]} - data
-	 */
-	const data = await getPageData(query);
-	return {
-		data
-	};
+    /**
+     * @type {import('$lib/types').UserGuide[]} - data
+     */
+    const data = await getPageData(query);
+    return {
+        data
+    };
 };
