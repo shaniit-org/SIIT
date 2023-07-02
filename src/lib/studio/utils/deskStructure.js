@@ -48,6 +48,16 @@ export function newDeskStructure(S) {
                 id: 'keyboard_or_font_page',
                 schemaType: 'keyboard_or_font_page'
             }),
+            documentItem(S, {
+                title: 'News Page',
+                id: 'newsPage',
+                schemaType: 'newsPage'
+            }),
+            documentItem(S, {
+                title: 'Events Page',
+                id: 'eventsPage',
+                schemaType: 'eventsPage'
+            }),
             S.divider(),
             ...S.documentTypeListItems().filter(
                 (item) =>
@@ -57,7 +67,9 @@ export function newDeskStructure(S) {
                         'faqPage',
                         'keyboard_or_font_page',
                         'nlpPage',
-                        'aboutPage'
+                        'aboutPage',
+                        'newsPage',
+                        'eventsPage'
                     ].includes(item.getId() ?? '')
             )
         ]);

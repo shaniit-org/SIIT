@@ -12,5 +12,5 @@ export const pageQuery = (query) => query;
  * @returns {Promise<T>} - Sanity document
  */
 export const getPageData = async (query, params) => {
-	return await sanityClient.fetch(pageQuery(query), params ? params : {});
+    return await sanityClient.fetch(pageQuery(query), params ? params : {});
 };

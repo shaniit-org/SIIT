@@ -6,5 +6,6 @@
 </script>
 
 <Container>
+	<slot name="seo" />
 	<slot />
 </Container>

@@ -1,7 +1,6 @@
 export interface Category {
-src / lib / studio / schema / pages / about / mission.js
-title: string;
-_id: string;
+    title: string;
+    _id: string;
 }
 export interface RelatedArticle {
     title: string;

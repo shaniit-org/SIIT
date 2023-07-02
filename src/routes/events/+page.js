@@ -1,14 +1,17 @@
 import { getPageData } from '$lib/sanity/query';
 
 const query = `
-*[_type =="event"][0...100]{
-          "slug": slug.current,
-          title,
-          description,
-          coverImage ,
-          publishedAt,
-        categories[]->{ title , _id}
-}
+  *[_id == 'eventsPage'][0]{
+    ...,
+    'events':*[_type =="event"][0...100]{
+              "slug": slug.current,
+                  title,
+                  description,
+                  coverImage ,
+                  publishedAt,
+                  categories[]->{ title , _id}
+          }
+  }
 `;
 
 export const load = async () => {

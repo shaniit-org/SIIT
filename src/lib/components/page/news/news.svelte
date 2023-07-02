@@ -5,12 +5,12 @@
 	import { Search, Select, SelectItem } from 'carbon-components-svelte';
 
 	/**
-	 * @type {{data:import('../../../types').News[]}} - data
+	 * @type {import('../../../types').News[]} - data
 	 */
-	export let data = { data: [] };
+	export let data = [];
 	let input = '';
 	let selected = 'Latest';
-	$: res = sortByDate(searchByTitle(data.data, input), selected);
+	$: res = sortByDate(searchByTitle(data, input), selected);
 </script>
 
 <div class="min-h-screen section-container box">
