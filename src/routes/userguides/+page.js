@@ -1,19 +1,22 @@
 import { getPageData } from '$lib/sanity/query';
 
 const query = `
-*[_type =="userguide"]{
+  *[_id == 'userGuidePage'][0]{
+    ...,
+          'userguides':  *[_type =="userguide"]{
            downloadlink,
           title,
           description,
           coverImage ,
           publishedAt,
         categories[]->{ title , _id}
-}
+  }
+  }
 `;
 
 export const load = async () => {
     /**
-     * @type {import('$lib/types').UserGuide[]} - data
+     * @type {import('../../lib/types/userGuidesPage').UserGuidesPage} - data
      */
     const data = await getPageData(query);
     return {

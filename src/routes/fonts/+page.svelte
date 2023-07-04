@@ -1,4 +1,5 @@
 <script>
+	import Meta from '$lib/components/common/Meta.svelte';
 	import Mac from '$lib/components/icons/mac.svelte';
 	import Android from '$lib/components/icons/android.svelte';
 	import Windows from '$lib/components/icons/windows.svelte';
@@ -34,6 +35,7 @@
 	};
 </script>
 
+<Meta data={data.data.seo} />
 <SubHero title="Fonts & Keyboards" />
 <div class="min-h-screen section-container box">
 	<div class="mb-6">

@@ -58,6 +58,11 @@ export function newDeskStructure(S) {
                 id: 'eventsPage',
                 schemaType: 'eventsPage'
             }),
+            documentItem(S, {
+                title: 'UserGuide Page',
+                id: 'userGuidePage',
+                schemaType: 'userGuidePage'
+            }),
             S.divider(),
             ...S.documentTypeListItems().filter(
                 (item) =>
@@ -69,7 +74,8 @@ export function newDeskStructure(S) {
                         'nlpPage',
                         'aboutPage',
                         'newsPage',
-                        'eventsPage'
+                        'eventsPage',
+                        'userGuidePage'
                     ].includes(item.getId() ?? '')
             )
         ]);

@@ -6,8 +6,11 @@ export interface KeyboardOrFont {
     downloadlink: string;
 }
 
-type OS = 'mac' | 'windows' | 'linux' | 'ios' | 'android' | 'title';
+type OS = 'mac' | 'windows' | 'linux' | 'ios' | 'android';
 
 export type KeyboardOrFontList = Partial<{
-    [key in OS]: KeyboardOrFont[] | string;
+    linux: KeyboardOrFont[] | string;
+    windows: KeyboardOrFont[] | string;
+    ios: KeyboardOrFont[] | string;
+    android: KeyboardOrFont[] | string;
 }>;

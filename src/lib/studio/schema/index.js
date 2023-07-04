@@ -6,6 +6,7 @@ import aboutPage from './pages/about/';
 import nlpPage from './pages/nlp';
 import newsPage from './pages/news/';
 import eventsPage from './pages/events';
+import userGuidePage from './pages/userguides/';
 
 export const schemaTypes = [
     ...common,
@@ -15,5 +16,6 @@ export const schemaTypes = [
     eventsPage,
     newsPage,
     faqPage,
-    keyboard_and_fonts
+    keyboard_and_fonts,
+    userGuidePage
 ];

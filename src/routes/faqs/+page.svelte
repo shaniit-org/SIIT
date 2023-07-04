@@ -7,16 +7,19 @@
 		UnorderedList,
 		ListItem
 	} from 'carbon-components-svelte';
+	import Meta from '$lib/components/common/Meta.svelte';
 	/**
-	 * @type {{ data : import('../../lib/types/faqPage').FAQList}} - data
+	 * @type {{ data : import('../../lib/types/faqPage').FaqPageData }} - data
 	 */
-	export let data = { data: [] };
+	export let data;
+	const { seo, faqs } = data.data;
 </script>
 
+<Meta data={seo} />
 <SubHero title="FAQs" />
 <div class="min-h-screen section-container box">
 	<Accordion>
-		{#each data.data.faqs as item}
+		{#each faqs as item}
 			<AccordionItem>
 				<svelte:fragment slot="title">
 					<h3 class="text-lg my-2">{item.category}</h3>

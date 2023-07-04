@@ -1,12 +1,13 @@
 export interface FAQ {
-	qanda: {
-		question: string;
-		answer: PortableText;
-	}[];
-	category: string;
+    qanda: {
+        question: string;
+        answer: PortableText;
+    }[];
+    category: string;
 }
 
-export interface FAQList {
-	category: string;
-	faqs: FAQ[];
+export interface FaqPageData {
+    category: string;
+    faqs: FAQ[];
+    seo: BaseMetaData;
 }

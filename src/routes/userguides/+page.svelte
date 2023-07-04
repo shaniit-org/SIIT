@@ -3,15 +3,18 @@
 	import UserGuideCard from '$lib/components/common/UserGuideCard.svelte';
 	import { Search } from 'carbon-components-svelte';
 	import { searchByTitle } from '$lib/utils/search-by-title';
+	import Meta from '$lib/components/common/Meta.svelte';
 
 	/**
-	 * @type {{data:import('../../lib/types').UserGuide[]}} - data
+	 * @type {{ data:import('../../lib/types/userGuidesPage').UserGuidesPage }} - data
 	 */
-	export let data = { data: [] };
+	export let data;
+	const { userguides, seo } = data.data;
 	let keyword = '';
-	$: result = searchByTitle(data.data, keyword);
+	$: result = searchByTitle(userguides, keyword);
 </script>
 
+<Meta data={seo} />
 <SubHero title="User Guides" />
 <div class="min-h-screen section-container box">
 	<Search bind:value={keyword} placeholder="Search userguides..." />

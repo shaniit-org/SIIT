@@ -11,7 +11,6 @@ const query = `
               publishedAt,
              categories[]->{ title , _id}
     }
-
   }
 `;
 
