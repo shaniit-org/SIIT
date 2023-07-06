@@ -1,12 +1,17 @@
 <script>
+	import { urlFor } from '$lib/sanity/image/config';
+	let defaultMeta = {
+		title: 'SIIT - Shan Institute of Information Technology',
+		description: 'Shan Institute of Information Technology',
+		ogImage: null
+	};
 	/**
 	 * @type BaseMetaData - data
 	 */
-	import { urlFor } from '$lib/sanity/image/config';
-	export let data;
+	export let data = defaultMeta;
 	const { title, description, ogImage } = data;
 	const domain = import.meta.env.VITE_PUBLIC_DOMAIN;
-	const image = urlFor(ogImage).width(1200).height(628).url();
+	const image = ogImage && urlFor(ogImage).width(1200).height(628).url();
 </script>
 
 <svelte:head>

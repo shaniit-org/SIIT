@@ -1,15 +1,17 @@
 <script>
-	import { CopyButton, TextArea, Button, Tile } from 'carbon-components-svelte';
+	import { CopyButton, TextArea, Button, Tile, TextInput } from 'carbon-components-svelte';
 	import SubHero from '$lib/components/common/SubHero.svelte';
+	import Meta from '$lib/components/common/Meta.svelte';
 	import { syllable_breaker } from '../../../lib/utils/syllable_breaker';
 
 	let input = '';
+	let breaker = '|';
 
 	/** @type string */
 	let output = '';
 	let is_breaked = false;
 	function break_word() {
-		output = syllable_breaker(input);
+		output = syllable_breaker(input, breaker);
 		is_breaked = true;
 	}
 	function clear() {
@@ -19,9 +21,11 @@
 	}
 </script>
 
+<Meta />
 <SubHero title="Syllable Breaker" />
 <div class="section-container box min-h-screen flex flex-col md:flex-row gap-4">
 	<div class="w-full h-full flex flex-col gap-4">
+		<TextInput labelText={'Break word '} bind:value={breaker} placeholder="Break word" />
 		<TextArea
 			placeholder="Enter text"
 			type={'multi'}
