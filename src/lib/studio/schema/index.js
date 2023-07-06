@@ -7,15 +7,19 @@ import nlpPage from './pages/nlp';
 import newsPage from './pages/news/';
 import eventsPage from './pages/events';
 import userGuidePage from './pages/userguides/';
+import termsPage from './pages/terms';
+import contactPage from './pages/contact';
 
 export const schemaTypes = [
-    ...common,
-    ...homePage,
-    ...aboutPage,
-    ...nlpPage,
-    eventsPage,
-    newsPage,
-    faqPage,
-    keyboard_and_fonts,
-    userGuidePage
+	...common,
+	...homePage,
+	...aboutPage,
+	...nlpPage,
+	eventsPage,
+	contactPage,
+	newsPage,
+	faqPage,
+	keyboard_and_fonts,
+	userGuidePage,
+	termsPage
 ];

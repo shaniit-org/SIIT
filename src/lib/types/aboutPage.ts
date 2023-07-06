@@ -1,4 +1,3 @@
-import type { RowBanner } from '.';
 import type { Author } from '.';
 
 export interface AboutMission {
@@ -14,7 +13,7 @@ export interface AboutBanner {
 	description: string;
 }
 
-export type AboutSection = AboutBanner | RowBanner | AboutMission;
+export type AboutSection = AboutBanner | AboutBanner | AboutMission;
 
 export type AboutPageData = {
 	seo: BaseMetaData;

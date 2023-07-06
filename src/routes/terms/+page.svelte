@@ -1,11 +1,13 @@
 <script>
 	import SubHero from '$lib/components/common/SubHero.svelte';
+	import Meta from '$lib/components/common/Meta.svelte';
 	/**
-	 * @type {{data:import('../../lib/types/termPage').TermGroup,char:string[]}}
+	 * @type {{ data:import('../../lib/types/termPage').TermGroup,char:string[],seo:BaseMetaData }} - data
 	 */
 	export let data;
 </script>
 
+<Meta data={data.seo} />
 <div class="min-h-screen">
 	<SubHero title="Terms" />
 	<div class="section-container box">

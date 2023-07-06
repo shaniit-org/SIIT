@@ -1,9 +1,15 @@
 <script>
 	import SubHero from '$lib/components/common/SubHero.svelte';
 	import { Location, PhoneVoice, Email } from 'carbon-icons-svelte';
+	import Meta from '$lib/components/common/Meta.svelte';
+	/**
+	 * @type {{data:import('$lib/types/contactPage').ContactPageData}}
+	 */
+	export let data;
 </script>
 
-<SubHero title="Contact Us" />
+<Meta data={data.data.seo} />
+<SubHero title={data.data.title} />
 <div class="min-h-screen section-container box">
 	<div class="w-full h-full bg-theme-muted aspect-video max-h-[600px]">
 		<iframe

@@ -1,13 +1,15 @@
 <script>
 	import NlpArticle from '$lib/components/page/nlp/NLPArticle.svelte';
+	import Meta from '$lib/components/common/Meta.svelte';
 	import NlpCard from '$lib/components/page/nlp/NLPCard.svelte';
 	import SubHero from '$lib/components/common/SubHero.svelte';
 	/**
-	 * @type {{data:import('$lib/types/nlpPage').NLPPage}} - data
+	 * @type {{data:import('../../lib/types/nlpPage').NLPPage}} - data
 	 */
-	export let data = { data: {} };
+	export let data;
 </script>
 
+<Meta data={data.data.seo} />
 <SubHero title="Natural language processing" />
 <div class="section-container box min-h-screen">
 	<div class="flex flex-col">

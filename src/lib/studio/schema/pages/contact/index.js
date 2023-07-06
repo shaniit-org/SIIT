@@ -1,7 +1,7 @@
 export default {
-	id: 'keyboardAndFont',
-	title: 'Keyboard & Font Page',
-	name: 'keyboard_or_font_page',
+	id: 'contactPage',
+	title: 'Contact Page',
+	name: 'contactPage',
 	type: 'document',
 	fields: [
 		{
@@ -24,7 +24,7 @@ export default {
 		 * @param {import('sanity').PreviewProps} props
 		 */
 		prepare({ title, media, subtitle }) {
-			return { title: title || 'Keyboard And Font Page', subtitle: subtitle, media };
+			return { title: title || 'Contact Page', subtitle: subtitle, media };
 		}
 	}
 };

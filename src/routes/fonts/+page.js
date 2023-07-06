@@ -10,11 +10,11 @@ const query = `*[ _id=='keyboard_or_font_page'][0] {
 }`;
 
 export const load = async () => {
-    /**
-     * @type {import('../../lib/types/keyboard_and_font').KeyboardOrFontList} - data
-     */
-    const data = await getPageData(query);
-    return {
-        data
-    };
+	/**
+	 * @type {import('../../lib/types/keyboard_and_font').KeyboardOrFontList} - data
+	 */
+	const data = await getPageData(query);
+	return {
+		data
+	};
 };
