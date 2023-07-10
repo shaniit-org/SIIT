@@ -14,7 +14,7 @@
 	export let loading = 'lazy';
 	export let alt = '';
 	export let maxWidth = 600;
-	let imageProps = getImageProps({ image, maxWidth });
+	$: imageProps = getImageProps({ image, maxWidth });
 </script>
 
 <img
