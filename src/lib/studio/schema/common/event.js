@@ -40,6 +40,22 @@ export default {
 			}
 		},
 		{
+			title: 'Categories',
+			name: 'categories',
+			type: 'array',
+			of: [
+				{
+					type: 'reference',
+					to: [
+						{
+							type: 'category'
+						}
+					]
+				}
+			]
+		},
+
+		{
 			title: 'Body',
 			name: 'body',
 			type: 'blockContent'

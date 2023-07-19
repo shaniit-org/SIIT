@@ -9,9 +9,10 @@
 	 * @type BaseMetaData - data
 	 */
 	export let data = defaultMeta;
-	const { title, description, ogImage } = data;
-	const domain = import.meta.env.VITE_PUBLIC_DOMAIN;
-	const image = ogImage && urlFor(ogImage).width(1200).height(628).url();
+	$: ({ title, description, ogImage } = data);
+	$: domain = import.meta.env.VITE_PUBLIC_DOMAIN;
+	$: image = ogImage && urlFor(ogImage).width(1200).height(628).url();
+	console.log(image);
 </script>
 
 <svelte:head>

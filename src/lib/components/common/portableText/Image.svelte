@@ -7,4 +7,9 @@
 	const image = portableText.value;
 </script>
 
-<SanityImage className="w-full my-6 aspect-video  mx-auto" {image} alt={image.alt} maxWidth={800} />
+<SanityImage
+	className="w-full my-6 max-h-max  mx-auto object-contain"
+	{image}
+	alt={image.alt}
+	maxWidth={1000}
+/>

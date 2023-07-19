@@ -8,6 +8,7 @@ const query = `*[_type =="news" && slug.current==$slug][0]{
    name,
    profile
  },
+  "readingTime": round(length(pt::text(body)) / 5 / 180 ),
   "related": *[_type == "news" && _id != ^._id && count(categories[@._ref in ^.^.categories[]._ref]) > 0] | order(publishedAt desc, _createdAt desc) [0..2] {
      title,
      _id,

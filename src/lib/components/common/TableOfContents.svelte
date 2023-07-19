@@ -5,16 +5,18 @@
 	 * @type {Array<{title:string; slug:string; _id:string}> } ;
 	 */
 	export let data = [];
+	export let title = 'Related ';
+	export let slug_prefix = '';
 </script>
 
 <div class="text-md cursor-pointer sticky top-20 flex gap-2 flex-col">
-	<span class="text-lg">Related Articles</span>
 	{#if data.length > 0}
+		<span class="text-lg">{title}</span>
 		<ul class="flex flex-col">
 			{#each data as item}
 				<li class="flex gap-2 group items-center gap-1">
 					<a
-						href="/news/{item.slug}"
+						href={`${slug_prefix}/${item.slug}`}
 						class="flex items-center gap-2 text-theme-dark hover:text-blue-500 hover:underline"
 						>{item.title}</a
 					>
