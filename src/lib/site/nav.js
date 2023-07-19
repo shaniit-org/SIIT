@@ -42,5 +42,9 @@ export const navs = [
     {
         name: 'Contact',
         path: '/contact'
+    },
+    {
+        name: 'Donate',
+        path: '/donate'
     }
 ];

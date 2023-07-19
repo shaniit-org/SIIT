@@ -9,17 +9,18 @@ import eventsPage from './pages/events';
 import userGuidePage from './pages/userguides/';
 import termsPage from './pages/terms';
 import contactPage from './pages/contact';
-
+import donatePage from './pages/donate';
 export const schemaTypes = [
-	...common,
-	...homePage,
-	...aboutPage,
-	...nlpPage,
-	eventsPage,
-	contactPage,
-	newsPage,
-	faqPage,
-	keyboard_and_fonts,
-	userGuidePage,
-	termsPage
+    ...common,
+    ...homePage,
+    ...aboutPage,
+    ...nlpPage,
+    eventsPage,
+    contactPage,
+    newsPage,
+    faqPage,
+    keyboard_and_fonts,
+    userGuidePage,
+    termsPage,
+    donatePage
 ];
