@@ -8,7 +8,6 @@
 	 * @type {{data:import('../../lib/types/donatePage').DonatePageData;}}
 	 */
 	export let data;
-	console.log(data);
 </script>
 
 <Meta data={data.data.seo} />

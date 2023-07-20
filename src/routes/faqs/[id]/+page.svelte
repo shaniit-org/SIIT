@@ -1,10 +1,7 @@
 <script>
 	import PortableText from '$lib/components/common/portableText/PortableText.svelte';
 	import FaqBanner from '$lib/components/common/FaqBanner.svelte';
-	/**
-	 * @type {{ data : import('../../../lib/types/faqPage').FAQ}} - data
-	 */
-	export let data = { data: {} };
+	export let data = {};
 </script>
 
 <div class="min-h-screen">

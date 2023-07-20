@@ -16,6 +16,7 @@ export interface Author {
 }
 
 export interface Article {
+	seo: BaseMetaData;
 	title: string;
 	description: string;
 	coverImage: SanityImage;
@@ -33,11 +34,10 @@ export interface UserGuide extends Article {
 export interface News extends Article {}
 
 export interface NewsDetail extends News {
-	authors: Author[];
 	readingTime: number;
 	categories: Category[];
 	body: PortableText;
-	related?: RelatedArticle[];
+	related?: News[];
 }
 
 export interface Event extends Article {}

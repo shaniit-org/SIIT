@@ -5,6 +5,7 @@ import {
 	SanityReference
 } from '@sanity/image-url/lib/types/types';
 import type { InputValue } from '@portabletext/svelte/ptTypes';
+import type { decl } from 'postcss';
 
 declare global {
 	type PortableText = InputValue;
@@ -42,5 +43,6 @@ declare global {
 		// interface Platform {}
 	}
 }
+declare module 'svelte-share-buttons-component' {}
 
 export {};
