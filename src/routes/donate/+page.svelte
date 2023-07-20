@@ -25,13 +25,13 @@
 					className="w-full h-full "
 				/>
 			</div>
-			<div class="w-[80%] mx-auto">
+			<div class="w-full md:w-[80%] mx-auto">
 				<PortableText value={data.data.content} />
 			</div>
 		</div>
 		<div class="flex flex-col gap-4 my-12">
-			<h1 class="text-4xl font-bold text-center mb-4">You can donate us in these accounts</h1>
-			<div class="grid grid-cols-2 lg:grid-cols-3 gap-12">
+			<h3 class="text-xl md:text-4xl text-center mb-4">{data.data.payment_methods_description}</h3>
+			<div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-12">
 				{#each data.data.payment_methods as method}
 					<DonationMethod data={method} />
 				{/each}
