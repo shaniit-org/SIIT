@@ -17,7 +17,7 @@
 				{data.description}
 			</p>
 			<Link
-				src={`/news/${data.slug}`}
+				href={`/news/${data.slug}`}
 				icon={LinkIcon}
 				class="cursor-pointer text-theme-dark underline ">Donate Us</Link
 			>

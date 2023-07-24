@@ -1,10 +1,15 @@
 <script>
 	import SanityImage from '$lib/sanity/image/SanityImage.svelte';
-	import { ClickableTile, ImageLoader } from 'carbon-components-svelte';
+	import { ClickableTile } from 'carbon-components-svelte';
+	/**
+	 * @type {import('../../../types/termPage').Term}
+	 */
+	export let term;
 	/**
 	 * @type {import('../../../types/homePage').HomePageHero} - data
 	 */
 	export let data;
+	console.log(term);
 </script>
 
 <div
@@ -17,17 +22,18 @@
 		loading="eager"
 		className="h-full w-full object-cover absolute z-[-1]"
 	/>
-	<ClickableTile class=" max-w-[90%] md:max-w-[400px] h-auto space-y-2 mt-auto row-start-2">
-		<div class="p-4">
+	<ClickableTile
+		href="/terms/{term.slug.current}"
+		class=" max-w-[90%] md:max-w-[400px] h-auto space-y-2 mt-auto row-start-2"
+	>
+		<div class="p-4 min-w-[300px]">
 			<div class="flex items-center justify-between">
 				<span>Term Of The Day</span>
 				<span>Jan 8, 2023</span>
 			</div>
-			<h2 class="text-2xl lg:mb-4">App</h2>
+			<h2 class="text-2xl lg:mb-4 mt-3">{term.title}</h2>
 			<p class="text-sm leading-loose mt-2">
-				မိူဝ်ႈၼႆႉ ပီ 2023 ၸၼ်ႇဝႃႇရီႇ 4 ဝၼ်း - လုၵ်ႉတီႈ Wikimedia Foundation သေ လႆပိုတ်ႇတၢင်ႇပၼ်
-				ဝီႇၶီႇပပ်ႉတႆး ႁဝ်းၶႃႈယဝ်ႉ။ ဝီႇၶီႇပပ်ႉဢၼ်ဝႃႈၼႆႉ မၼ်းပဵၼ် တီႈဢဝ် ပၵ်းလၵ်းသုတ်ႇ ပပ်ႉၵၢၼ်ႁဵၼ်း
-				ဢၼ်လွတ်ႈလႅဝ်းထၢင်ႇႁၢင်ႈၼၼ်ႉ တ
+				{term.description}
 			</p>
 		</div>
 	</ClickableTile>

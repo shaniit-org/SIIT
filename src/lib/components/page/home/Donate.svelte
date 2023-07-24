@@ -5,6 +5,7 @@
 	 * @type {import('../../../types/homePage').HomePageDonate} - data
 	 */
 	export let data;
+	console.log(data);
 </script>
 
 <Tile class="bg-theme-secondary">
@@ -16,7 +17,7 @@
 			<p class="mb-4 text-sm lg:text-xl lg:leading-[2]">
 				{data.description}
 			</p>
-			<Link src={data.link.href} icon={LinkIcon} class="cursor-pointer text-theme-dark underline "
+			<Link href={data.link.url} icon={LinkIcon} class="cursor-pointer text-theme-dark underline "
 				>{data.link.title}</Link
 			>
 		</div>

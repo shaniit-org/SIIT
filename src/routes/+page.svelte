@@ -11,14 +11,15 @@
 	export let data;
 	const { events, news } = data.data;
 	const { homePage } = data.data;
-	const { sections, seo } = homePage;
+	const { sections, seo, term } = homePage;
+	console.log(term);
 </script>
 
 <Meta data={seo} />
 <div>
 	{#each sections as sec}
 		{#if sec._type === 'Hero'}
-			<Hero data={sec} />
+			<Hero data={sec} {term} />
 		{/if}
 		{#if sec._type === 'Highlight'}
 			<HighLight data={sec} />

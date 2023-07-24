@@ -2,10 +2,16 @@ import { getPageData } from '$lib/sanity/query';
 
 const query = `{
   "homePage" : *[_id == 'homePage'][0]{
-    
        ...,
+        'term': *[_type == 'term'][0]{title,description,slug},
        sections[] {
       	...,
+        _type == 'Hero' => @->{
+            _type,
+            _key,
+            heroImage,
+            title,
+        },
         _type == 'Highlight' => @->{
           "slug":slug.current,
           title,
