@@ -12,7 +12,6 @@
 	const { events, news } = data.data;
 	const { homePage } = data.data;
 	const { sections, seo, term } = homePage;
-	console.log(term);
 </script>
 
 <Meta data={seo} />
