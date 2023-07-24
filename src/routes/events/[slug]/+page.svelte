@@ -4,11 +4,18 @@
 	import Meta from '$lib/components/common/Meta.svelte';
 	import PortableText from '$lib/components/common/portableText/PortableText.svelte';
 	import RelatedArticle from '$lib/components/common/RelatedArticle.svelte';
+	import { LinkedIn, Facebook, Twitter } from 'svelte-share-buttons-component';
+	import { onMount } from 'svelte';
 	/**
 	 * @type {{ data : import('../../../lib/types').EventDetail}} - data
 	 */
 	export let data;
 	$: ({ data: event } = data);
+	/** @type string */
+	let url;
+	onMount(() => {
+		url = window.location.href;
+	});
 </script>
 
 <Meta data={event.seo} />
@@ -17,8 +24,6 @@
 		title={event.title}
 		publishedAt={event.publishedAt}
 		description={event.description}
-		authors={event.authors}
-		readingTime={event.readingTime}
 	/>
 	<div
 		class="relative p-4 md:p-12 grid grid-cols-1 lg:grid-cols-[1fr_300px] mx-auto section-container gap-4 md:gap-8"
@@ -26,8 +31,25 @@
 		<div class="md:col-start-2 min-w-[200px] scroll-pt-20">
 			<TableOfContents data={event.body} />
 		</div>
-		<div class="md:col-start-1 md:row-start-1">
+		<div class="flex flex-col md:col-start-1 md:row-start-1">
 			<PortableText value={event.body} />
+			<div class="flex gap-2 mt-4 ml-auto">
+				<Twitter
+					class="text-base bg-transparent flex items-center max-w-max"
+					text={event.title}
+					{url}
+				/>
+				<Facebook
+					class="text-base bg-transparent flex items-center max-w-max"
+					text={event.title}
+					{url}
+				/>
+				<LinkedIn
+					class="text-base bg-transparent flex items-center max-w-max"
+					text={event.title}
+					{url}
+				/>
+			</div>
 		</div>
 	</div>
 	<RelatedArticle data={event.related} />

@@ -1,6 +1,6 @@
 <script>
 	import NewsCard from '$lib/components/common/NewsCard.svelte';
-	/** @type {import('../../types').News[]} */
+	/** @type {import('../../types').RelatedArticle[] | undefined} */
 	export let data;
 </script>
 

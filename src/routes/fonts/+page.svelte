@@ -21,7 +21,7 @@
 	 * @param {import('../../lib/types/keyboard_and_font').KeyboardOrFont[]} data
 	 */
 	$: filterByType = (
-		/**@type import('../../lib/types/keyboard_and_font').KeyboardOrFont[] | undefined */ data
+		/**@type import('../../lib/types/keyboard_and_font').KeyboardOrFont[] | undefined | string*/ data
 	) => {
 		if (!data) return [];
 		if (filter === 0) {

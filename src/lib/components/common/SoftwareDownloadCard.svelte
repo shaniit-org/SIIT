@@ -21,10 +21,10 @@
 			/>
 		</div>
 	</div>
-	<div class="flex flex-col p-4">
-		<h2 class="text-lg mb-2 pr-4">{data.title}</h2>
-		<div class="mb-2">
-			<Tag type="blue" size="sm" class="m-0">{data.type}</Tag>
+	<div class="flex flex-col p-6">
+		<h2 class="text-xl mb-4 pr-2">{data.title}</h2>
+		<div class="mb-4">
+			<Tag type="blue" class="m-0">{data.type}</Tag>
 		</div>
 		<p class="text-sm">
 			{data.description}

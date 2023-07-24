@@ -1,6 +1,5 @@
 <script>
 	import moment from 'moment';
-	import SanityImage from '$lib/sanity/image/SanityImage.svelte';
 	/**
 	 *  @type {string} - title
 	 */
@@ -10,17 +9,9 @@
 	 */
 	export let description = '';
 	/**
-	 *  @type {import("../../types").Author[] | undefined} - authors
-	 */
-	export let authors = [];
-	/**
 	 *  @type {string} - _createdat
 	 */
 	export let publishedAt = '';
-	/**
-	 *  @type {number} - readintTime
-	 */
-	export let readingTime;
 </script>
 
 <div

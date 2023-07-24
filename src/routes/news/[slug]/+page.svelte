@@ -1,9 +1,9 @@
 <script>
 	import { onMount } from 'svelte';
 	import { LinkedIn, Facebook, Twitter } from 'svelte-share-buttons-component';
+	import TableOfContents from '$lib/components/common/TableOfContents.svelte';
 	import PortableText from '$lib/components/common/portableText/PortableText.svelte';
 	import ArticleBanner from '$lib/components/common/ArticleBanner.svelte';
-	import TableOfContents from '$lib/components/common/TableOfContents.svelte';
 	import RelatedArticle from '$lib/components/common/RelatedArticle.svelte';
 	import Meta from '$lib/components/common/Meta.svelte';
 	/**

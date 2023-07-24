@@ -36,6 +36,7 @@ export interface News extends Article {}
 export interface NewsDetail extends News {
 	readingTime: number;
 	categories: Category[];
+	authors: Author[];
 	body: PortableText;
 	related?: News[];
 }
