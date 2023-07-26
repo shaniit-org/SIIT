@@ -19,7 +19,7 @@
 			<Link
 				href={`/news/${data.slug}`}
 				icon={LinkIcon}
-				class="cursor-pointer text-theme-dark underline ">Donate Us</Link
+				class="cursor-pointer text-theme-dark underline ">Read More</Link
 			>
 		</div>
 	</div>
