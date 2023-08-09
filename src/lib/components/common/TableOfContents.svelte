@@ -16,7 +16,7 @@
 
 {#if outline.length > 0}
 	<div
-		class="text-md cursor-pointer sticky top-20 flex gap-2 flex-col min-w-[300px] border p-4 border-solid border-theme-muted"
+		class="text-md cursor-pointer sticky top-20 flex gap-2 flex-col lg:min-w-[300px] border p-4 border-solid border-theme-muted"
 	>
 		<button on:click={toggle_toc} class="text-left outline-none border-none hover:text-blue-500">
 			<span class="text-lg">Table of Contents</span>

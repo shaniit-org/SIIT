@@ -31,7 +31,7 @@
 		<div class="md:col-start-2 min-w-[200px] lg:max-w-[300px] md:max-w-[200px] scroll-pt-20">
 			<TableOfContents data={news.body} />
 		</div>
-		<div class="md:col-start-1 md:row-start-1 flex flex-col">
+		<div class="md:col-start-1 md:row-start-1 prose md:prose-lg lg:prose-xl">
 			<PortableText value={news.body} />
 
 			<div class="flex gap-2 mt-4 ml-auto">
