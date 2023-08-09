@@ -24,10 +24,10 @@
 			<HighLight data={sec} />
 		{/if}
 		{#if sec._type === 'News'}
-			<News data={news} />
+			<News data={news} section={sec} />
 		{/if}
 		{#if sec._type === 'Events'}
-			<Events data={events} />
+			<Events data={events} section={sec} />
 		{/if}
 		{#if sec._type === 'Donate'}
 			<Donate data={sec} />

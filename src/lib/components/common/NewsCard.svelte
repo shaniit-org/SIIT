@@ -9,10 +9,10 @@
 
 <a href={`/news/${data.slug}`} class="cursor-pointer hover:bg-theme-muted bg-white flex flex-col">
 	<SanityImage
-		maxWidth={350}
+		maxWidth={450}
 		image={data.coverImage}
 		alt={data.title}
-		className="aspect-video w-full"
+		className=" aspect-video w-full object-cover"
 	/>
 	<div class="flex-col justify-between p-4 flex gap-6">
 		<h3 class="text-xl">

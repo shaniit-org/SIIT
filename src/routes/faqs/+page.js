@@ -1,4 +1,5 @@
 import { getPageData } from '$lib/sanity/query';
+import { error } from '@sveltejs/kit';
 
 const query = `*[_type =="faqPage"][0]{
   ...,
@@ -12,11 +13,12 @@ const query = `*[_type =="faqPage"][0]{
 }
 `;
 export const load = async () => {
-    /**
-     * @type {import('$lib/types/faqPage').FaqPageData}
-     */
-    const data = await getPageData(query);
-    return {
-        data
-    };
+	/**
+	 * @type {import('$lib/types/faqPage').FaqPageData}
+	 */
+	const data = await getPageData(query);
+	if (!data) throw error(404, 'Not Found');
+	return {
+		data
+	};
 };

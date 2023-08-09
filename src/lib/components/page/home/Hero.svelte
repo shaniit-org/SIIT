@@ -22,19 +22,21 @@
 		loading="eager"
 		className="h-full w-full object-cover absolute z-[-1]"
 	/>
-	<ClickableTile
-		href="/terms/{term.slug.current}"
-		class=" max-w-[90%] md:max-w-[400px] h-auto space-y-2 mt-auto row-start-2"
-	>
-		<div class="p-4 min-w-[300px]">
-			<div class="flex items-center justify-between">
-				<span>Term Of The Day</span>
-				<span>Jan 8, 2023</span>
+	{#if term}
+		<ClickableTile
+			href="/terms/{term.slug.current}"
+			class=" max-w-[90%] md:max-w-[400px] h-auto space-y-2 mt-auto row-start-2"
+		>
+			<div class="p-4 min-w-[300px]">
+				<div class="flex items-center justify-between">
+					<span>Term Of The Day</span>
+					<span>Jan 8, 2023</span>
+				</div>
+				<h2 class="text-2xl lg:mb-4 mt-3">{term.title}</h2>
+				<p class="text-sm leading-loose mt-2">
+					{term.description}
+				</p>
 			</div>
-			<h2 class="text-2xl lg:mb-4 mt-3">{term.title}</h2>
-			<p class="text-sm leading-loose mt-2">
-				{term.description}
-			</p>
-		</div>
-	</ClickableTile>
+		</ClickableTile>
+	{/if}
 </div>

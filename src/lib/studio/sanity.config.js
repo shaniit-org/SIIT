@@ -10,7 +10,7 @@ export default defineConfig({
 	name: 'default',
 	title: 'ShanIIT',
 	projectId: 'za3lzlmc',
-	dataset: 'production',
+	dataset: 'live',
 	basePath: '/studio',
 	plugins: [
 		deskTool({

@@ -14,7 +14,7 @@
 >
 	<div class="w-full h-full basis-[20%] aspect-video max-w-[330px] mt-4 shrink-0">
 		<SanityImage
-			className="w-full h-full "
+			className="w-full h-full object-cover"
 			maxWidth={300}
 			image={data.coverImage}
 			alt={data.title}

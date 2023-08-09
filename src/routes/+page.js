@@ -1,4 +1,5 @@
 import { getPageData } from '$lib/sanity/query';
+import { error } from '@sveltejs/kit';
 
 const query = `{
   "homePage" : *[_id == 'homePage'][0]{
@@ -42,6 +43,7 @@ export const load = async () => {
 	 * @type {import('$lib/types/homePage').HomePageData}
 	 */
 	const data = await getPageData(query);
+	if (!data.homePage) throw error(404, 'Not Found');
 	return {
 		data
 	};
