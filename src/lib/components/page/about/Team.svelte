@@ -14,14 +14,14 @@
 		<div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 mt-6">
 			{#each data as dat}
 				<div class="aspect-square items-center flex flex-col gap-4">
-					<div class=" aspect-square w-full h-full">
+					<div class=" aspect-square w-full h-full rounded-full overflow-hidden">
 						<SanityImage
 							image={dat.profile}
 							alt="image"
 							className="aspect-video object-cover w-full h-full"
 						/>
 					</div>
-					<h3 class="text-xl mt-4">{dat.role}</h3>
+					<h3 class="text-xl mt-4 text-center">{dat.role}</h3>
 				</div>
 			{/each}
 		</div>
