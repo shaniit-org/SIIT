@@ -4,11 +4,6 @@ import { error } from '@sveltejs/kit';
 const query = `
   *[ _id=='aboutPage'][0]{
     ...,
-    "teamMembers":*[_type=="author" && isMember==true]{
-      name,
-      role,
-     profile
-    }
   }
 `;
 

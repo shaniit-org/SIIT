@@ -5,7 +5,7 @@
 	import { Select, SelectItem } from 'carbon-components-svelte';
 	import { sortByDate } from '$lib/utils/search-by-title';
 	/**
-	 * @type { import('../../lib/types/eventsPage').EventsPage} - data
+	 * @type {{data: import('../../lib/types/eventsPage').EventsPage}} - data
 	 */
 	export let data;
 	let selected = 'Latest';

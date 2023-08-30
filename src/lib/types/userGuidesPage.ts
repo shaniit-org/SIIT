@@ -1,6 +1,6 @@
-import { UserGuide } from '.';
+import type { UserGuide } from '.';
 
 export interface UserGuidesPage {
     seo: BaseMetaData;
-    userGuides: UserGuide[];
+    userguides: UserGuide[];
 }

@@ -1,7 +1,10 @@
 <script>
 	import { Tile } from 'carbon-components-svelte';
 	/**
-	 * @type {import('../../../types/aboutPage').AboutBanner} - data
+	 * @type {
+         import('../../../types/aboutPage').AboutBanner |
+         import('../../../types/aboutPage').RowBanner
+     } - data
 	 */
 	export let data;
 </script>

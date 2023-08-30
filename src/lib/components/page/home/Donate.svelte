@@ -5,7 +5,6 @@
 	 * @type {import('../../../types/homePage').HomePageDonate} - data
 	 */
 	export let data;
-	console.log(data);
 </script>
 
 <Tile class="bg-theme-secondary">

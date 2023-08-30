@@ -25,6 +25,11 @@ export default {
 				{
 					title: 'Team Mission',
 					type: 'aboutMission'
+				},
+
+				{
+					title: 'Team Member',
+					type: 'teamMember'
 				}
 			]
 		}

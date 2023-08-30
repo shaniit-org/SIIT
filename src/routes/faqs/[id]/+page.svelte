@@ -25,17 +25,7 @@
 			<PortableText value={data.data.answer} />
 
 			<div class="flex gap-2 mt-4 ml-auto">
-				<Twitter
-					class="text-base bg-transparent flex items-center max-w-max"
-					text={data.data.title}
-					{url}
-				/>
 				<Facebook
-					class="text-base bg-transparent flex items-center max-w-max"
-					text={data.data.title}
-					{url}
-				/>
-				<LinkedIn
 					class="text-base bg-transparent flex items-center max-w-max"
 					text={data.data.title}
 					{url}

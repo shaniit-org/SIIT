@@ -24,11 +24,6 @@ export default {
 			type: 'string'
 		},
 		{
-			title: 'IsMember',
-			name: 'isMember',
-			type: 'boolean'
-		},
-		{
 			title: 'Story',
 			name: 'story',
 			type: 'blockContent'

@@ -21,7 +21,7 @@
 	 * @param {import('../../lib/types/keyboard_and_font').KeyboardOrFont[]} data
 	 */
 	$: filterByType = (
-		/**@type import('../../lib/types/keyboard_and_font').KeyboardOrFont[] | undefined | string*/ data
+		/**@type import('../../lib/types/keyboard_and_font').KeyboardOrFont[] | undefined */ data
 	) => {
 		if (!data) return [];
 		if (filter === 0) {
@@ -53,12 +53,6 @@
 			</Switch>
 		</ContentSwitcher>
 	</div>
-	<div class="flex flex-col gap-2">
-		<p class="text-xl leading-relaxed mt-4">
-			{data.data.title}
-		</p>
-	</div>
-
 	{#if linux.length > 0 && linux}
 		<div class="mt-10">
 			<div class="flex items-center gap-2">

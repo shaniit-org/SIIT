@@ -11,7 +11,7 @@
 <div class="bg-white">
 	<div class="relative min-h-[380px] isolate">
 		<SanityImage
-			maxWidth={300}
+			maxWidth={800}
 			image={data.coverImage}
 			alt={data.title}
 			className="w-full h-[380px] aspect-[9/16] object-cover"

@@ -11,7 +11,7 @@
 	export let charType;
 
 	/**
-      @type description - description
+        @type string - description
      */
 	export let description;
 </script>

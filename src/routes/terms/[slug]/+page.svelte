@@ -1,6 +1,6 @@
 <script>
 	import PortableText from '$lib/components/common/portableText/PortableText.svelte';
-	import { LinkedIn, Facebook, Twitter } from 'svelte-share-buttons-component';
+	import { Facebook } from 'svelte-share-buttons-component';
 	import TableOfContents from '$lib/components/common/TableOfContents.svelte';
 	import TermHero from '$lib/components/common/TermHero.svelte';
 	import { onMount } from 'svelte';
@@ -8,6 +8,9 @@
 	 * @type {{data: import('../../../lib/types/termPage').Term}} - data
 	 */
 	export let data;
+	/**
+	 * @type {string} - url
+	 */
 	let url;
 	onMount(() => {
 		url = window.location.href;
@@ -21,21 +24,11 @@
 		<div class="md:col-start-2 min-w-[200px] lg:max-w-[300px] md:max-w-[200px] scroll-pt-20">
 			<TableOfContents data={data.data.body} />
 		</div>
-		<div class="md:col-start-1 md:row-start-1 flex flex-col">
+		<div class="md:col-start-1 md:row-start-1 md:prose-lg lg:prose-xl max-w-[800px]">
 			<PortableText value={data.data.body} />
 
 			<div class="flex gap-2 mt-4 ml-auto">
-				<Twitter
-					class="text-base bg-transparent flex items-center max-w-max"
-					text={data.data.title}
-					{url}
-				/>
 				<Facebook
-					class="text-base bg-transparent flex items-center max-w-max"
-					text={data.data.title}
-					{url}
-				/>
-				<LinkedIn
 					class="text-base bg-transparent flex items-center max-w-max"
 					text={data.data.title}
 					{url}

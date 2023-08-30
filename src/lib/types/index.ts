@@ -3,7 +3,11 @@ export interface Category {
 	_id: string;
 }
 export interface RelatedArticle {
+	seo: BaseMetaData;
 	title: string;
+	description: string;
+	coverImage: SanityImage;
+	publishedAt: string;
 	slug: string;
 	_id: string;
 }

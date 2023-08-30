@@ -1,11 +1,9 @@
-<script>
+<!-- <script>
 	import { Modal } from 'carbon-components-svelte';
 	import Search from 'svelte-algolia';
 	import { algoliaConfig } from '../../../lib/utils/algolia';
 	import Hits from './algolia/Hits.svelte';
-	console.log(algoliaConfig);
 	let open = true;
-	console.log(algoliaConfig);
 </script>
 
 <Modal
@@ -25,4 +23,4 @@
 		}}
 	/>
 	<div id="hits" />
-</Modal>
+</Modal> -->

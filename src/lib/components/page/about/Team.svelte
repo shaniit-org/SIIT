@@ -6,7 +6,6 @@
 	 * @type {import('$lib/types').Author[]}
 	 */
 	export let data;
-	console.log(data);
 </script>
 
 <Tile class="bg-theme-muted bg-opacity-50">

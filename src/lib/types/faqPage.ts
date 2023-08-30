@@ -9,6 +9,7 @@ export interface FAQData {
 }
 
 export interface FaqPageData {
+	_id: string;
 	category: string;
 	faqs: FAQ[];
 	seo: BaseMetaData;

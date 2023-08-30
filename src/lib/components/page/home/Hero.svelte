@@ -9,14 +9,13 @@
 	 * @type {import('../../../types/homePage').HomePageHero} - data
 	 */
 	export let data;
-	console.log(term);
 </script>
 
 <div
 	class=" grid grid-rows-[auto_1fr] gap-4 justify-end relative w-full min-h-[60vh] md:min-h-[700px]"
 >
 	<SanityImage
-		maxWidth={1050}
+		maxWidth={1150}
 		image={data.heroImage}
 		alt={data.title}
 		loading="eager"

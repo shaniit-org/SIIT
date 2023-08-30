@@ -31,20 +31,10 @@
 		<div class="md:col-start-2 min-w-[200px] scroll-pt-20">
 			<TableOfContents data={event.body} />
 		</div>
-		<div class="flex flex-col md:col-start-1 md:row-start-1">
+		<div class="md:col-start-1 md:row-start-1 md:prose-lg lg:prose-xl max-w-[800px]">
 			<PortableText value={event.body} />
 			<div class="flex gap-2 mt-4 ml-auto">
-				<Twitter
-					class="text-base bg-transparent flex items-center max-w-max"
-					text={event.title}
-					{url}
-				/>
 				<Facebook
-					class="text-base bg-transparent flex items-center max-w-max"
-					text={event.title}
-					{url}
-				/>
-				<LinkedIn
 					class="text-base bg-transparent flex items-center max-w-max"
 					text={event.title}
 					{url}

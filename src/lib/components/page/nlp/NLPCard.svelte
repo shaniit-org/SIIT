@@ -5,7 +5,6 @@
 	 * @type {import('$lib/types/nlpPage').Tools} - data
 	 */
 	export let data;
-	console.log(data);
 </script>
 
 <div class="bg-white min-h-[160px] flex justify-between flex-col">

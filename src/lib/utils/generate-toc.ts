@@ -1,26 +1,29 @@
-/**
- * @param {Array<any>} value
- * @returns {Array<{id: string, text: string,style:string, subheadings: Array<{id: string, text: string,style:string}>}>}
- */
-const findHeadings = (value) => {
+type Heading = {
+	_key: string;
+	_type: string;
+	children: Array<{ _key: string; _type: string; marks: Array<string>; text: string }>;
+	subheadings: Array<Item>;
+	markDefs: Array<any>;
+	style: string;
+};
+
+type Item = {
+	id: string;
+	text: string;
+	children: Array<Item>;
+};
+const findHeadings = (value: Heading[]) => {
 	return value.filter((child) => /h\d/.test(child.style));
 };
 
-/**
- * @param {any} item;
- */
-function format_object(item) {
+function format_object(item: Item) {
 	return {
 		id: item.children[0].id,
 		text: item.children[0].text
 	};
 }
 
-/**
- * @param {Array<any>} headings
- * @returns {Array<{id: string, text: string, children: Array<{id: string, text: string,subheadings:Array<{text:string;id:string}>}>} >}
- */
-export function format_toc(headings) {
+export function format_toc(headings: Heading[]) {
 	return headings.map((head) => {
 		return {
 			id: head._key,
@@ -30,34 +33,21 @@ export function format_toc(headings) {
 	});
 }
 
-/**
- * @param {PortableText} value
- * @returns {Array<{id: string, text: string, children: Array<{id: string, text: string}>}>}
- */
-export function generate_toc(value) {
+export function generate_toc(value: PortableText) {
 	return format_toc(parseOutline(value));
 }
 
-/**
- *  @param {any} object
- *  @param {Array<any>} path
- */
-const get = (object, path) => path.reduce((prev, curr) => prev[curr], object);
+const get = (object: any, path: any[]) => path.reduce((prev, curr) => prev[curr], object);
 
 /**
- * @param {Array<string | number>} path
  */
-const getObjectPath = (path) =>
+const getObjectPath = (path: (number | string)[]) =>
 	path.length === 0 ? path : ['subheadings'].concat(path.join('.subheadings.').split('.'));
 
-/**
- * @param {any} ast
- */
-export const parseOutline = (ast) => {
+export const parseOutline = (ast: any) => {
 	const outline = { subheadings: [] };
 	const headings = findHeadings(ast);
-	/** @type {Array<number>} */
-	const path = [];
+	const path: any = [];
 	let lastLevel = 0;
 	headings.forEach((heading) => {
 		const level = Number(heading.style.slice(1));

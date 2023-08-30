@@ -9,7 +9,7 @@
 		<div class="flex flex-col gap-4 md:flex-row justify-between">
 			<div class="basis-1/2">
 				<div class="mb-6">
-					<ImageLoader class="max-w-[140px] aspect-video " src="/logo.svg" alt="SIIT logo" />
+					<ImageLoader class="max-w-[100px] aspect-video " src="/logo.svg" alt="SIIT logo" />
 				</div>
 				<ul class="grid grid-cols-2 gap-y-4 justify-center text-white gap-x-10">
 					{#each navs as nav}

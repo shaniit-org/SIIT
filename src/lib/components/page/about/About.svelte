@@ -1,6 +1,5 @@
 <script>
 	import SanityImage from '$lib/sanity/image/SanityImage.svelte';
-	import { ImageLoader } from 'carbon-components-svelte';
 	/**
 	 * @type {import('../../../types/aboutPage').AboutBanner} - data
 	 */

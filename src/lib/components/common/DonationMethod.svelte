@@ -1,12 +1,10 @@
 <script>
-	import { ClickableTile } from 'carbon-components-svelte';
 	import SanityImage from '$lib/sanity/image/SanityImage.svelte';
 	/**
 	 * @type {import('../../types/donatePage').PaymentMethod} - data
 	 */
 
 	export let data;
-	console.log(data);
 </script>
 
 <div
