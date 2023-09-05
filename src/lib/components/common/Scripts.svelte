@@ -1,0 +1,16 @@
+<script>
+	import { browser } from '$app/environment';
+</script>
+
+{#if browser}
+	<script
+		src="https://cdn.jsdelivr.net/npm/algoliasearch@4.19.1/dist/algoliasearch-lite.umd.js"
+		integrity="sha256-qzlNbRtZWHoUV5I2mI2t9QR7oYXlS9oNctX+0pECXI0="
+		crossorigin="anonymous"
+	></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.56.9/dist/instantsearch.production.min.js"
+		integrity="sha256-8AA0iLtMtPZvYXCp1M0yOWKK/PkffhvDt+1yl7bNtCw="
+		crossorigin="anonymous"
+	></script>
+{/if}

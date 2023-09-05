@@ -49,10 +49,10 @@
 		gap: 1em;
 		flex-direction: column;
 		max-height: 300px;
+		min-height: 300px;
 	}
 
 	.hits_result :global(ol) {
-		min-height: 400px;
 		display: flex;
 		flex-direction: column;
 		gap: 1em;

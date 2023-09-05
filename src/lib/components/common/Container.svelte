@@ -1,9 +1,7 @@
 <script>
+	import Scripts from './Scripts.svelte';
 	import Footer from '$lib/components/common/Footer.svelte';
 	import Header from '$lib/components/common/Header.svelte';
-	/**
-	 * @type {'g10' | 'white'}
-	 */
 </script>
 
 <Header />
@@ -11,6 +9,7 @@
 	<slot />
 </div>
 <Footer />
+<Scripts />
 
 <style>
 	.content {
