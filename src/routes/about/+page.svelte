@@ -9,7 +9,6 @@
 	 * @type {{data:import('$lib/types/aboutPage').AboutPageData;}}
 	 */
 	export let data;
-	console.log(data);
 </script>
 
 <Meta data={data.data.seo} />
