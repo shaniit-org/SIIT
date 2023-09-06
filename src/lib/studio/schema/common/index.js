@@ -6,7 +6,6 @@ import userguide from './userguide';
 import category from './category';
 import blockContent from './blockContent';
 import link from './link';
-import site from './site';
 import news from './news';
 import event from './event';
 import term from './term';
@@ -15,19 +14,18 @@ import keyboard_or_font from './keyboard_or_font';
 import payment_method from './payment_method';
 
 export default [
-	userguide,
-	payment_method,
-	keyboard_or_font,
-	faq,
-	banner,
-	link,
-	news,
-	baseSeo,
-	term,
-	category,
-	blockContent,
-	site,
-	event,
-	author,
-	rowBanner
+    userguide,
+    payment_method,
+    keyboard_or_font,
+    faq,
+    banner,
+    link,
+    news,
+    baseSeo,
+    term,
+    category,
+    blockContent,
+    event,
+    author,
+    rowBanner
 ];

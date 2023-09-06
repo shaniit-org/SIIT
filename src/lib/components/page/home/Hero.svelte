@@ -24,7 +24,7 @@
 	{#if term}
 		<ClickableTile
 			href="/terms/{term.slug.current}"
-			class=" max-w-[90%] md:max-w-[400px] h-auto space-y-2 mt-auto row-start-2"
+			class=" max-w-[90%] md:max-w-[400px] h-auto space-y-2 mt-auto row-start-2 "
 		>
 			<div class="p-4 min-w-[300px]">
 				<div class="flex items-center justify-between">

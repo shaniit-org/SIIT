@@ -7,10 +7,13 @@
 	src: url('/fonts/GreatHorKham_Yangon.woff2') format('woff2');
 }
 :root {
+	--font-family-base: 'GreatHorKham Yangon', sans-serif;
 	--aa-primary-color-rgb: white;
+	--aa-font-family: var(--font-family-base);
 	font-display: swap;
 	@apply scroll-smooth;
 }
+
 @layer utilities {
 	.box {
 		@apply p-6 md:p-12 my-12;
