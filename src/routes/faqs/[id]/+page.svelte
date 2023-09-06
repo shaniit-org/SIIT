@@ -2,7 +2,7 @@
 	import PortableText from '$lib/components/common/portableText/PortableText.svelte';
 	import FaqBanner from '$lib/components/common/FaqBanner.svelte';
 	import { onMount } from 'svelte';
-	import { LinkedIn, Facebook, Twitter } from 'svelte-share-buttons-component';
+	import { Facebook } from 'svelte-share-buttons-component';
 	import TableOfContents from '$lib/components/common/TableOfContents.svelte';
 	/**
 	 * @type {{data:import('../../../lib/types/faqPage').FAQData}})

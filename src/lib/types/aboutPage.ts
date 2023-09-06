@@ -21,7 +21,7 @@ export interface RowBanner {
 }
 
 export interface AboutTeamMember {
-    _type: 'aboutTeamMember';
+    _type: 'teamMember';
     title: string;
     teams: Author[];
 }
@@ -31,5 +31,4 @@ export type AboutSection = RowBanner | AboutBanner | AboutMission | AboutTeamMem
 export type AboutPageData = {
     seo: BaseMetaData;
     sections: AboutSection[];
-    teamMembers: Author[];
 };
