@@ -9,6 +9,7 @@
 	 * @type {{data:import('$lib/types/aboutPage').AboutPageData;}}
 	 */
 	export let data;
+	console.log(data);
 </script>
 
 <Meta data={data.data.seo} />
@@ -24,6 +25,8 @@
 		{#if sec._type === 'aboutMission'}
 			<Mission data={sec} />
 		{/if}
+		{#if sec._type === 'teamMember'}
+			<Team data={sec.teams} />
+		{/if}
 	{/each}
-	<Team data={data.data.teamMembers} />
 </div>
