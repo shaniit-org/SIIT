@@ -1,4 +1,6 @@
 <script>
+	import { init_autocomplete } from '../../utils/algolia';
+	import { onMount } from 'svelte';
 	import {
 		Header,
 		HeaderUtilities,
@@ -12,12 +14,11 @@
 	} from 'carbon-components-svelte';
 	import { Search } from 'carbon-icons-svelte';
 	import { navs } from '$lib/site/nav';
-	import SearchModal from './SearchModal.svelte';
+
 	let isSideNavOpen = false;
-	let isSearchModalOpen = false;
-	let toggle = () => {
-		isSearchModalOpen = !isSearchModalOpen;
-	};
+	onMount(() => {
+		init_autocomplete();
+	});
 </script>
 
 <Header bind:isSideNavOpen expandedByDefault={false}>
@@ -34,17 +35,9 @@
 		<Search size={32} />
 	</HeaderNav>
 	<HeaderUtilities>
-		<HeaderGlobalAction
-			on:click={() => (isSearchModalOpen = true)}
-			aria-label="Search Action Button"
-			id="search_action"
-			title="Search"
-			icon={Search}
-			class="grid place-items-center"
-		/>
+		<HeaderGlobalAction id="autocomplete" class="grid place-items-center text-white" />
 	</HeaderUtilities>
 </Header>
-<SearchModal open={isSearchModalOpen} {toggle} />
 <SideNav bind:isOpen={isSideNavOpen} default={false}>
 	<SideNavItems>
 		{#each navs as nav}
@@ -58,5 +51,22 @@
 		max-width: 100%;
 		height: 20px;
 		object-fit: cover;
+	}
+	:global(.aa-input-d) {
+		border: solid 1px #393939;
+		border-radius: 0px;
+	}
+	:global(.aa-input-d):hover {
+		border: solid 1px white;
+		cursor: pointer;
+	}
+	:global(.aa-input-d-i) {
+		color: white;
+	}
+	:global(.aa-input-d-p) {
+		display: none;
+	}
+	:global(.aa-input-d-q) {
+		display: none;
 	}
 </style>

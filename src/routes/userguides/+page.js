@@ -16,12 +16,12 @@ const query = `
 `;
 
 export const load = async () => {
-    /**
-     * @type {import('../../lib/types/userGuidesPage').UserGuidesPage} - data
-     */
-    const data = await getPageData(query);
-    if (!data) throw error(404, 'Not Found');
-    return {
-        data
-    };
+	/**
+	 * @type {import('../../lib/types/userGuidesPage').UserGuidesPage} - data
+	 */
+	const data = await getPageData(query);
+	if (!data) throw error(404, 'Not Found');
+	return {
+		data
+	};
 };

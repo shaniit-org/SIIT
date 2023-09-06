@@ -7,6 +7,7 @@
 	src: url('/fonts/GreatHorKham_Yangon.woff2') format('woff2');
 }
 :root {
+	--aa-primary-color-rgb: white;
 	font-display: swap;
 	@apply scroll-smooth;
 }

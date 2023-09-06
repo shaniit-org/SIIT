@@ -11,16 +11,16 @@ import termsPage from './pages/terms';
 import contactPage from './pages/contact';
 import donatePage from './pages/donate';
 export const schemaTypes = [
-    ...common,
-    ...homePage,
-    ...aboutPage,
-    ...nlpPage,
-    eventsPage,
-    contactPage,
-    newsPage,
-    faqPage,
-    keyboard_and_fonts,
-    userGuidePage,
-    termsPage,
-    donatePage
+	...common,
+	...homePage,
+	...aboutPage,
+	...nlpPage,
+	eventsPage,
+	contactPage,
+	newsPage,
+	faqPage,
+	keyboard_and_fonts,
+	userGuidePage,
+	termsPage,
+	donatePage
 ];
