@@ -1,12 +1,14 @@
+import { FaListAlt } from 'react-icons/fa';
 export default {
-	title: 'Category',
-	name: 'category',
-	type: 'document',
-	fields: [
-		{
-			type: 'string',
-			name: 'title',
-			title: 'Title'
-		}
-	]
+    icon: FaListAlt,
+    title: 'Category',
+    name: 'category',
+    type: 'document',
+    fields: [
+        {
+            type: 'string',
+            name: 'title',
+            title: 'Title'
+        }
+    ]
 };

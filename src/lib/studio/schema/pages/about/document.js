@@ -1,4 +1,7 @@
+import { FaUserFriends } from 'react-icons/fa';
+
 export default {
+    icon: FaUserFriends,
     id: 'aboutPage',
     title: 'About Page',
     name: 'aboutPage',

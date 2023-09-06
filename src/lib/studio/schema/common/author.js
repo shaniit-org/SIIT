@@ -1,4 +1,6 @@
+import { FaUser } from 'react-icons/fa';
 export default {
+    icon: FaUser,
     title: 'Author',
     name: 'author',
     type: 'document',

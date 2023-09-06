@@ -23,6 +23,9 @@ dependencies:
   '@sanity/color-input':
     specifier: ^3.1.0
     version: 3.1.0(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(sanity@3.14.1)(styled-components@5.3.11)
+  '@sanity/icons':
+    specifier: ^2.4.1
+    version: 2.4.1(react@18.2.0)
   '@sanity/image-url':
     specifier: ^1.0.2
     version: 1.0.2
@@ -47,6 +50,9 @@ dependencies:
   prismjs:
     specifier: ^1.29.0
     version: 1.29.0
+  react-icons:
+    specifier: ^4.10.1
+    version: 4.10.1(react@18.2.0)
   sanity:
     specifier: ^3.14.1
     version: 3.14.1(react-dom@18.2.0)(react@18.2.0)(sass@1.62.1)(styled-components@5.3.11)
@@ -1618,7 +1624,7 @@ packages:
       '@codemirror/view': 6.13.0
       '@juggle/resize-observer': 3.4.0
       '@lezer/highlight': 1.1.6
-      '@sanity/icons': 2.3.1(react@18.2.0)
+      '@sanity/icons': 2.4.1(react@18.2.0)
       '@sanity/incompatible-plugin': 1.0.4(react-dom@18.2.0)(react@18.2.0)
       '@sanity/ui': 1.5.0(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@5.3.11)
       '@uiw/codemirror-themes': 4.21.3(@codemirror/language@6.8.0)(@codemirror/state@6.2.1)(@codemirror/view@6.13.0)
@@ -1644,7 +1650,7 @@ packages:
       sanity: ^3
       styled-components: ^5.2
     dependencies:
-      '@sanity/icons': 2.3.1(react@18.2.0)
+      '@sanity/icons': 2.4.1(react@18.2.0)
       '@sanity/incompatible-plugin': 1.0.4(react-dom@18.2.0)(react@18.2.0)
       '@sanity/ui': 1.5.0(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@5.3.11)
       lodash: 4.17.21
@@ -1701,15 +1707,6 @@ packages:
     resolution: {integrity: sha512-5wVG/vIiGuGrSmq+Bl3PY7XDgQrGv0fyHdJI64FSulnr2wH3NMqZ6C59UFxnrZ93sr7kOt0zQFoNv2lkPBi0Cg==}
     peerDependencies:
       react: ^16.9 || ^17 || ^18
-    dependencies:
-      react: 18.2.0
-    dev: false
-
-  /@sanity/icons@2.3.1(react@18.2.0):
-    resolution: {integrity: sha512-DyUdjjWFIokrMewnK24Vvxpv2lKx5LrzUM3eEk0ZVwhS8+hWkFFN1Z7jhcwQnQ5NweejhzsZkT4JHUdffCAQaw==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      react: ^18
     dependencies:
       react: 18.2.0
     dev: false
@@ -1868,7 +1865,7 @@ packages:
     dependencies:
       '@floating-ui/react-dom': 1.1.1(react-dom@18.2.0)(react@18.2.0)
       '@sanity/color': 2.2.5
-      '@sanity/icons': 2.3.1(react@18.2.0)
+      '@sanity/icons': 2.4.1(react@18.2.0)
       csstype: 3.1.2
       framer-motion: 10.12.16(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
@@ -1945,7 +1942,7 @@ packages:
       '@rexxars/react-json-inspector': 8.0.1(react@18.2.0)
       '@rexxars/react-split-pane': 0.1.93(react-dom@18.2.0)(react@18.2.0)
       '@sanity/color': 2.2.5
-      '@sanity/icons': 2.3.1(react@18.2.0)
+      '@sanity/icons': 2.4.1(react@18.2.0)
       '@sanity/ui': 1.5.0(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@5.3.11)
       '@uiw/react-codemirror': 4.21.2(@babel/runtime@7.22.5)(@codemirror/autocomplete@6.7.1)(@codemirror/language@6.8.0)(@codemirror/lint@6.2.2)(@codemirror/search@6.5.0)(@codemirror/state@6.2.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.13.0)(codemirror@6.0.1)(react-dom@18.2.0)(react@18.2.0)
       hashlru: 2.3.0
@@ -5094,6 +5091,14 @@ packages:
       react-clientside-effect: 1.2.6(react@18.2.0)
       use-callback-ref: 1.3.0(react@18.2.0)
       use-sidecar: 1.1.2(react@18.2.0)
+    dev: false
+
+  /react-icons@4.10.1(react@18.2.0):
+    resolution: {integrity: sha512-/ngzDP/77tlCfqthiiGNZeYFACw85fUjZtLbedmJ5DTlNDIwETxhwBzdOJ21zj4iJdvc0J3y7yOsX3PpxAJzrw==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-infinite-scroll-component@6.1.0(react@18.2.0):
