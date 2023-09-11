@@ -1,4 +1,5 @@
 <script>
+	import DonatorChart from '$lib/components/common/DonatorChart.svelte';
 	import SubHero from '$lib/components/common/SubHero.svelte';
 	import Meta from '$lib/components/common/Meta.svelte';
 	import SanityImage from '$lib/sanity/image/SanityImage.svelte';
@@ -36,5 +37,6 @@
 				{/each}
 			</div>
 		</div>
+		<DonatorChart data={data.data.donors} />
 	</div>
 </div>

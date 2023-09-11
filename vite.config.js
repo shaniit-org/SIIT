@@ -10,6 +10,6 @@ export default defineConfig({
 		})
 	],
 	ssr: {
-		noExternal: ENV === 'production' ? ['instantsearch.js', 'algoliasearch'] : []
+		noExternal: ENV === 'production' ? ['instantsearch.js', 'algoliasearch', '@carbon/charts'] : []
 	}
 });

@@ -4,7 +4,12 @@ import { error } from '@sveltejs/kit';
 const query = `
   *[ _id=='donatePage'][0]{
     ...,
-  }
+    "donors":*[_type=='donator'][0..100]{
+          _id,
+          "group":name,
+          "value":amount
+        }
+      }
 `;
 
 /**

@@ -7,6 +7,11 @@ export interface DonatePageData {
 	payment_methods_description: string;
 	coverImage: SanityImage;
 }
+export interface Donator {
+	_id: string;
+	group: string;
+	amount: number;
+}
 
 export interface PaymentMethod {
 	name: string;
