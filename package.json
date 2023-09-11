@@ -58,6 +58,7 @@
 		"react-icons": "^4.10.1",
 		"sanity": "^3.14.1",
 		"sanity-plugin-asset-source-unsplash": "^1.1.0",
+		"sanity-plugin-graph-view": "^2.0.1",
 		"svelte-preprocess": "^5.0.4",
 		"svelte-share-buttons-component": "^1.5.5"
 	}

@@ -5,6 +5,7 @@ import { deskTool } from 'sanity/desk';
 import { codeInput } from '@sanity/code-input';
 import { schemaTypes } from './schema';
 import { newDeskStructure } from './utils/deskStructure';
+import { contentGraphView } from 'sanity-plugin-graph-view';
 
 export default defineConfig({
 	name: 'default',
@@ -17,6 +18,7 @@ export default defineConfig({
 			structure: newDeskStructure
 		}),
 		visionTool(),
+		contentGraphView({}),
 		unsplashImageAsset(),
 		codeInput()
 	],
