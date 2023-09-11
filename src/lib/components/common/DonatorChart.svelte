@@ -28,8 +28,8 @@
 	];
 </script>
 
-<div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-2 overflow-hidden">
-	<div class="grid place-items-center w-full">
+<div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-2 overflow-hidden md:my-24">
+	<div class="grid place-items-center w-full p-4 md:p-0">
 		<PieChart {data} {options} />
 	</div>
 	<div class="prose prose-h3:font-normal leading-relaxed">

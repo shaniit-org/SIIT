@@ -19,4 +19,6 @@
 	});
 </script>
 
-<PortableText {value} {components} />
+<div class="prose lg:prose-xl">
+	<PortableText {value} {components} />
+</div>
