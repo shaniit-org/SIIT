@@ -1,12 +1,22 @@
 <script>
+	import PortableText from './portableText/PortableText.svelte';
 	import '@carbon/charts-svelte/styles.css';
 	import { PieChart, Alignments } from '@carbon/charts-svelte';
-	import { ProgressIndicator, ProgressStep, Button } from 'carbon-components-svelte';
+	import { ProgressIndicator, ProgressStep } from 'carbon-components-svelte';
 
 	/**
 	 * @type { import('../../../lib/types/donatePage').Donator[]}
 	 */
 	export let data = [];
+
+	/**
+	 * @type { import('../../../lib/types/donatePage').DonateRoadmap}
+	 */
+	export let roadmap = {
+		description: [],
+		title: 'Our Donator',
+		target: 0
+	};
 
 	let options = {
 		title: 'Our Donator',
@@ -21,6 +31,7 @@
 	};
 
 	let currentIndex = 2;
+
 	let progress_steps = [
 		{ id: '1', label: 'Goal 1', description: 'Step 1 Description', complete: true },
 		{ id: '2', label: 'Goal 2', description: 'Step 2 Description', complete: true },
@@ -33,13 +44,8 @@
 		<PieChart {data} {options} />
 	</div>
 	<div class="prose prose-h3:font-normal leading-relaxed">
-		<h3>Our Roadmap</h3>
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aperiam voluptatibus
-			consequatur debitis magni mollitia dolorum veniam velit deserunt tempora repellendus officiis
-			ipsam, corporis, vitae autem voluptas maiores voluptatum assumenda!
-		</p>
-
+		<h3>{roadmap.title}</h3>
+		<PortableText value={roadmap.description} />
 		<div class="grid">
 			<ProgressIndicator {currentIndex} preventChangeOnClick class="m-0 w-full p-0">
 				{#each progress_steps as step}
@@ -53,10 +59,5 @@
 				{/each}
 			</ProgressIndicator>
 		</div>
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aperiam voluptatibus
-			consequatur debitis magni mollitia dolorum veniam velit deserunt tempora repellendus officiis
-			ipsam, corporis, vitae autem voluptas maiores voluptatum assumenda!
-		</p>
 	</div>
 </div>

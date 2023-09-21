@@ -6,6 +6,8 @@ export interface DonatePageData {
 	payment_methods: PaymentMethod[];
 	payment_methods_description: string;
 	coverImage: SanityImage;
+	donors: Donator[];
+	roadmap: DonateRoadmap;
 }
 export interface Donator {
 	_id: string;
@@ -17,4 +19,9 @@ export interface PaymentMethod {
 	name: string;
 	number: string;
 	Image: SanityImage;
+}
+export interface DonateRoadmap {
+	title: string;
+	description: PortableText;
+	target: number;
 }

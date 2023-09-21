@@ -37,6 +37,6 @@
 				{/each}
 			</div>
 		</div>
-		<DonatorChart data={data.data.donors} />
+		<DonatorChart data={data.data.donors} roadmap={data.data.donate_roadmap} />
 	</div>
 </div>
