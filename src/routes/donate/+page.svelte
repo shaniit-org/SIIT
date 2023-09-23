@@ -15,7 +15,7 @@
 <div class="w-full min-h-screen flex flex-col gap-6 md:gap-12">
 	<SubHero title="Donate Us" />
 
-	<div class="section-container p-6 md:p-12">
+	<div class="section-container p-6 md:p-12 w-full">
 		<div class="w-full flex flex-col">
 			<div class="mb-8">
 				<SanityImage
@@ -30,8 +30,8 @@
 			</div>
 		</div>
 		<div class="flex flex-col gap-4 my-24">
-			<h3 class="text-xl md:text-3xl text-center mb-4">{data.data.payment_methods_description}</h3>
-			<div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-12 mt-8">
+			<h3 class="text-xl md:text-2xl text-center">{data.data.payment_methods_description}</h3>
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-12 mt-8">
 				{#each data.data.payment_methods as method}
 					<DonationMethod data={method} />
 				{/each}

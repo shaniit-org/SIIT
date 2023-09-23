@@ -14,7 +14,9 @@ export default {
 		{
 			title: 'Target %',
 			name: 'target',
-			type: 'number'
+			type: 'number',
+			/* @ts-ignore */
+			validation: (Rule) => Rule.required().min(0).max(100)
 		},
 		{
 			title: 'Description',

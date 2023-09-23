@@ -18,8 +18,8 @@
 			maxWidth={200}
 		/>
 	</div>
-	<div class="flex flex-col p-4 text-center">
-		<p class="md:text-lg text-base text-theme-body font-bold">{data.name}</p>
-		<p class="text-base md:text-lg">{data.number}</p>
+	<div class="flex flex-col p-4 text-center gap-2">
+		<p class="font-semibold text-sm md:text-lg text-theme-body leading-[1]">{data.name}</p>
+		<p class="text-sm group-hover:text-blue-500">{data.number}</p>
 	</div>
 </div>
