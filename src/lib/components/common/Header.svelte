@@ -23,7 +23,7 @@
 
 <Header bind:isSideNavOpen expandedByDefault={false}>
 	<a href="/" slot="platform" class="grid place-items-center overflow-hidden">
-		<img loading="eager" src={'/logo.svg'} alt="IBM Logo" class="logo" />
+		<img loading="eager" src={'/logo.svg'} alt="SIIT Logo" class="logo" />
 	</a>
 	<svelte:fragment slot="skip-to-content">
 		<SkipToContent />
