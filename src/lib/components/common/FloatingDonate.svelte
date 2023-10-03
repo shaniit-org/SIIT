@@ -16,7 +16,7 @@
 </script>
 
 {#if show}
-	<div in:fade={{ duration: 500 }} out:fade={{ duration: 200 }} class="relative">
+	<div in:fade={{ duration: 500 }} out:fade={{ duration: 200 }} class="relative z-[1000]">
 		<ClickableTile
 			style="padding-inline: 1.5rem; padding-block: 1.5rem;"
 			class="translate-hover w-[250px]  hover:bg-white text-center hover:scale-[1.04] duration-500 
