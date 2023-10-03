@@ -1,0 +1,38 @@
+<script>
+	import { fade } from 'svelte/transition';
+	import { onMount } from 'svelte';
+	import { ClickableTile, ImageLoader, Button } from 'carbon-components-svelte';
+
+	let show = false;
+	onMount(() => {
+		setTimeout(() => {
+			show = true;
+		}, 3000);
+	});
+	function close() {
+		show = false;
+	}
+</script>
+
+{#if show}
+	<div in:fade={{ duration: 500 }} out:fade={{ duration: 200 }}>
+		<ClickableTile
+			on:click={close}
+			style="padding-inline: 1.5rem; padding-block: 1.5rem;"
+			href="/donate"
+			class="translate-hover w-[250px]  hover:bg-white text-center hover:scale-[1.04] duration-500 
+    fixed top-[30%] right-10 shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] flex flex-col gap-4  "
+		>
+			<h2 class="leading-[1.2] flex items-center gap-1">
+				<span class="w-1/2 h-[2px] bg-[#E3983B]" />
+				<span class="w-full text-base font-semibold"> Make Some Donation </span>
+				<span class="w-1/2 h-[2px] bg-[#E3983B]" />
+			</h2>
+			<ImageLoader src="/images/donate.png" alt="donate" class="max-w-max mx-auto min-h-[50px]" />
+			<p class="text-sm my-4 leading-relaxed">
+				တွၼ်ႈတႃႇ ၵၢၼ်ဢၢႆႇထီႇတႆး တေၶိုၼ်ႈယႂ်ႇၼၼ်ႉ... လူဝ်ႇတၢင်းၸွႆႈထႅမ်သူၸဝ်ႈယူႇ။
+			</p>
+			<Button class="bg-[#E3983B] hover:bg-[#e3983B] py-3" size="field">Donate Now</Button>
+		</ClickableTile>
+	</div>
+{/if}

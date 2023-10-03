@@ -29,14 +29,19 @@
 				<p class="text-white text-xl mb-6">Contact Us</p>
 				<p class="text-white mb-2">Email</p>
 				<TextInput
-					placeholder="Enter user name..."
-					class="mb-4"
+					placeholder="Enter your name..."
+					class="mb-4 bg-[#262626]  text-white"
 					type="email"
 					required
 					name="email"
 				/>
 				<p class="text-white mb-2">Message</p>
-				<TextArea placeholder="Enter message..." name="message" required />
+				<TextArea
+					placeholder="Enter message..."
+					class="mb-4 bg-[#262626] text-white"
+					name="message"
+					required
+				/>
 				<Button type="submit" class=" mt-4 bg-[#0F62FE]" kind="primary">Submit</Button>
 			</form>
 		</div>
