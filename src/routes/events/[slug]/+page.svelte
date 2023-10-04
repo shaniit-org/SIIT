@@ -3,19 +3,14 @@
 	import EventBanner from '$lib/components/common/EventBanner.svelte';
 	import Meta from '$lib/components/common/Meta.svelte';
 	import PortableText from '$lib/components/common/portableText/PortableText.svelte';
+	import SocialShare from '$lib/components/common/SocialShare.svelte';
 	import RelatedArticle from '$lib/components/common/RelatedArticle.svelte';
-	import { LinkedIn, Facebook, Twitter } from 'svelte-share-buttons-component';
-	import { onMount } from 'svelte';
 	/**
 	 * @type {{ data : import('../../../lib/types').EventDetail}} - data
 	 */
 	export let data;
 	$: ({ data: event } = data);
 	/** @type string */
-	let url;
-	onMount(() => {
-		url = window.location.href;
-	});
 </script>
 
 <Meta data={event.seo} />
@@ -33,13 +28,7 @@
 		</div>
 		<div class="md:col-start-1 md:row-start-1 md:prose-lg lg:prose-xl max-w-[800px]">
 			<PortableText value={event.body} />
-			<div class="flex gap-2 mt-4 ml-auto">
-				<Facebook
-					class="text-base bg-transparent flex items-center max-w-max"
-					text={event.title}
-					{url}
-				/>
-			</div>
+			<SocialShare />
 		</div>
 	</div>
 	<RelatedArticle data={event.related} />

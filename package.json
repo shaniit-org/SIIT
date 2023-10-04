@@ -59,7 +59,6 @@
 		"sanity": "^3.16.7",
 		"sanity-plugin-asset-source-unsplash": "^1.1.1",
 		"sanity-plugin-graph-view": "^2.0.1",
-		"svelte-preprocess": "^5.0.4",
-		"svelte-share-buttons-component": "^1.5.5"
+		"svelte-preprocess": "^5.0.4"
 	}
 }

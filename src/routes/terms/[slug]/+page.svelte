@@ -1,9 +1,8 @@
 <script>
 	import PortableText from '$lib/components/common/portableText/PortableText.svelte';
-	import { Facebook } from 'svelte-share-buttons-component';
 	import TableOfContents from '$lib/components/common/TableOfContents.svelte';
 	import TermHero from '$lib/components/common/TermHero.svelte';
-	import { onMount } from 'svelte';
+	import SocialShare from '$lib/components/common/SocialShare.svelte';
 	/**
 	 * @type {{data: import('../../../lib/types/termPage').Term}} - data
 	 */
@@ -11,10 +10,6 @@
 	/**
 	 * @type {string} - url
 	 */
-	let url;
-	onMount(() => {
-		url = window.location.href;
-	});
 </script>
 
 <div class="min-h-screen">
@@ -27,13 +22,7 @@
 		<div class="md:col-start-1 md:row-start-1 md:prose-lg lg:prose-xl max-w-[800px]">
 			<PortableText value={data.data.body} />
 
-			<div class="flex gap-2 mt-4 ml-auto">
-				<Facebook
-					class="text-base bg-transparent flex items-center max-w-max"
-					text={data.data.title}
-					{url}
-				/>
-			</div>
+			<SocialShare />
 		</div>
 	</div>
 </div>

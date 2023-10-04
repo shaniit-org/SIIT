@@ -1,8 +1,7 @@
 <script>
-	import { onMount } from 'svelte';
-	import { LinkedIn, Facebook, Twitter } from 'svelte-share-buttons-component';
 	import TableOfContents from '$lib/components/common/TableOfContents.svelte';
 	import PortableText from '$lib/components/common/portableText/PortableText.svelte';
+	import SocialShare from '$lib/components/common/SocialShare.svelte';
 	import ArticleBanner from '$lib/components/common/ArticleBanner.svelte';
 	import RelatedArticle from '$lib/components/common/RelatedArticle.svelte';
 	import Meta from '$lib/components/common/Meta.svelte';
@@ -10,11 +9,6 @@
 	 * @type {{ data : import('../../../lib/types').NewsDetail}} - data
 	 */
 	export let data;
-	/** @type string */
-	let url;
-	onMount(() => {
-		url = window.location.href;
-	});
 	$: ({ data: news } = data);
 </script>
 
@@ -33,14 +27,7 @@
 		</div>
 		<div class="md:col-start-1 md:row-start-1 md:prose-lg lg:prose-xl max-w-[800px]">
 			<PortableText value={news.body} />
-
-			<div class="flex gap-2 mt-4 ml-auto">
-				<Facebook
-					class="text-base bg-transparent flex items-center max-w-max"
-					text={news.title}
-					{url}
-				/>
-			</div>
+			<SocialShare />
 		</div>
 	</div>
 	<RelatedArticle data={news.related} />

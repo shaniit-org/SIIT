@@ -1,18 +1,12 @@
 <script>
 	import PortableText from '$lib/components/common/portableText/PortableText.svelte';
 	import FaqBanner from '$lib/components/common/FaqBanner.svelte';
-	import { onMount } from 'svelte';
-	import { Facebook } from 'svelte-share-buttons-component';
+	import SocialShare from '$lib/components/common/SocialShare.svelte';
 	import TableOfContents from '$lib/components/common/TableOfContents.svelte';
 	/**
 	 * @type {{data:import('../../../lib/types/faqPage').FAQData}})
 	 **/
 	export let data;
-	/** @type string */
-	let url;
-	onMount(() => {
-		url = window.location.href;
-	});
 </script>
 
 <div class="min-h-screen">
@@ -24,13 +18,7 @@
 		<div class="md:col-start-1 md:row-start-1 flex flex-col">
 			<PortableText value={data.data.answer} />
 
-			<div class="flex gap-2 mt-4 ml-auto">
-				<Facebook
-					class="text-base bg-transparent flex items-center max-w-max"
-					text={data.data.title}
-					{url}
-				/>
-			</div>
+			<SocialShare />
 		</div>
 	</div>
 </div>
