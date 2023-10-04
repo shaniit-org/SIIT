@@ -4,15 +4,15 @@ import sveltePreprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	preprocess: [
-		sveltePreprocess({
-			scss: true
-		}),
-		optimizeImports()
-	],
-	kit: {
-		adapter: adapter()
-	}
+    preprocess: [
+        sveltePreprocess({
+            scss: true
+        }),
+        optimizeImports()
+    ],
+    kit: {
+        adapter: adapter()
+    }
 };
 
 export default config;

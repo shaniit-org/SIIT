@@ -41,7 +41,9 @@
 			<p class="text-sm my-4 leading-relaxed">
 				တွၼ်ႈတႃႇ ၵၢၼ်ဢၢႆႇထီႇတႆး တေၶိုၼ်ႈယႂ်ႇၼၼ်ႉ... လူဝ်ႇတၢင်းၸွႆႈထႅမ်သူၸဝ်ႈယူႇ။
 			</p>
-			<Button class="bg-[#E3983B] hover:bg-[#e3983B] py-3" size="field">Donate Now</Button>
+			<Button class="bg-[#E3983B] hover:bg-[#e3983B] py-3" size="field" href="/donate"
+				>Donate Now</Button
+			>
 		</ClickableTile>
 	</div>
 {/if}
