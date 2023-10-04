@@ -14,10 +14,9 @@
 <Meta data={data.data.seo} />
 <div class="w-full min-h-screen flex flex-col gap-6 md:gap-12">
 	<SubHero title="Donate Us" />
-
 	<div class="section-container p-6 md:p-12 w-full">
 		<div class="w-full flex flex-col">
-			<div class="mb-8">
+			<div class="mb-6 md:mb-12">
 				<SanityImage
 					image={data.data.coverImage}
 					maxWidth={1000}
@@ -25,7 +24,7 @@
 					className="w-full h-full "
 				/>
 			</div>
-			<div class="w-full grid place-items-center">
+			<div class="w-full grid place-items-center mt-6">
 				<PortableText value={data.data.content} />
 			</div>
 		</div>

@@ -35,7 +35,11 @@
 		<Search size={32} />
 	</HeaderNav>
 	<HeaderUtilities>
-		<HeaderGlobalAction id="autocomplete" class="grid place-items-center text-white" />
+		<HeaderGlobalAction
+			id="autocomplete"
+			kind="ghost"
+			class="grid place-items-center text-white border-none mr-1 cursor-pointer"
+		/>
 	</HeaderUtilities>
 </Header>
 <SideNav bind:isOpen={isSideNavOpen} default={false}>

@@ -1,4 +1,3 @@
-<!-- SanityImage.svelte -->
 <script>
 	import getImageProps from './config';
 
@@ -28,9 +27,15 @@
 
 <style>
 	img {
-		transition: 1s opacity;
+		transition: 500ms all;
+		transform-origin: center;
 	}
 	img[data-loaded='false'] {
-		opacity: 0;
+		filter: blur(5px);
+		opacity: 0.5;
+		scale: 0.99;
+	}
+	img[data-loaded='true'] {
+		scale: 1;
 	}
 </style>
