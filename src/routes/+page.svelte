@@ -2,7 +2,6 @@
 	// @ts-nocheck
 
 	import Hero from '$lib/components/page/home/Hero.svelte';
-	import { Parallax } from 'svelte-parallax';
 	import HighLight from '$lib/components/page/home/Highlight.svelte';
 	import News from '$lib/components/page/home/News.svelte';
 	import Donate from '$lib/components/page/home/Donate.svelte';
