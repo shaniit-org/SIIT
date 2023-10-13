@@ -19,6 +19,6 @@
 	kind="primary"
 	iconDescription="Delete"
 	icon={LogoFacebook}
-	class="mt-4 bg-blue-500"
+	class="mt-4 bg-blue-500 max-w-max"
 	on:click={shareOnFacebook}
 />

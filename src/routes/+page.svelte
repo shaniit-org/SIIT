@@ -2,6 +2,7 @@
 	// @ts-nocheck
 
 	import Hero from '$lib/components/page/home/Hero.svelte';
+	import { Parallax } from 'svelte-parallax';
 	import HighLight from '$lib/components/page/home/Highlight.svelte';
 	import News from '$lib/components/page/home/News.svelte';
 	import Donate from '$lib/components/page/home/Donate.svelte';
@@ -20,10 +21,10 @@
 <div>
 	{#each sections as sec}
 		{#if sec._type === 'Hero'}
-			<Hero data={sec} {term} />
+			<Hero data={sec} />
 		{/if}
 		{#if sec._type === 'Highlight'}
-			<HighLight data={sec} />
+			<HighLight data={sec} {term} />
 		{/if}
 		{#if sec._type === 'News'}
 			<News data={news} section={sec} />

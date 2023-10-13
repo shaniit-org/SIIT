@@ -4,7 +4,7 @@ import { error } from '@sveltejs/kit';
 const query = `{
   "homePage" : *[_id == 'homePage'][0]{
        ...,
-        'term': *[_type == 'term'][0]{title,description,slug},
+      'term': *[_type == 'term'][0]{title,description,slug,_createdAt},
        sections[] {
       	...,
         _type == 'Hero' => @->{
@@ -20,13 +20,13 @@ const query = `{
         },
       },
   },
-  "events":*[_type =="event"][0...5]{
+  "events":*[_type =="event"][0...6]{
           "slug":slug.current,
           title,
           description,
           publishedAt
     },
-  "news":*[_type =="news"][0...5]{
+  "news":*[_type =="news"][0...6]{
           "slug":slug.current,
           title,
           description,
@@ -39,12 +39,12 @@ const query = `{
  * @type {import('@sveltejs/kit').Load}
  */
 export const load = async () => {
-	/**
-	 * @type {import('$lib/types/homePage').HomePageData}
-	 */
-	const data = await getPageData(query);
-	if (!data.homePage) throw error(404, 'Not Found');
-	return {
-		data
-	};
+    /**
+     * @type {import('$lib/types/homePage').HomePageData}
+     */
+    const data = await getPageData(query);
+    if (!data.homePage) throw error(404, 'Not Found');
+    return {
+        data
+    };
 };

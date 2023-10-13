@@ -8,12 +8,12 @@
 </script>
 
 {#if value.listItem === 'number'}
-	<OrderedList class="pl-4 my-4 leading-loose flex flex-col gap-2">
+	<OrderedList class="not-prose pl-4 my-4 leading-loose flex flex-col gap-2">
 		<slot />
 	</OrderedList>
 {/if}
 {#if value.listItem === 'bullet'}
-	<UnorderedList class="pl-4 my-4 leading-loose flex flex-col gap-2">
+	<UnorderedList class="not-prose pl-4 my-4 leading-loose flex flex-col gap-2">
 		<slot />
 	</UnorderedList>
 {/if}

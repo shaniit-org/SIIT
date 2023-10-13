@@ -11,7 +11,7 @@
 </script>
 
 <div class="section-container box">
-	<div class="flex flex-col gap-2 mb-6">
+	<div class="flex flex-col mb-6">
 		<h3 class="text-4xl my-4 text-theme-dark cursor-pointer">{section.title}</h3>
 
 		{#if section.description}

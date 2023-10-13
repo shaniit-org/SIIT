@@ -1,3 +1,3 @@
-<em class="underline italic">
+<em class="font-semibold">
 	<slot />
 </em>

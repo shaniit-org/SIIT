@@ -11,7 +11,7 @@
 	import 'prismjs/components/prism-python';
 	import 'prismjs/components/prism-markdown';
 	/**
-	 *  @type {import('@portabletext/svelte/dist/ptTypes').InputValue}
+	 *  @type {import('@portabletext/svelte/dist/index').InputValue}
 	 */
 	export let value = [];
 	onMount(() => {
