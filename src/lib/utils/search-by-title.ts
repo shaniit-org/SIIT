@@ -16,3 +16,12 @@ export function sortByDate(data, order) {
 		}
 	});
 }
+
+export function filterByCategory(data, category) {
+	if (category.length > 0) {
+		return data.filter((item) => {
+			return item.categories.some((cat) => category.includes(cat.title));
+		});
+	}
+	return data;
+}

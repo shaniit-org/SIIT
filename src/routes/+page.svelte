@@ -18,21 +18,21 @@
 
 <Meta data={seo} />
 <div>
-	{#each sections as sec}
-		{#if sec._type === 'Hero'}
-			<Hero data={sec} />
+	{#each sections as s}
+		{#if s._type === 'Hero'}
+			<Hero data={s} />
 		{/if}
-		{#if sec._type === 'Highlight'}
-			<HighLight data={sec} {term} />
+		{#if s._type === 'Highlight'}
+			<HighLight data={s} {term} />
 		{/if}
-		{#if sec._type === 'News'}
-			<News data={news} section={sec} />
+		{#if s._type === 'News'}
+			<News data={news} section={s} />
 		{/if}
-		{#if sec._type === 'Events'}
-			<Events data={events} section={sec} />
+		{#if s._type === 'Events'}
+			<Events data={events} section={s} />
 		{/if}
-		{#if sec._type === 'Donate'}
-			<Donate data={sec} />
+		{#if s._type === 'Donate'}
+			<Donate data={s} />
 		{/if}
 	{/each}
 </div>

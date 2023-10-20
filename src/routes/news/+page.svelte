@@ -6,9 +6,9 @@
 	 * @type {{data:import('../../lib/types/newsPage').NewsPage}} - data
 	 */
 	export let data;
-	let { title, news, seo } = data.data;
+	let { title, news, seo, categories } = data.data;
 </script>
 
 <Meta data={seo} />
 <SubHero {title} />
-<News data={news} />
+<News data={news} {categories} />

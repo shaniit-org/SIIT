@@ -11,13 +11,16 @@ const query = `
               coverImage ,
               publishedAt,
              categories[]->{ title , _id}
+    },
+   'categories':*[_type =="category"]{
+      title,
+        _id
     }
   }
 `;
-
 export const load = async () => {
 	/**
-	 * @type {import('$lib/types').News[]} - data
+	 * @type {import('../../lib/types/newsPage').NewsPage} - data
 	 */
 	const data = await getPageData(query);
 	if (!data) throw error(404, 'Not Found');
