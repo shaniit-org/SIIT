@@ -7,7 +7,6 @@
 	 * @type {{data:import('../../../lib/types/faqPage').FAQData}})
 	 **/
 	export let data;
-	console.log(data);
 </script>
 
 <div class="min-h-screen">
