@@ -1,5 +1,5 @@
-import adapter from '@sveltejs/adapter-auto';
 import { optimizeImports } from 'carbon-preprocess-svelte';
+import adapter from '@sveltejs/adapter-cloudflare';
 import sveltePreprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -12,7 +12,11 @@ const config = {
 	],
 	kit: {
 		adapter: adapter({
-			runtime: 'node'
+			// See below for an explanation of these options
+			routes: {
+				include: ['/*'],
+				exclude: ['<all>']
+			}
 		})
 	}
 };
