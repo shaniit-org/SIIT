@@ -48,7 +48,7 @@
 						</div>
 						<div class="flex flex-col">
 							<span class="uppercase mb-1 text-sm"> {aut.name} </span>
-							<div class="flex items-center gap-4">
+							<div class="flex flex-col md:flex-row md:items-center md:gap-4">
 								<span class="text-gray-500">{readingTime} min read</span>
 								<span class="text-sm text-gray-500"> {moment(publishedAt).format('LL')}</span>
 							</div>

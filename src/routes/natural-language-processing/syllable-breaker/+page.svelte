@@ -2,7 +2,7 @@
 	import { CopyButton, TextArea, Button, Tile, TextInput } from 'carbon-components-svelte';
 	import SubHero from '$lib/components/common/SubHero.svelte';
 	import Meta from '$lib/components/common/Meta.svelte';
-	import { syllable_breaker } from '../../../lib/utils/syllable_breaker';
+	import { syllable_breaker } from '$lib/utils/sylabble';
 
 	let input = '';
 	let breaker = '|';

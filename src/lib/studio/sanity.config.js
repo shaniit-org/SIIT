@@ -8,21 +8,21 @@ import { newDeskStructure } from './utils/deskStructure';
 import { contentGraphView } from 'sanity-plugin-graph-view';
 
 export default defineConfig({
-	name: 'default',
-	title: 'ShanIIT',
-	projectId: 'za3lzlmc',
-	dataset: 'live',
-	basePath: '/studio',
-	plugins: [
-		deskTool({
-			structure: newDeskStructure
-		}),
-		visionTool(),
-		contentGraphView({}),
-		unsplashImageAsset(),
-		codeInput()
-	],
-	schema: {
-		types: schemaTypes
-	}
+    name: 'default',
+    title: 'ShanIIT',
+    projectId: 'za3lzlmc',
+    dataset: 'live',
+    basePath: '/studio',
+    plugins: [
+        deskTool({
+            structure: newDeskStructure
+        }),
+        visionTool(),
+        contentGraphView({}),
+        unsplashImageAsset(),
+        codeInput()
+    ],
+    schema: {
+        types: schemaTypes
+    }
 });
