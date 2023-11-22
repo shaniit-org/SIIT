@@ -1,9 +1,10 @@
 import algoliasearch from 'algoliasearch/lite';
+import { PUBLIC_ALGOLIA_ID, PUBLIC_ALGOLIA_API } from '$env/static/public';
 
 import { autocomplete, getAlgoliaResults } from '@algolia/autocomplete-js';
 
-const APP_ID = import.meta.env.FLY_ALGOLIA_ID || import.meta.env.VITE_ALGOLIA_ID;
-const API = import.meta.env.FLY_ALGOLIA_API || import.meta.env.VITE_ALGOLIA_API;
+const APP_ID = PUBLIC_ALGOLIA_ID || import.meta.env.VITE_ALGOLIA_ID;
+const API = PUBLIC_ALGOLIA_API || import.meta.env.VITE_ALGOLIA_API;
 
 export const searchClient = algoliasearch(APP_ID, API);
 
