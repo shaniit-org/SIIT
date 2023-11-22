@@ -1,7 +1,8 @@
 <script>
 	import { navs } from '$lib/site/nav';
+	import { PUBLIC_FORMSPREE_ID } from '$env/static/public';
 	import { ImageLoader, TextInput, TextArea, Button } from 'carbon-components-svelte';
-	let formID = import.meta.env.FLY_FORMSPREE_ID;
+	let formID = import.meta.env.FLY_FORMSPREE_ID || PUBLIC_FORMSPREE_ID;
 </script>
 
 <footer class="bg-theme-dark p-2">
