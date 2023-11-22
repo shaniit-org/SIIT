@@ -1,5 +1,5 @@
 import { optimizeImports } from 'carbon-preprocess-svelte';
-import adapter from '@sveltejs/adapter-cloudflare';
+import adapter from '@sveltejs/adapter-node';
 import sveltePreprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
