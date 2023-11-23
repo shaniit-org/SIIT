@@ -23,7 +23,7 @@
 			</div>
 			<form
 				class="flex flex-col p-0 md:p-4 basis-1/2"
-				action="https://formspree.io/f/{formID}"
+				action={`https://formspree.io/f/${formID}`}
 				method="POST"
 			>
 				<p class="text-white text-xl mb-6">Contact Us</p>

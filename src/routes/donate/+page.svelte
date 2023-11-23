@@ -12,9 +12,9 @@
 </script>
 
 <Meta data={data.data.seo} />
-<div class="w-full min-h-screen flex flex-col gap-6 md:gap-12">
+<div class="w-full min-h-screen flex flex-col">
 	<SubHero title="Donate Us" />
-	<div class="section-container p-6 md:p-12 w-full">
+	<div class="section-container box">
 		<div class="w-full flex flex-col">
 			<div class="mb-6 md:mb-12">
 				<SanityImage
