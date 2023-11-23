@@ -1,8 +1,9 @@
 import algoliasearch from 'algoliasearch/lite';
 import { autocomplete, getAlgoliaResults } from '@algolia/autocomplete-js';
+import { env } from '$env/dynamic/public';
 
-const APP_ID = import.meta.env.PUBLIC_ALGOLIA_ID || import.meta.env.VITE_ALGOLIA_ID;
-const API = import.meta.env.PUBLIC_ALGOLIA_API || import.meta.env.VITE_ALGOLIA_API;
+const APP_ID = env.PUBLIC_ALGOLIA_ID || import.meta.env.VITE_ALGOLIA_ID;
+const API = env.PUBLIC_ALGOLIA_API || import.meta.env.VITE_ALGOLIA_API;
 
 export const searchClient = algoliasearch(APP_ID, API);
 
