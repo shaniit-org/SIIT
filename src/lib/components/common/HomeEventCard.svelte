@@ -1,14 +1,22 @@
 <script>
 	import moment from 'moment';
+	import SanityImage from '$lib/sanity/image/SanityImage.svelte';
 	/**
 	 * @type {import('../../types').News}
 	 */
 	export let data;
+	console.log(data);
 </script>
 
 <a href={`/events/${data.slug}`} class="cursor-pointer hover:bg-theme-muted bg-white flex flex-col">
-	<div class="flex flex-col justify-between p-4 flex gap-6">
-		<h3 class="text-lg text-theme-dark">
+	<SanityImage
+		maxWidth={450}
+		image={data.coverImage}
+		alt={data.title}
+		className=" aspect-video w-full object-cover"
+	/>
+	<div class="flex-col justify-between p-4 flex gap-6">
+		<h3 class="text-xl">
 			{data.title}
 		</h3>
 		<div class="flex flex-col">

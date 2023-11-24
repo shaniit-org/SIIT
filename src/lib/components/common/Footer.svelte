@@ -29,7 +29,7 @@
 				<p class="text-white text-xl mb-6">Contact Us</p>
 				<p class="text-white mb-2">Email</p>
 				<TextInput
-					placeholder="Enter your name..."
+					placeholder="Enter your name"
 					class="mb-4 bg-[#262626]  text-white"
 					type="email"
 					required
@@ -37,7 +37,7 @@
 				/>
 				<p class="text-white mb-2">Message</p>
 				<TextArea
-					placeholder="Enter message..."
+					placeholder="Enter message"
 					class="mb-4 bg-[#262626] text-white"
 					name="message"
 					required

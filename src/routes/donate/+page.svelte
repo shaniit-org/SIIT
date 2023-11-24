@@ -83,7 +83,7 @@
 					required
 					name="units"
 				/>
-				<TextArea labelText="Message" placeholder="Enter message..." name="message" required />
+				<TextArea labelText="Message" placeholder="Enter message" name="message" required />
 				<Button type="submit" class=" mt-4 bg-[#0F62FE]" kind="primary">Send</Button>
 			</form>
 		</div>
