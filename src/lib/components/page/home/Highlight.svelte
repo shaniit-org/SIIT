@@ -23,13 +23,13 @@
 				>
 					<div class="p-4">
 						<h2 class="text-2xl md:text-4xl mb-4">{term.title}</h2>
-						<div class="text-base flex text-gray-800 items-center justify-between mb-4">
+						<div class="text-sm md:text-base flex text-gray-800 items-center justify-between mb-4">
 							<span class="italic">Term Of The Day</span>
 							<span class="italic">
-								{moment(term._createdAt).format('LL')}
+								{moment(new Date()).format('LL')}
 							</span>
 						</div>
-						<p class="mb-4 text-base leading-relaxed lg:text-xl lg:leading-[2]">
+						<p class="text-sm mb-4 md:text-base leading-relaxed lg:text-xl lg:leading-[2]">
 							{term.description}
 						</p>
 					</div>
@@ -41,7 +41,7 @@
 			<h3 class="text-xl md:text-3xl md:leading-relaxed mb-4">
 				{data.title}
 			</h3>
-			<p class="mb-6 text-base leading-relaxed lg:text-xl lg:leading-[2]">
+			<p class="mb-6 text-sm md:text-base leading-relaxed lg:text-xl lg:leading-[2]">
 				{data.description}
 			</p>
 			<Button

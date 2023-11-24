@@ -6,7 +6,7 @@
 	export let data;
 </script>
 
-<div class="grid gap-4 relative w-full md:h-[35vw] overflow-hidden">
+<div class="grid gap-4 relative w-full md:h-[35vw] overflow-hidden h-[20vh]">
 	<SanityImage
 		maxWidth={1920}
 		image={data.heroImage}

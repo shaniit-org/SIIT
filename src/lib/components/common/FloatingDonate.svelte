@@ -37,7 +37,11 @@
 				<span class="w-full text-base font-semibold"> Make Some Donation </span>
 				<span class="w-1/2 h-[2px] bg-[#E3983B]" />
 			</h2>
-			<ImageLoader src="/images/donate.png" alt="donate" class="max-w-max mx-auto min-h-[50px]" />
+			<ImageLoader
+				src="/images/donate.png"
+				alt="donate"
+				class="max-w-max mx-auto w-[50%] h-[50%] object-cover"
+			/>
 			<p class="text-sm my-4 leading-relaxed">
 				တွၼ်ႈတႃႇ ၵၢၼ်ဢၢႆႇထီႇတႆး တေၶိုၼ်ႈယႂ်ႇၼၼ်ႉ... လူဝ်ႇတၢင်းၸွႆႈထႅမ်သူၸဝ်ႈယူႇ။
 			</p>
