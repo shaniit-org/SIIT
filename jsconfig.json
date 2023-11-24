@@ -1,6 +1,7 @@
 {
 	"extends": "./.svelte-kit/tsconfig.json",
 	"compilerOptions": {
+		"jsx": "react",
 		"allowJs": true,
 		"checkJs": true,
 		"esModuleInterop": true,
@@ -9,7 +10,8 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true
-	}
+	},
+	"exclude": ["./src/lib/studio/**/*"]
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias and https://kit.svelte.dev/docs/configuration#files
 	//
 	// If you want to overwrite includes/excludes, make sure to copy over the relevant includes/excludes
