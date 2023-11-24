@@ -2,7 +2,7 @@ import { error } from '@sveltejs/kit';
 import { getPageData } from '$lib/sanity/query';
 
 const query = `*[_type =="news" && slug.current==$slug][0]{
-  ...,
+ ...,
  "authors":authors[]->{
    _id,
    name,
@@ -14,7 +14,7 @@ const query = `*[_type =="news" && slug.current==$slug][0]{
      _id,
      "slug": slug.current,
      description,
-          coverImage
+     coverImage
    }
 }`;
 

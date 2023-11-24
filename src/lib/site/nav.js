@@ -8,8 +8,8 @@ export const navs = [
 		path: '/'
 	},
 	{
-		name: 'News',
-		path: '/news'
+		name: 'Blogs',
+		path: '/blogs'
 	},
 	{
 		name: 'Events',

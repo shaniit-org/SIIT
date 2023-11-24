@@ -28,7 +28,7 @@ export async function GET({ url }) {
 	}
 	try {
 		const { news, events } = await sanityClient.fetch(query);
-		const newsIndex = searchClient.initIndex('news');
+		const newsIndex = searchClient.initIndex('blogs');
 		const eventsIndex = searchClient.initIndex('events');
 		// @ts-ignore
 		await newsIndex.saveObjects(news);

@@ -29,7 +29,7 @@
 						<UnorderedList class="pl-4 md:pl-6">
 							{#each item.qanda as itm}
 								<ListItem class="flex flex-col gap-2">
-									<Link class="text-sm mt-1 text-black" href="/faqs/{itm._id}">
+									<Link class="text-base mt-1 text-black" href="/faqs/{itm._id}">
 										<span class="text-black">{itm.question}</span></Link
 									>
 								</ListItem>

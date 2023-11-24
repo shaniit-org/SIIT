@@ -20,7 +20,7 @@
 		</p>
 		<Button
 			size="field"
-			href="/news/{data.slug}"
+			href="/blogs/{data.slug}"
 			class="text-white border border-blue-500  max-w-max"
 			icon={Link}>Read More</Button
 		>
