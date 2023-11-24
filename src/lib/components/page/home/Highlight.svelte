@@ -46,7 +46,7 @@
 			</p>
 			<Button
 				kind="secondary"
-				href={`/blogs/${data.slug}`}
+				href={data.authors ? `/blogs/${data.slug}` : `/events/${data.slug}`}
 				icon={LinkIcon}
 				class="cursor-pointer  max-w-max"
 				>Read More

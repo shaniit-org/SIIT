@@ -7,7 +7,6 @@
 	 */
 	export let data;
 	let { title, news, seo, categories } = data.data;
-	console.log(categories);
 </script>
 
 <Meta data={seo} />
