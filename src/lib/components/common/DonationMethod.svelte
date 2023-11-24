@@ -1,25 +1,32 @@
 <script>
+	import { ClickableTile, CodeSnippet } from 'carbon-components-svelte';
 	import SanityImage from '$lib/sanity/image/SanityImage.svelte';
+
+	import { ComposedModal, ModalHeader, ModalBody } from 'carbon-components-svelte';
 	/**
 	 * @type {import('../../types/donatePage').PaymentMethod} - data
 	 */
 
 	export let data;
+	$: open = false;
 </script>
 
-<div
-	class="cursor-pointer group bg-[#edf3f9] py-2 min-h-[130px] items-center flex justify-between flex-col"
+<ComposedModal size="xs" bind:open on:open on:open on:close>
+	<ModalHeader title={data.name} />
+	<ModalBody>
+		<div class=" text-lg overflow-hidden">
+			<CodeSnippet light={true}>{data.number}</CodeSnippet>
+		</div>
+	</ModalBody>
+</ComposedModal>
+<ClickableTile
+	class="cursor-pointer group   grid place-items-center "
+	on:click={() => (open = true)}
 >
-	<div class="w-full flex mx-auto transition-all duration-300 group-hover:scale-[1.1]">
-		<SanityImage
-			className="w-[100px] md:w-[140px]   aspect-square mx-auto object-contain bg-transparent"
-			image={data.Image}
-			alt={data.name}
-			maxWidth={200}
-		/>
-	</div>
-	<div class="flex flex-col p-4 text-center gap-2">
-		<p class="font-semibold text-sm md:text-lg text-theme-body leading-[1]">{data.name}</p>
-		<p class="text-sm group-hover:text-blue-500">{data.number}</p>
-	</div>
-</div>
+	<SanityImage
+		className="w-full aspect-square mx-auto object-contain bg-transparent max-w-[80px]"
+		image={data.Image}
+		alt={data.name}
+		maxWidth={100}
+	/>
+</ClickableTile>
