@@ -7,7 +7,7 @@
 	export let data;
 </script>
 
-<a href={`/news/${data.slug}`} class="cursor-pointer hover:bg-theme-muted bg-white flex flex-col">
+<a href={`/blogs/${data.slug}`} class="cursor-pointer hover:bg-theme-muted bg-white flex flex-col">
 	<SanityImage
 		maxWidth={450}
 		image={data.coverImage}

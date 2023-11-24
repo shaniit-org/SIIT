@@ -9,36 +9,36 @@ import Em from './Em.svelte';
 import CodeInput from './CodeInput.svelte';
 
 export const components = {
-    types: {
-        code: CodeInput,
-        image: Image
-    },
-    marks: {
-        em: Em,
-        link: Link,
-        strong: Strong
-    },
-    block: {
-        normal: Paragraph,
-        //	blockquote: Quote,
-        // Re-using the same component across multiple styles
-        h1: Heading,
-        h2: Heading,
-        h3: Heading,
-        h4: Heading
-    },
-    list: {
-        // Swap only the list parts you need
-        bullet: List,
-        // Custom user-defined list type
-        normal: List,
-        number: List
-        //	checklist: ChecklistWrapper
-    },
-    listItem: {
-        number: ListItem,
-        bullet: ListItem,
-        normal: ListItem
-        // checklist: ChecklistItem
-    }
+	types: {
+		code: CodeInput,
+		image: Image
+	},
+	marks: {
+		em: Em,
+		link: Link,
+		strong: Strong
+	},
+	block: {
+		normal: Paragraph,
+		//	blockquote: Quote,
+		// Re-using the same component across multiple styles
+		h1: Heading,
+		h2: Heading,
+		h3: Heading,
+		h4: Heading
+	},
+	list: {
+		// Swap only the list parts you need
+		bullet: List,
+		// Custom user-defined list type
+		normal: List,
+		number: List
+		//	checklist: ChecklistWrapper
+	},
+	listItem: {
+		number: ListItem,
+		bullet: ListItem,
+		normal: ListItem
+		// checklist: ChecklistItem
+	}
 };

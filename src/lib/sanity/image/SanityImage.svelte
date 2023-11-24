@@ -27,15 +27,16 @@
 
 <style>
 	img {
-		transition: 500ms all;
+		transition: 500ms all ease-in-out;
 		transform-origin: center;
 	}
 	img[data-loaded='false'] {
 		filter: blur(5px);
 		opacity: 0.5;
-		scale: 0.99;
+		scale: 1.01;
 	}
 	img[data-loaded='true'] {
 		scale: 1;
+		opacity: 1;
 	}
 </style>

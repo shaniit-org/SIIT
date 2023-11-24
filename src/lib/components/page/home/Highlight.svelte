@@ -46,7 +46,7 @@
 			</p>
 			<Button
 				kind="secondary"
-				href={`/news/${data.slug}`}
+				href={`/blogs/${data.slug}`}
 				icon={LinkIcon}
 				class="cursor-pointer  max-w-max"
 				>Read More

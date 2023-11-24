@@ -23,13 +23,13 @@ export function init_autocomplete() {
 		getSources({ query }) {
 			return [
 				{
-					sourceId: 'news',
+					sourceId: 'blog',
 					getItems() {
 						return getAlgoliaResults({
 							searchClient,
 							queries: [
 								{
-									indexName: 'news',
+									indexName: 'blogs',
 									query,
 									params: {
 										hitsPerPage: 3,

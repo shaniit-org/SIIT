@@ -5,7 +5,7 @@ export interface NewsPage {
 	title: string;
 	news: News[];
 	categories: {
-		name: string;
-		slug: string;
+		title: string;
+		_id: string;
 	}[];
 }

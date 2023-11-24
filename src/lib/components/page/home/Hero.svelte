@@ -6,11 +6,12 @@
 	export let data;
 </script>
 
-<div class="grid gap-4 relative w-full md:h-[500px] overflow-hidden">
+<div class="grid gap-4 relative w-full md:h-[35vw] overflow-hidden">
 	<SanityImage
+		maxWidth={1920}
 		image={data.heroImage}
 		alt={data.title}
 		loading="eager"
-		className=" w-full object-cover z-[-1] "
+		className=" w-full object-cover z-[-1] h-full "
 	/>
 </div>
