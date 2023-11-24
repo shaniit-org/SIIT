@@ -5,7 +5,6 @@
 	 * @type {import('../../types').News}
 	 */
 	export let data;
-	console.log(data);
 </script>
 
 <a href={`/events/${data.slug}`} class="cursor-pointer hover:bg-theme-muted bg-white flex flex-col">
