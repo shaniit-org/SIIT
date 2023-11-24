@@ -25,7 +25,8 @@ const query = `{
           "slug":slug.current,
           title,
           description,
-          publishedAt
+          publishedAt,
+          coverImage ,
     },
   "news":*[_type =="news"] | order(publishedAt desc)[0...6]  {
           "slug":slug.current,
@@ -40,12 +41,12 @@ const query = `{
  * @type {import('@sveltejs/kit').Load}
  */
 export const load = async () => {
-	/**
-	 * @type {import('$lib/types/homePage').HomePageData}
-	 */
-	const data = await getPageData(query);
-	if (!data.homePage) throw error(404, 'Not Found');
-	return {
-		data
-	};
+    /**
+     * @type {import('$lib/types/homePage').HomePageData}
+     */
+    const data = await getPageData(query);
+    if (!data.homePage) throw error(404, 'Not Found');
+    return {
+        data
+    };
 };

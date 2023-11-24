@@ -23,7 +23,7 @@
 							className="aspect-video object-cover w-full h-full group-hover:scale-105 transition-all duration-500 cursor-pointer"
 						/>
 					</div>
-					<h3 class="text-xl mt-4 text-center">{dat.role}</h3>
+					<h3 class="text-xl mt-2 text-center">{dat.role}</h3>
 				</div>
 			{/each}
 		</div>
