@@ -39,11 +39,11 @@
 			{#if authors}
 				{#each authors as aut}
 					<div class="flex items-center gap-4 flex-row">
-						<div class="w-[60px] aspect-square bg-gray-800 h-[60px]">
+						<div class="w-[60px] aspect-square bg-gray-800 h-[60px] rounded-full">
 							<SanityImage
 								maxWidth={80}
 								image={aut.profile}
-								className="w-[60px] h-[60px] object-cover"
+								className="w-[60px] h-[60px] object-cover rounded-full"
 							/>
 						</div>
 						<div class="flex flex-col">

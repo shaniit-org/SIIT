@@ -40,7 +40,7 @@
 			<ImageLoader
 				src="/images/donate.png"
 				alt="donate"
-				class="max-w-max mx-auto min-h-[50px] min-w-[50px]"
+				class="mx-auto h-[50px] w-[50px] max-w-max"
 			/>
 			<p class="text-sm my-4 leading-relaxed">
 				တွၼ်ႈတႃႇ ၵၢၼ်ဢၢႆႇထီႇတႆး တေၶိုၼ်ႈယႂ်ႇၼၼ်ႉ... လူဝ်ႇတၢင်းၸွႆႈထႅမ်သူၸဝ်ႈယူႇ။
