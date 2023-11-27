@@ -1,6 +1,5 @@
 <script>
-	import NewsCard from '$lib/components/common/NewsCard.svelte';
-	import EventCard from './EventCard.svelte';
+	import RelatedCard from './RelatedCard.svelte';
 	/** @type {import('../../types').RelatedArticle[] | undefined} */
 	export let data;
 </script>
@@ -11,12 +10,7 @@
 			<h3 class="text-xl mb-4">Related Articles</h3>
 			<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-12">
 				{#each data as itm}
-					{#if itm._type == 'event'}
-						<EventCard data={itm} />
-					{/if}
-					{#if itm._type != 'event'}
-						<NewsCard data={itm} />
-					{/if}
+					<RelatedCard data={itm} />
 				{/each}
 			</div>
 		</div>
