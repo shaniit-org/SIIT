@@ -5,7 +5,7 @@
 	 * @type {import('../../types').News}
 	 */
 	export let data;
-	$: url = data._type === 'event' ? `/events/${data.slug}` : `/news/${data.slug}`;
+	$: url = data._type === 'event' ? `/events/${data.slug}` : `/blogs/${data.slug}`;
 </script>
 
 <a href={url} class="cursor-pointer hover:bg-theme-muted bg-white flex flex-col">
