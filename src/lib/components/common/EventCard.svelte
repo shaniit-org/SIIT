@@ -12,7 +12,7 @@
 <div
 	class="border-t border-t-gray-200 border-solid pt-4 cursor-pointer flex flex-col gap-8 md:flex-row md:gap-6"
 >
-	<div class="w-full h-full basis-[20%] aspect-video max-w-[330px] mt-4 shrink-0">
+	<div class="w-full h-full basis-[20%] aspect-video max-w-[330px] mt-4 shrink-0 overflow-hidden">
 		<SanityImage
 			className="w-full h-full object-cover"
 			maxWidth={300}
