@@ -1,11 +1,13 @@
 const DOMAIN = 'https://shaniit.org';
 import { getPageData } from '$lib/sanity/query';
+
 type Page = {
     loc: string;
     changefreq: string;
     priority: number;
     lastmod: string;
 };
+
 const pages = [
     {
         loc: '/',
@@ -136,5 +138,5 @@ export async function GET() {
                 'Content-Type': 'application/xml'
             }
         }
-    );
+	);
 }
