@@ -7,7 +7,7 @@
 	export let data;
 </script>
 
-<Tile class="bg-theme-secondary">
+<div class="card">
 	<div class="section-container box grid grid-cols-1 md:grid-cols-3 gap-6">
 		<h3 class="text-xl md:text-2xl md:leading-relaxed">
 			{data.title}
@@ -21,4 +21,4 @@
 			>
 		</div>
 	</div>
-</Tile>
+</div>

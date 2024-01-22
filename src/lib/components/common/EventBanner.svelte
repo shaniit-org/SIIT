@@ -15,17 +15,17 @@
 </script>
 
 <div
-	class="w-full bg-gradient-to-b from-black to-gray-900 relative text-white min-h-[300px] flex justify-end flex-col overflow-hidden"
+	class="w-full relative card text-white min-h-[400px] flex justify-end flex-col overflow-hidden box"
 >
-	<div class="section-container box w-full">
-		<div class="flex gap-2 flex-col mb-8">
-			<h1 class="text-4xl font-bold lg:text-5xl lg:leading-[1.2] leading-[1.5]">
+	<div class="section-container w-full">
+		<div class="flex gap-2 flex-col my-8">
+			<h1 class="h1 font-bold mb-4">
 				{title}
 			</h1>
-			<p class="text-theme-muted text-sm md:w-3/4 leading-relaxed mt-4">
+			<p class="md:w-3/4 block leading-relaxed mt-4">
 				{description}
 			</p>
-			<span class="text-sm mt-2 text-gray-500"> {moment(publishedAt).format('LL')}</span>
+			<span class="mt-2"> {moment(publishedAt).format('LL')}</span>
 		</div>
 	</div>
 </div>

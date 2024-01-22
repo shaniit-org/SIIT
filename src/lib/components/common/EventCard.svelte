@@ -14,7 +14,7 @@
 >
 	<div class="w-full h-full basis-[20%] aspect-video max-w-[330px] mt-4 shrink-0 overflow-hidden">
 		<SanityImage
-			className="w-full h-full object-cover"
+			className="rounded-token w-full h-full object-cover"
 			maxWidth={300}
 			image={data.coverImage}
 			alt={data.title}

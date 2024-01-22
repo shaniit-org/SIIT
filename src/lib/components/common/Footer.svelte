@@ -1,10 +1,10 @@
 <script>
 	import { navs } from '$lib/site/nav';
-	import { ImageLoader, TextInput, TextArea, Button } from 'carbon-components-svelte';
+	import { ImageLoader, Button } from 'carbon-components-svelte';
 	let formID = 'mrgwbjkb';
 </script>
 
-<footer class="bg-theme-dark p-2">
+<footer class="card rounded-none border-none p-2">
 	<div class="section-container box">
 		<div class="flex flex-col gap-4 md:flex-row justify-between">
 			<div class="basis-1/2">
@@ -27,21 +27,17 @@
 				method="POST"
 			>
 				<p class="text-white text-xl mb-6">Contact Us</p>
-				<p class="text-white mb-2">Email</p>
-				<TextInput
-					placeholder="Enter your name"
-					class="mb-4 bg-[#262626]  text-white"
-					type="email"
-					required
-					name="email"
-				/>
+				<label class="label">
+					<span>Email</span>
+					<input
+						class="input px-4 py-2 rounded-token"
+						title="Enter your email "
+						type="text"
+						placeholder="Enter your email "
+					/>
+				</label>
 				<p class="text-white mb-2">Message</p>
-				<TextArea
-					placeholder="Enter message"
-					class="mb-4 bg-[#262626] text-white"
-					name="message"
-					required
-				/>
+				<textarea placeholder="Enter message" name="message" required class="textarea px-4 py-2" />
 				<Button type="submit" class=" mt-4 bg-[#0F62FE]" kind="primary">Submit</Button>
 			</form>
 		</div>
