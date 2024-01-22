@@ -7,19 +7,21 @@
 	export let data;
 </script>
 
-<a href={`/blogs/${data.slug}`} class="cursor-pointer hover:bg-theme-muted bg-white flex flex-col">
-	<SanityImage
-		maxWidth={450}
-		image={data.coverImage}
-		alt={data.title}
-		className=" aspect-video w-full object-cover"
-	/>
-	<div class="flex-col justify-between p-4 flex gap-6">
-		<h3 class="text-xl">
+<a href={`/blogs/${data.slug}`} class="cursor-pointer bg-white flex flex-col card overflow-hidden">
+	<div class="p-4 overflow-hidden md:p-8 md:pb-0">
+		<SanityImage
+			maxWidth={450}
+			image={data.coverImage}
+			alt={data.title}
+			className="aspect-video w-full object-cover overflow-hidden"
+		/>
+	</div>
+	<div class="flex-col justify-between p-4 flex gap-6 md:p-8">
+		<h3 class="h3">
 			{data.title}
 		</h3>
 		<div class="flex flex-col">
-			<span class="text-gray-800 mb-2"> {data.description} </span>
+			<p class="mb-2">{data.description}</p>
 			<span> {moment(data.publishedAt).format('LL')}</span>
 		</div>
 	</div>
