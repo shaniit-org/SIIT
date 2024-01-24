@@ -1,6 +1,5 @@
 <script>
 	import { navs } from '$lib/site/nav';
-	import { ImageLoader, Button } from 'carbon-components-svelte';
 	let formID = 'mrgwbjkb';
 </script>
 
@@ -9,9 +8,9 @@
 		<div class="flex flex-col gap-4 md:flex-row justify-between">
 			<div class="basis-1/2">
 				<div class="mb-6">
-					<ImageLoader class="max-w-[100px] aspect-video " src="/logo.svg" alt="SIIT logo" />
+					<img class="max-w-[100px] aspect-video" src="/logo.svg" alt="SIIT logo" />
 				</div>
-				<ul class="grid grid-cols-2 gap-y-4 justify-center text-white gap-x-10">
+				<ul class="grid grid-cols-2 gap-y-4 justify-center gap-x-10">
 					{#each navs as nav}
 						<li>
 							<a href={nav.path} class="text-theme-light hover:text-blue-500 text-base"
@@ -26,19 +25,19 @@
 				action={`https://formspree.io/f/${formID}`}
 				method="POST"
 			>
-				<p class="text-white text-xl mb-6">Contact Us</p>
-				<label class="label">
+				<p class=" text-xl mb-6">Contact Us</p>
+				<label class="label mb-4">
 					<span>Email</span>
 					<input
-						class="input px-4 py-2 rounded-token"
+						class="input px-4 py-2"
 						title="Enter your email "
 						type="text"
 						placeholder="Enter your email "
 					/>
 				</label>
-				<p class="text-white mb-2">Message</p>
+				<p class=" mb-2">Message</p>
 				<textarea placeholder="Enter message" name="message" required class="textarea px-4 py-2" />
-				<Button type="submit" class=" mt-4 bg-[#0F62FE]" kind="primary">Submit</Button>
+				<button type="submit" class=" mt-4 button variant-filled-primary py-2">Submit</button>
 			</form>
 		</div>
 	</div>

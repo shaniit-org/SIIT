@@ -7,13 +7,13 @@
 </script>
 
 <div
-	class="grid z-20 gap-4 relative md:h-[35vw] section-container box mx-auto overflow-hidden h-[20vh]"
+	class="rounded-xl z-20 relative grid gap-4 md:h-[25vw] section-container box mx-auto overflow-hidden h-[20vh]"
 >
 	<SanityImage
 		maxWidth={1920}
 		image={data.heroImage}
 		alt={data.title}
 		loading="eager"
-		className="gradient-mask w-full object-cover z-[-1] h-full overflow-hidden "
+		className="rounded-xl z-12 w-full object-cover z-[-1] h-full overflow-hidden "
 	/>
 </div>

@@ -15,7 +15,7 @@
 
 html,
 body {
-	@apply h-full overflow-hidden  bg-white dark:bg-surface-50-900-token;
+	@apply h-full overflow-hidden  dark:bg-surface-50-900-token;
 }
 
 @layer utilities {

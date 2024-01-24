@@ -4,6 +4,7 @@
 	import Footer from '$lib/components/common/Footer.svelte';
 	import FloatingDonate from '$lib/components/common/FloatingDonate.svelte';
 	import { AppShell } from '@skeletonlabs/skeleton';
+	import Header from '$lib/components/common/Header.svelte';
 
 	onNavigate((navigation) => {
 		// check if view transition is supported
@@ -19,17 +20,16 @@
 	});
 </script>
 
-<AppShell>
+<AppShell class="relative">
 	<svelte:fragment slot="header">
-		<!-- <Header />
--->
+		<Header />
 	</svelte:fragment>
 	<!-- (sidebarLeft) -->
 	<!-- (pageHeader) -->
 
 	<!-- Router Slot -->
 
-	<div class="font-san content w-full min-h-screen bg-surface-900">
+	<div class="relative z-1 font-san content w-full min-h-screen">
 		<slot />
 	</div>
 	<!-- ---- / ---- -->

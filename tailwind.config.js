@@ -4,7 +4,7 @@ import { join } from 'path';
 // 1. Import the Skeleton plugin
 import { skeleton } from '@skeletonlabs/tw-plugin';
 export default {
-    darkMode: 'class',
+    darkMode: 'class', // or 'media' or 'class'
     content: [
         './src/**/**/*.{html,js,svelte,ts}',
         join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')
@@ -25,7 +25,18 @@ export default {
         require('@tailwindcss/typography'),
         skeleton({
             themes: {
-                preset: ['skeleton', 'wintry', 'vintage', 'seafoam', 'gold-nouveau', 'crimson', 'sahara']
+                preset: [
+                    'skeleton',
+                    'rocket',
+                    'modern',
+                    'wintry',
+                    'vintage',
+                    'seafoam',
+                    'gold-nouveau',
+                    'crimson',
+                    'sahara',
+                    'hamlindigo'
+                ]
             }
         })
     ]

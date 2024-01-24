@@ -1,54 +1,36 @@
 <script>
+	import { LightSwitch } from '@skeletonlabs/skeleton';
 	import { init_autocomplete } from '../../utils/algolia';
 	import { onMount } from 'svelte';
-	import {
-		Header,
-		HeaderUtilities,
-		HeaderGlobalAction,
-		HeaderNav,
-		HeaderNavItem,
-		SideNav,
-		SideNavItems,
-		SideNavLink,
-		SkipToContent
-	} from 'carbon-components-svelte';
-	import { Search } from 'carbon-icons-svelte';
 	import { navs } from '$lib/site/nav';
-
-	let isSideNavOpen = false;
 	onMount(() => {
 		init_autocomplete();
 	});
 </script>
 
-<Header bind:isSideNavOpen expandedByDefault={false}>
-	<a href="/" slot="platform" class="grid place-items-center overflow-hidden">
-		<img loading="eager" src={'/logo.svg'} alt="SIIT Logo" class="logo" />
-	</a>
-	<svelte:fragment slot="skip-to-content">
-		<SkipToContent />
-	</svelte:fragment>
-	<HeaderNav>
-		{#each navs as nav}
-			<HeaderNavItem href={nav.path} text={nav.name} />
-		{/each}
-		<Search size={32} />
-	</HeaderNav>
-	<HeaderUtilities>
-		<HeaderGlobalAction
-			id="autocomplete"
-			kind="ghost"
-			class="grid place-items-center text-white border-none mr-1 cursor-pointer"
-		/>
-	</HeaderUtilities>
-</Header>
-<SideNav bind:isOpen={isSideNavOpen} default={false}>
-	<SideNavItems>
-		{#each navs as nav}
-			<SideNavLink text={nav.name} href={nav.path} />
-		{/each}
-	</SideNavItems>
-</SideNav>
+<header
+	class="bg-surface-50-900-token backdrop-blur z-[9999] w-full bg-opacity-50 h-[5em] border-b border-b-surface-200 dark:border-b-surface-500 flex items-center"
+>
+	<div class="section-container w-full box flex items-center">
+		<a href="/" class="grid place-items-center overflow-hidden">
+			<img loading="eager" src={'/logo.svg'} alt="SIIT Logo" class="logo" />
+		</a>
+		<nav class="hidden mx-auto max-w-max pointer-events-none md:flex md:pointer-events-auto">
+			<ul class="flex items-center gap-4">
+				{#each navs as nav}
+					<li>
+						<a href={nav.path} class="variant-ghost px-2 py-2 button no-underline">
+							{nav.name}
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</nav>
+		<button class="grid place-items-center">
+			<iconify-icon icon="material-symbols:search" class="font-bold text-3xl" />
+		</button>
+	</div>
+</header>
 
 <style>
 	.logo {

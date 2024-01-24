@@ -21,7 +21,7 @@
 			</p>
 		{/if}
 	</div>
-	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-6">
+	<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 my-6">
 		{#each data as item}
 			<HomeEventCard data={item} />
 		{/each}

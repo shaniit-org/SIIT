@@ -24,7 +24,7 @@
 </script>
 
 <div
-	class="w-full bg-gradient-to-b from-black to-gray-900 relative text-white min-h-[300px] flex justify-end flex-col overflow-hidden"
+	class="w-full relative card text-white min-h-[400px] flex justify-end flex-col overflow-hidden box"
 >
 	<div class="section-container box w-full">
 		<div class="flex gap-2 flex-col my-8">

@@ -7,22 +7,19 @@
 	export let data;
 </script>
 
-<a href={`/events/${data.slug}`} class="cursor-pointer card flex flex-col">
-	<div class="p-4 md:p-6 md:pb-0 overflow-hidden">
-		<SanityImage
-			maxWidth={450}
-			image={data.coverImage}
-			alt={data.title}
-			className=" rounded-token aspect-video w-full object-cover"
-		/>
-	</div>
-	<div class="flex-col md:p-8 justify-between p-4 flex gap-6">
-		<h3 class="h3">
-			{data.title}
-		</h3>
-		<div class="flex flex-col">
-			<p class="mb-2 leading-relaxed line-clamp-2">{data.description}</p>
-			<span> {moment(data.publishedAt).format('LL')}</span>
-		</div>
+<a href={`/events/${data.slug}`} class="cursor-pointer card flex flex-col gap-4 p-4 md:p-6">
+	<h3 class="h3 mb-2">
+		{data.title}
+	</h3>
+
+	<SanityImage
+		maxWidth={450}
+		image={data.coverImage}
+		alt={data.title}
+		className="  rounded-2xl aspect-video w-full object-cover"
+	/>
+	<div class="flex flex-col">
+		<p class="mb-2 leading-relaxed line-clamp-2">{data.description}</p>
+		<span> {moment(data.publishedAt).format('LL')}</span>
 	</div>
 </a>

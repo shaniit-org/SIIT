@@ -17,22 +17,20 @@
 </script>
 
 <Meta data={seo} />
-<div>
-	{#each sections as s}
-		{#if s._type === 'Hero'}
-			<Hero data={s} />
-		{/if}
-		{#if s._type === 'Highlight'}
-			<HighLight data={s} {term} />
-		{/if}
-		{#if s._type === 'News'}
-			<News data={news} section={s} />
-		{/if}
-		{#if s._type === 'Events'}
-			<Events data={events} section={s} />
-		{/if}
-		{#if s._type === 'Donate'}
-			<Donate data={s} />
-		{/if}
-	{/each}
-</div>
+{#each sections as s}
+	{#if s._type === 'Hero'}
+		<Hero data={s} />
+	{/if}
+	{#if s._type === 'Highlight'}
+		<HighLight data={s} {term} />
+	{/if}
+	{#if s._type === 'News'}
+		<News data={news} section={s} />
+	{/if}
+	{#if s._type === 'Events'}
+		<Events data={events} section={s} />
+	{/if}
+	{#if s._type === 'Donate'}
+		<Donate data={s} />
+	{/if}
+{/each}

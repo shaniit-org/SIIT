@@ -21,9 +21,9 @@
 		/>
 	</div>
 	<div class="flex flex-col">
-		<h2 class="text-2xl lg:text-2xl my-4 md:mb-2">
+		<h3 class="h3 my-4 md:mb-2">
 			{data.title}
-		</h2>
+		</h3>
 		<span class="mb-2 block text-base mt-2">
 			{moment(data.publishedAt).format('LL')}
 		</span>

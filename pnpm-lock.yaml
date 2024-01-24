@@ -56,6 +56,9 @@ dependencies:
   d3-sankey:
     specifier: ^0.12.3
     version: 0.12.3
+  iconify-icon:
+    specifier: ^1.0.8
+    version: 1.0.8
   instantsearch.js:
     specifier: ^4.62.0
     version: 4.62.0(algoliasearch@4.20.0)
@@ -1453,6 +1456,10 @@ packages:
   /@ibm/plex@6.0.0-next.6:
     resolution: {integrity: sha512-B3uGruTn2rS5gweynLmfSe7yCawSRsJguJJQHVQiqf4rh2RNgJFu8YLE2Zd/JHV0ZXoVMOslcXP2k3hMkxKEyA==}
     engines: {node: '>=14'}
+    dev: false
+
+  /@iconify/types@2.0.0:
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
     dev: false
 
   /@icons/material@0.2.4(react@18.2.0):
@@ -4846,6 +4853,12 @@ packages:
     resolution: {integrity: sha512-yCe9964O+1abdIG01AOzk6P9mQi0HVJV1B57whYJQu6TjmrB9JHHDYonDI8amGt6M6b9bP3x3R0Zh7ROmvX7JQ==}
     dependencies:
       '@babel/runtime': 7.23.5
+    dev: false
+
+  /iconify-icon@1.0.8:
+    resolution: {integrity: sha512-jvbUKHXf8EnGGArmhlP2IG8VqQLFFyTvTqb9LVL2TKTh7/eCCD1o2HHE9thpbJJb6B8hzhcFb6rOKhvo7reNKA==}
+    dependencies:
+      '@iconify/types': 2.0.0
     dev: false
 
   /iconv-lite@0.6.3:
