@@ -30,6 +30,7 @@
 	let input = '';
 	let selected = 'Latest';
 	$: res = sortByDate(filterByCategory(searchByTitle(data, input), selected_category), selected);
+	$: console.log(selected);
 </script>
 
 <div
@@ -49,25 +50,30 @@
 		</div>
 	</div>
 	<div class="row-start-1 md:col-start-2 lg:col-start-3 flex flex-col gap-6">
-		<div class="flex items-end md:flex-row flex-col-reverse justify-between gap-6">
-			<Search labelText="SortBy" placeholder="Search ..." bind:value={input} />
+		<div class="flex flex-col">
+			<span class="block text-lg">Search</span>
+			<input
+				aria-label="SortBy"
+				placeholder="Search ..."
+				bind:value={input}
+				class="input px-2 py-2"
+			/>
 		</div>
 		<div class="flex flex-row gap-1 item-center justify-end">
-			<Select bind:selected labelText="SortBy" class="w-full ">
-				<SelectItem value="Oldest" />
-				<SelectItem value="Latest" />
-			</Select>
+			<select class="select" aria-label="Sort By" bind:value={selected}>
+				<option value="Latest">Latest</option>
+				<option value="Oldest">Oldest</option>
+			</select>
 		</div>
 		<div>
-			<span class="text-[#525252] text-[12px] mb-2 block">Category</span>
-			<div class="flex flex-row md:flex-wrap gap-x-4 gap-y-1 w-full overflow-x-scroll">
+			<span class="text-lg mb-2 block">Category</span>
+			<div class="flex flex-row md:flex-wrap gap-x-4 gap-y-2 w-full overflow-x-scroll">
 				{#each categories as item}
-					<Tag
-						filter={selected_category.includes(item.title)}
+					<button
 						on:click={() => handleClick(item.title)}
-						class="leading-relaxed cursor-pointer shrink-0 flex items-center"
-						type={selected_category.includes(item.title) ? 'blue' : 'cool-gray'}
-						size="default">{item.title}</Tag
+						class={`badge cursor-pointer  ${
+							!selected_category.includes(item.title) ? 'variant-ghost' : 'variant-filled-primary'
+						}`}>{item.title}</button
 					>
 				{/each}
 			</div>

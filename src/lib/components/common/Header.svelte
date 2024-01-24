@@ -28,6 +28,7 @@
 		</nav>
 		<button class="grid place-items-center">
 			<iconify-icon icon="material-symbols:search" class="font-bold text-3xl" />
+			<LightSwitch class="ml-4" />
 		</button>
 	</div>
 </header>
