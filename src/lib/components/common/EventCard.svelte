@@ -9,7 +9,7 @@
 
 <a
 	href={`/events/${data.slug}`}
-	class=" card p-6 cursor-pointer flex flex-col gap-8 md:flex-row md:gap-6 items-center"
+	class=" card card-hover p-6 cursor-pointer flex flex-col gap-8 md:flex-row md:gap-6 items-center"
 >
 	<div class="w-full h-full basis-[20%] aspect-video md:max-w-[330px] shrink-0 overflow-hidden">
 		<SanityImage

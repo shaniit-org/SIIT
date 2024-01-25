@@ -20,7 +20,7 @@ body {
 
 @layer utilities {
 	.box {
-		@apply p-6 lg:p-12;
+		@apply p-8 lg:p-16;
 	}
 	.section-container {
 		@apply md:max-w-[1000px] lg:max-w-[1400px] mx-auto;

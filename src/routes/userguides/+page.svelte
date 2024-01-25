@@ -1,7 +1,6 @@
 <script>
 	import SubHero from '$lib/components/common/SubHero.svelte';
 	import UserGuideCard from '$lib/components/common/UserGuideCard.svelte';
-	import { Search } from 'carbon-components-svelte';
 	import { searchByTitle } from '$lib/utils/search-by-title';
 	import Meta from '$lib/components/common/Meta.svelte';
 
@@ -16,8 +15,13 @@
 
 <Meta data={seo} />
 <SubHero title="User Guides" />
-<div class="min-h-screen section-container box">
-	<Search bind:value={keyword} placeholder="Search userguides..." />
+<div class="min-h-screen flex flex-col section-container box">
+	<input
+		id="search"
+		bind:value={keyword}
+		placeholder="Search user guides..."
+		class="ml-auto input px-3 py-2 pt-3 rounded-xl max-w-[300px]"
+	/>
 	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
 		{#each result as item}
 			<UserGuideCard data={item} />

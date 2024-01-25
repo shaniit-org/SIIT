@@ -1,6 +1,4 @@
 <script>
-	import { Button, Tag } from 'carbon-components-svelte';
-	import { Download } from 'carbon-icons-svelte';
 	import SanityImage from '$lib/sanity/image/SanityImage.svelte';
 	/**
 	 * @type {import('../../types').UserGuide} - data
@@ -8,37 +6,34 @@
 	export let data;
 </script>
 
-<div class="bg-white">
-	<div class="relative min-h-[380px] isolate">
-		<SanityImage
-			maxWidth={800}
-			image={data.coverImage}
-			alt={data.title}
-			className="w-full h-[380px] aspect-[9/16] object-cover"
-		/>
-		{#if data.downloadlink}
-			<div class="absolute top-0 right-0">
-				<Button
-					href={data.downloadlink}
-					target="_blank"
-					size="lg"
-					icon={Download}
-					aria-label="Download"
-					iconDescription="Download"
-					class="bg-theme-dark"
-				/>
-			</div>
-		{/if}
-	</div>
-	<div class="flex flex-col p-4">
-		<h2 class="text-xl mb-1">{data.title}</h2>
+<div class="card overflow-hidden">
+	<SanityImage
+		maxWidth={800}
+		image={data.coverImage}
+		alt={data.title}
+		className="w-full h-[380px] aspect-[9/16] object-cover"
+	/>
+	<div class="flex flex-col p-8">
+		<h2 class="h3 mb-1">{data.title}</h2>
 		<div class="mb-4 mt-2">
 			{#each data.categories as cat}
-				<Tag type="blue" size="sm" class="m-0">{cat.title}</Tag>
+				<span class="m-0 badge variant-soft-primary pt-2">{cat.title}</span>
 			{/each}
 		</div>
-		<p class=" text-sm leading-loose">
+		<p class=" text-sm line-clamp-3 leading-loose">
 			{data.description}
 		</p>
+
+		{#if data.downloadlink}
+			<a
+				href={data.downloadlink}
+				target="_blank"
+				aria-label="Download"
+				class="button variant-filled-primary rounded-token mt-4 px-4 flex items-center gap-2 py-2 max-w-max"
+			>
+				<span class="pt-1"> Download </span>
+				<iconify-icon icon="material-symbols:download" class="text-xl" />
+			</a>
+		{/if}
 	</div>
 </div>

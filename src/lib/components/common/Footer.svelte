@@ -29,7 +29,7 @@
 				<label class="label mb-4">
 					<span>Email</span>
 					<input
-						class="rounded-xl input px-4 py-2"
+						class=" input px-4 py-2"
 						title="Enter your email "
 						type="text"
 						placeholder="Enter your email "
@@ -40,9 +40,10 @@
 					placeholder="Enter message"
 					name="message"
 					required
-					class="textarea px-4 py-2 rounded-xl"
+					class="textarea px-4 py-2"
+					rows="5"
 				/>
-				<button type="submit" class=" mt-4 button variant-filled-primary py-2 rounded-xl"
+				<button type="submit" class="mt-4 button variant-filled-primary py-2 rounded-token pt-4"
 					>Submit</button
 				>
 			</form>
