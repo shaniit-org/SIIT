@@ -2,7 +2,6 @@
 	import { Warning } from 'carbon-icons-svelte';
 	import NewsCard from '$lib/components/common/NewsCard.svelte';
 	import { searchByTitle, sortByDate, filterByCategory } from '$lib/utils/search-by-title';
-	import { Search, Select, SelectItem, Tag } from 'carbon-components-svelte';
 
 	/**
 	 * @type {import('../../../types').News[]} - data
@@ -30,7 +29,6 @@
 	let input = '';
 	let selected = 'Latest';
 	$: res = sortByDate(filterByCategory(searchByTitle(data, input), selected_category), selected);
-	$: console.log(selected);
 </script>
 
 <div
@@ -49,30 +47,33 @@
 			{/each}
 		</div>
 	</div>
-	<div class="row-start-1 md:col-start-2 lg:col-start-3 flex flex-col gap-6">
-		<div class="flex flex-col">
-			<span class="block text-lg">Search</span>
+	<div class="row-start-1 md:col-start-2 lg:col-start-3 flex flex-col gap-4">
+		<div class="flex flex-row md:flex-col gap-4">
 			<input
 				aria-label="SortBy"
 				placeholder="Search ..."
 				bind:value={input}
-				class="input px-2 py-2"
+				class="input px-2 py-2 basis-1/2 rounded-xl variant-soft-surface"
 			/>
+			<div class="flex basis-1/2 flex-row gap-1 item-center justify-end">
+				<select
+					class="select rounded-xl variant-soft-surface"
+					aria-label="Sort By"
+					bind:value={selected}
+				>
+					<option value="Latest">Latest</option>
+					<option value="Oldest">Oldest</option>
+				</select>
+			</div>
 		</div>
-		<div class="flex flex-row gap-1 item-center justify-end">
-			<select class="select" aria-label="Sort By" bind:value={selected}>
-				<option value="Latest">Latest</option>
-				<option value="Oldest">Oldest</option>
-			</select>
-		</div>
-		<div>
+		<div class="p-4 card variant-soft-surface">
 			<span class="text-lg mb-2 block">Category</span>
-			<div class="flex flex-row md:flex-wrap gap-x-4 gap-y-2 w-full overflow-x-scroll">
+			<div class="flex flex-row md:flex-wrap gap-x-4 gap-y-4 w-full overflow-x-scroll">
 				{#each categories as item}
 					<button
 						on:click={() => handleClick(item.title)}
-						class={`badge cursor-pointer  ${
-							!selected_category.includes(item.title) ? 'variant-ghost' : 'variant-filled-primary'
+						class={`pt-2 px-2 text-[12px] font-light badge cursor-pointer  ${
+							!selected_category.includes(item.title) ? 'variant-ghost' : 'variant-soft-primary'
 						}`}>{item.title}</button
 					>
 				{/each}

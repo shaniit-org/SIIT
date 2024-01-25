@@ -7,7 +7,7 @@
 	export let data;
 </script>
 
-<a href={`/events/${data.slug}`} class="cursor-pointer card flex flex-col gap-4 p-4 md:p-6">
+<a href={`/blogs/${data.slug}`} class="cursor-pointer card flex flex-col gap-4 p-4 md:p-6">
 	<h3 class="h3 mb-2">
 		{data.title}
 	</h3>

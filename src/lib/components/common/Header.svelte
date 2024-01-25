@@ -1,5 +1,4 @@
 <script>
-	import { LightSwitch } from '@skeletonlabs/skeleton';
 	import { init_autocomplete } from '../../utils/algolia';
 	import { onMount } from 'svelte';
 	import { navs } from '$lib/site/nav';
@@ -26,9 +25,8 @@
 				{/each}
 			</ul>
 		</nav>
-		<button class="grid place-items-center">
+		<button class="ml-auto grid place-items-center">
 			<iconify-icon icon="material-symbols:search" class="font-bold text-3xl" />
-			<LightSwitch class="ml-4" />
 		</button>
 	</div>
 </header>

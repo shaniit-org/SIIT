@@ -12,9 +12,7 @@
 
 <div class="section-container box">
 	<div class="grid grid-cols-1 md:grid-cols-2 relative gap-4">
-		<div
-			class="card card-hover bg-surface-100-800-token overflow-hidden flex items-center p-4 md:p-8"
-		>
+		<div class="card card-hover overflow-hidden flex items-center p-4 md:p-8">
 			{#if term}
 				<a
 					href="/terms/{term.slug.current}"
@@ -27,7 +25,7 @@
 							{moment(new Date()).format('LL')}
 						</span>
 					</div>
-					<p class="leading-relaxed">
+					<p class="leading-relaxed mt-2">
 						{term.description}
 					</p>
 				</a>
@@ -36,12 +34,12 @@
 
 		<a
 			href={data.authors ? `/blogs/${data.slug}` : `/events/${data.slug}`}
-			class=" p-4 md:p-8 card bg-initial card-hover overflow-hidden flex flex-col justify-center"
+			class=" p-4 md:p-8 card card-hover overflow-hidden flex flex-col justify-center"
 		>
-			<h3 class="h3 font-sans md:leading-relaxed mb-4">
+			<h3 class="h3 font-sans md:leading-loose mb-4">
 				{data.title}
 			</h3>
-			<p class="mb-6 text-sm md:text-base leading-relaxed text-lg">
+			<p class="mb-6 md:text-base leading-loose text-lg">
 				{data.description}
 			</p>
 		</a>
