@@ -29,7 +29,7 @@
 				href={data.downloadlink}
 				target="_blank"
 				aria-label="Download"
-				class="button variant-filled-primary rounded-token mt-4 px-4 flex items-center gap-2 py-2 max-w-max"
+				class="button variant-filled-primary rounded-token mt-4 px-4 flex items-center gap-2 py-2 max-w-max text-sm"
 			>
 				<span class="pt-1"> Download </span>
 				<iconify-icon icon="material-symbols:download" class="text-xl" />

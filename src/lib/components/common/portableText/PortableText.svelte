@@ -19,6 +19,6 @@
 	});
 </script>
 
-<div class="prose lg:prose-xl">
+<div class="prose lg:prose-xl prose-p:text-token">
 	<PortableText {value} {components} />
 </div>
