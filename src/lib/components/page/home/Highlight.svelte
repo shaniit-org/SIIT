@@ -10,14 +10,11 @@
 	export let term;
 </script>
 
-<div class="section-container box">
+<div class="section-container box z-10">
 	<div class="grid grid-cols-1 md:grid-cols-2 relative gap-4">
 		{#if term}
 			<div class="card card-hover overflow-hidden flex items-center p-4 md:p-8">
-				<a
-					href="/terms/{term.slug.current}"
-					class=" p-4 w-full max-h-max space-y-2 mt-auto relative"
-				>
+				<a href="/terms/{term.slug}" class=" p-4 w-full max-h-max space-y-2 mt-auto relative">
 					<h2 class="h2 mb-4">{term.title}</h2>
 					<div class=" flex items-center mb-4 gap-4">
 						<span class="font-semibold">Term Of The Day </span>

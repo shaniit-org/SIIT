@@ -1,6 +1,4 @@
 <script>
-	import { Tag } from 'carbon-components-svelte';
-
 	/**
     @type string - title 
      */
@@ -16,16 +14,14 @@
 	export let description;
 </script>
 
-<div
-	class="w-full bg-gradient-to-b from-black to-gray-900 mt-[3em] text-white min-h-[300px] flex justify-end flex-col"
->
-	<div class="section-container border p-6 md:p-12 w-full">
-		<h1 class="text-5xl leading-[1.1] md:text-6xl mb-4">{title}</h1>
-		<div class="flex flex-col gap-2 mt-4">
-			<p class="leading-loose text-sm">
+<div class="w-full relative card box rounded-none bg-opacity-50 backdrop-filter backdrop-blur-lg">
+	<div class="section-container p-6 md:p-12 w-full">
+		<h1 class="h1 font-bold text-5xl lg:text-6xl">{title}</h1>
+		<div class="flex flex-col gap-2 mt-8">
+			<p class="leading-loose mb-2">
 				{description}
 			</p>
-			<Tag class="max-w-max">{charType}</Tag>
+			<span class="badge variant-soft-primary max-w-max pt-1">{charType}</span>
 		</div>
 	</div>
 </div>

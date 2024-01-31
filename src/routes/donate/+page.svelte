@@ -19,7 +19,7 @@
 		image={data.data.coverImage}
 		maxWidth={1000}
 		alt={data.data.title}
-		className="rounded-token w-full h-full "
+		className="rounded-xl w-full h-full "
 	/>
 	<div class="w-full grid place-items-center mt-6">
 		<div class="leading-loose md:max-w-[80%]">
