@@ -12,8 +12,8 @@
 
 <div class="section-container box">
 	<div class="grid grid-cols-1 md:grid-cols-2 relative gap-4">
-		<div class="card card-hover overflow-hidden flex items-center p-4 md:p-8">
-			{#if term}
+		{#if term}
+			<div class="card card-hover overflow-hidden flex items-center p-4 md:p-8">
 				<a
 					href="/terms/{term.slug.current}"
 					class=" p-4 w-full max-h-max space-y-2 mt-auto relative"
@@ -29,8 +29,8 @@
 						{term.description}
 					</p>
 				</a>
-			{/if}
-		</div>
+			</div>
+		{/if}
 
 		<a
 			href={data.authors ? `/blogs/${data.slug}` : `/events/${data.slug}`}

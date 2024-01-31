@@ -25,7 +25,7 @@
 				action={`https://formspree.io/f/${formID}`}
 				method="POST"
 			>
-				<p class=" text-xl mb-6">Contact Us</p>
+				<p class=" text-xl mb-4 md:mb-6">Contact Us</p>
 				<label class="label mb-4">
 					<span>Email</span>
 					<input

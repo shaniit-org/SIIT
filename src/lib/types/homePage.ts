@@ -14,6 +14,13 @@ export interface HighLightNews extends News {
 	authors: any;
 }
 
+export interface TermsOfTheDay extends Term {
+	_type: 'termsOfTheDay';
+	title: string;
+	description: string;
+	slug: string;
+}
+
 export interface HomePageNews {
 	_type: 'News';
 	title: string;
@@ -35,7 +42,7 @@ export interface HomePageDonate {
 
 export interface HomePage {
 	_type: 'homePage';
-	term: Term;
+	termsOfTheDay: TermsOfTheDay;
 	seo: BaseMetaData;
 	sections: HomePageSections[];
 }

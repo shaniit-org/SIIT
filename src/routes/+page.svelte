@@ -13,7 +13,7 @@
 	export let data;
 	const { events, news } = data.data;
 	const { homePage } = data.data;
-	const { sections, seo, term } = homePage;
+	const { sections, seo, termsOfTheDay: term } = homePage;
 </script>
 
 <Meta data={seo} />

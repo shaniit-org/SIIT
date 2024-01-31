@@ -7,7 +7,7 @@
 </script>
 
 <div
-	class="rounded-xl z-20 relative grid gap-4 md:h-[25vw] section-container box mx-auto overflow-hidden h-[20vh]"
+	class="rounded-xl z-20 relative grid gap-4 h-[30vh] md:h-[25vw] section-container box mx-auto overflow-hidden"
 >
 	<SanityImage
 		maxWidth={1920}
