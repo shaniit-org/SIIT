@@ -1,7 +1,3 @@
-<script>
-	import { ListItem } from 'carbon-components-svelte';
-</script>
-
-<ListItem class="text-base">
+<li class="list-item">
 	<slot />
-</ListItem>
+</li>

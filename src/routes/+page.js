@@ -21,14 +21,14 @@ const query = `{
         },
       },
   },
-  "events":*[_type =="event"] | order(publishedAt desc) [0...6] {
+  "events":*[_type =="event"] | order(publishedAt desc) [0...7] {
           "slug":slug.current,
           title,
           description,
           publishedAt,
           coverImage ,
     },
-  "news":*[_type =="news"] | order(publishedAt desc)[0...6]  {
+  "news":*[_type =="news"] | order(publishedAt desc)[0...7]  {
           "slug":slug.current,
           title,
           description,
@@ -41,12 +41,12 @@ const query = `{
  * @type {import('@sveltejs/kit').Load}
  */
 export const load = async () => {
-	/**
-	 * @type {import('$lib/types/homePage').HomePageData}
-	 */
-	const data = await getPageData(query);
-	if (!data.homePage) throw error(404, 'Not Found');
-	return {
-		data
-	};
+    /**
+     * @type {import('$lib/types/homePage').HomePageData}
+     */
+    const data = await getPageData(query);
+    if (!data.homePage) throw error(404, 'Not Found');
+    return {
+        data
+    };
 };

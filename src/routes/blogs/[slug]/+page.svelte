@@ -2,8 +2,8 @@
 	import TableOfContents from '$lib/components/common/TableOfContents.svelte';
 	import PortableText from '$lib/components/common/portableText/PortableText.svelte';
 	import SocialShare from '$lib/components/common/SocialShare.svelte';
-	import ArticleBanner from '$lib/components/common/ArticleBanner.svelte';
 	import RelatedArticle from '$lib/components/common/RelatedArticle.svelte';
+	import ArticleBanner from '$lib/components/common/ArticleBanner.svelte';
 	import Meta from '$lib/components/common/Meta.svelte';
 	/**
 	 * @type {{ data : import('../../../lib/types').NewsDetail}} - data
@@ -21,7 +21,7 @@
 		publishedAt={news.publishedAt}
 		readingTime={news.readingTime}
 	/>
-	<div class="relative p-4 md:p-12 grid grid-cols-1 mx-auto section-container gap-4 md:gap-8">
+	<div class="relative grid grid-cols-1 mx-auto section-container gap-4 md:gap-8 box">
 		<div class="md:col-start-2 min-w-[200px] lg:max-w-[300px] md:max-w-[200px] scroll-pt-20">
 			<TableOfContents data={news.body} />
 		</div>

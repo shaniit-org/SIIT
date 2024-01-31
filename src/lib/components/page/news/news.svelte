@@ -72,7 +72,7 @@
 				{#each categories as item}
 					<button
 						on:click={() => handleClick(item.title)}
-						class={`pt-2 px-2 text-[12px] font-light badge cursor-pointer  ${
+						class={`pt-2 px-2 text-[12px] font-light chip cursor-pointer  ${
 							!selected_category.includes(item.title) ? 'variant-ghost' : 'variant-soft-primary'
 						}`}>{item.title}</button
 					>
