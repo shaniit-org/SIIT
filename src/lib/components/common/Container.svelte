@@ -1,15 +1,16 @@
 <script>
-	import { computePosition, autoUpdate, offset, shift, flip, arrow } from '@floating-ui/dom';
-	import { initializeStores } from '@skeletonlabs/skeleton';
-	import { storePopup } from '@skeletonlabs/skeleton';
-	import { onNavigate } from '$app/navigation';
-	import Scripts from './Scripts.svelte';
-	import Footer from '$lib/components/common/Footer.svelte';
+	import { getDrawerStore } from '@skeletonlabs/skeleton';
 	import FloatingDonate from '$lib/components/common/FloatingDonate.svelte';
-	import { AppShell, Toast } from '@skeletonlabs/skeleton';
+	import Footer from '$lib/components/common/Footer.svelte';
 	import Header from '$lib/components/common/Header.svelte';
-
-	initializeStores();
+	import Scripts from './Scripts.svelte';
+	import { AppShell, Toast } from '@skeletonlabs/skeleton';
+	import { Drawer } from '@skeletonlabs/skeleton';
+	import { computePosition, autoUpdate, offset, shift, flip, arrow } from '@floating-ui/dom';
+	import { navs } from '$lib/site/nav';
+	import { onNavigate } from '$app/navigation';
+	import { storePopup } from '@skeletonlabs/skeleton';
+	const drawerStore = getDrawerStore();
 	storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 
 	onNavigate((navigation) => {
@@ -44,6 +45,33 @@
 		<FloatingDonate />
 		<Footer />
 	</svelte:fragment>
+	<Drawer>
+		{#if $drawerStore.id === 'navigation'}
+			<nav class="flex flex-col p-4">
+				<a href="/" class=" mb-4 mx-auto">
+					<img
+						loading="eager"
+						src={'/logo.svg'}
+						alt="SIIT Logo"
+						class="w-[90px] aspect-video"
+						width="60"
+					/>
+				</a>
+				<ul class="flex w-full items-center flex-col gap-2">
+					{#each navs as nav}
+						<li class="w-full">
+							<a
+								href={nav.path}
+								class="w-full variant-ghost px-2 py-2 rounded-none btn no-underline"
+							>
+								{nav.name}
+							</a>
+						</li>
+					{/each}
+				</ul>
+			</nav>
+		{/if}
+	</Drawer>
 	<Toast position="br" />
 	<!-- (footer) -->
 </AppShell>

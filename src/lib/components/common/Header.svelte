@@ -2,9 +2,19 @@
 	import { init_autocomplete } from '../../utils/algolia';
 	import { onMount } from 'svelte';
 	import { navs } from '$lib/site/nav';
+	import { getDrawerStore } from '@skeletonlabs/skeleton';
+	const drawerStore = getDrawerStore();
 	onMount(() => {
 		init_autocomplete();
 	});
+
+	const drawerSettings = {
+		id: 'navigation',
+		// Provide your property overrides:
+		width: 'w-[280px] md:w-[480px]',
+		padding: 'p-4',
+		rounded: 'rounded-xl'
+	};
 </script>
 
 <header
@@ -25,9 +35,18 @@
 				{/each}
 			</ul>
 		</nav>
-		<button class="ml-auto grid place-items-center">
-			<div id="autocomplete" />
-		</button>
+		<div class="flex ml-auto items-center gap-2">
+			<button class=" grid place-items-center">
+				<div id="autocomplete" />
+			</button>
+
+			<button
+				on:click={() => drawerStore.open(drawerSettings)}
+				class="lg:hidden btn w-full h-full text-xl p-3 variant-soft-surface rounded-xl aspect-square grid place-items-center"
+			>
+				<iconify-icon icon="material-symbols:menu" />
+			</button>
+		</div>
 	</div>
 </header>
 
@@ -39,7 +58,8 @@
 	}
 	:global(.aa-input-d) {
 		background: rgb(var(--color-surface-500) / 0.2);
-		border-radius: 0px;
+		border-radius: 0.75rem;
+		border: none;
 	}
 	:global(.aa-input-d):hover {
 		border: solid 1px rgb(var(--color-surface-500) / 0.9);
