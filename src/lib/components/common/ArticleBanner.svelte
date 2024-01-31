@@ -24,14 +24,14 @@
 </script>
 
 <div
-	class="w-full relative card text-white min-h-[400px] flex justify-end flex-col overflow-hidden box"
+	class="w-full relative card text-white min-h-[400px] flex justify-end flex-col overflow-hidden rounded-none box"
 >
 	<div class="section-container box w-full">
-		<div class="flex gap-2 flex-col my-8">
-			<h1 class="h1">
+		<div class="flex gap-2 flex-col">
+			<h1 class="h1 mb-2">
 				{title}
 			</h1>
-			<p class="text-theme-muted text-sm md:w-3/4 leading-relaxed mt-4">
+			<p class="my-4 leading-loose text-lg">
 				{description}
 			</p>
 		</div>
@@ -58,4 +58,11 @@
 			{/if}
 		</div>
 	</div>
+
+	<div
+		class="z-[-11] card rounded-full backdrop-blur w-[30%] blur-[200px] aspect-square absolute top-0 right-0 translate-y-[-90%] bg-gradient-to-tl opacity-20 variant-gradient-success-error"
+	/>
+	<div
+		class="z-[-13] card rounded-full backdrop-blur w-[40%] blur-[200px] aspect-square absolute top-0 left-1/2 translate-x-[-50%] translate-y-[-90%] variant-gradient-primary-secondary bg-gradient-to-tl opacity-40"
+	/>
 </div>
