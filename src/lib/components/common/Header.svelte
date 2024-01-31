@@ -26,7 +26,7 @@
 			</ul>
 		</nav>
 		<button class="ml-auto grid place-items-center">
-			<iconify-icon icon="material-symbols:search" class="font-bold text-3xl" />
+			<div id="autocomplete" />
 		</button>
 	</div>
 </header>
@@ -38,11 +38,11 @@
 		object-fit: cover;
 	}
 	:global(.aa-input-d) {
-		border: solid 1px #393939;
+		background: rgb(var(--color-surface-500) / 0.2);
 		border-radius: 0px;
 	}
 	:global(.aa-input-d):hover {
-		border: solid 1px white;
+		border: solid 1px rgb(var(--color-surface-500) / 0.9);
 		cursor: pointer;
 	}
 	:global(.aa-input-d-i) {
