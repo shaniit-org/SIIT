@@ -19,6 +19,6 @@
 	});
 </script>
 
-<div class="leading-relaxed">
+<div class="leading-relaxed mb-4">
 	<PortableText {value} {components} />
 </div>
