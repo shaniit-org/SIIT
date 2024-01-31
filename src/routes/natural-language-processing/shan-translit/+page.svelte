@@ -1,5 +1,6 @@
 <script>
 	import { taiToEng, engToTai } from '$lib/utils/shan-translit/shan-translit';
+	import { SlideToggle } from '@skeletonlabs/skeleton';
 	import SubHero from '$lib/components/common/SubHero.svelte';
 	import Meta from '$lib/components/common/Meta.svelte';
 
@@ -7,10 +8,11 @@
 	let right = '';
 
 	let toEng = true;
+	let markTones = false;
 
 	function convert() {
 		if (toEng) {
-			right = taiToEng(left);
+			right = taiToEng(left, markTones);
 		} else {
 			right = engToTai(left);
 		}
@@ -65,6 +67,14 @@
 				rows="5"
 			/>
 		</div>
+
+		<SlideToggle
+			name="Exclude Tones"
+			size="sm"
+			checked={markTones}
+			active="bg-primary-500"
+			on:change={() => (markTones = !markTones)}>Exclude Tone Marks</SlideToggle
+		>
 	</div>
 
 	<div class="flex flex-row items-center gap-4">
