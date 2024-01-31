@@ -21,7 +21,7 @@
 				</ul>
 			</div>
 			<form
-				class="flex flex-col p-0 md:p-4 basis-1/2"
+				class="flex flex-col p-4 md:p-8 card basis-1/2 md:max-w-lg"
 				action={`https://formspree.io/f/${formID}`}
 				method="POST"
 			>

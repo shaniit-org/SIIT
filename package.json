@@ -48,6 +48,7 @@
 		"@algolia/autocomplete-theme-classic": "^1.12.2",
 		"@carbon/charts-svelte": "^1.13.8",
 		"@carbon/styles": "^1.44.0",
+		"@floating-ui/dom": "^1.6.1",
 		"@sanity/client": "^6.9.2",
 		"@sanity/code-input": "^4.1.1",
 		"@sanity/color-input": "^3.1.0",
