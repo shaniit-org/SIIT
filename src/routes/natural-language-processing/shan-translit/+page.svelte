@@ -25,7 +25,7 @@
 </script>
 
 <Meta />
-<SubHero title="Syllable Breaker" />
+<SubHero title="Shan Translit" />
 <div class="section-container box min-h-screen flex flex-col gap-4">
 	<div class="w-full h-full grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 card p-4">
 		<div class="flex flex-col basis-1/2">
