@@ -12,7 +12,7 @@
 	const drawerSettings = {
 		id: 'navigation',
 		// Provide your property overrides:
-		width: 'w-[280px] md:w-[480px]',
+		width: 'w-[280px] md:w-[480px] ',
 		padding: 'p-4',
 		rounded: 'rounded-xl'
 	};

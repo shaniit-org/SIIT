@@ -43,7 +43,7 @@
 		<FloatingDonate />
 		<Footer />
 	</svelte:fragment>
-	<Drawer>
+	<Drawer zIndex="z-[100]">
 		{#if $drawerStore.id === 'navigation'}
 			<nav class="flex flex-col p-4">
 				<a href="/" class=" mb-4 mx-auto">
