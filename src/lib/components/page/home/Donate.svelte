@@ -1,6 +1,4 @@
 <script>
-	import { Link, Tile } from 'carbon-components-svelte';
-	import { Link as LinkIcon } from 'carbon-icons-svelte';
 	/**
 	 * @type {import('../../../types/homePage').HomePageDonate} - data
 	 */
@@ -16,9 +14,7 @@
 			<p class="mb-4 text-sm lg:text-xl lg:leading-[2]">
 				{data.description}
 			</p>
-			<Link href={data.link.url} icon={LinkIcon} class="cursor-pointer text-theme-dark underline "
-				>{data.link.title}</Link
-			>
+			<a href={data.link.url} class="cursor-pointer anchor no-underline">{data.link.title}</a>
 		</div>
 	</div>
 </div>
