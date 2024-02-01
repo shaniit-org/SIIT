@@ -1,6 +1,7 @@
 <script>
 	import { navs } from '$lib/site/nav';
 	import { browser } from '$app/environment';
+	import { LightSwitch } from '@skeletonlabs/skeleton';
 	let formID = 'mrgwbjkb';
 	let currentTheme = 'crimson';
 	const themes = [
@@ -46,6 +47,9 @@
 								<option value={theme}>{theme}</option>
 							{/each}
 						</select>
+					</li>
+					<li>
+						<LightSwitch />
 					</li>
 				</ul>
 			</div>

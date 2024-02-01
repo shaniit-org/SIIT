@@ -1,6 +1,5 @@
 <script>
 	import { init_autocomplete } from '../../utils/algolia';
-	import { LightSwitch } from '@skeletonlabs/skeleton';
 	import { onMount } from 'svelte';
 	import { navs } from '$lib/site/nav';
 	import { getDrawerStore } from '@skeletonlabs/skeleton';
@@ -37,7 +36,6 @@
 			</ul>
 		</nav>
 		<div class="flex ml-auto items-center gap-2">
-			<LightSwitch />
 			<button class=" grid place-items-center">
 				<div id="autocomplete" />
 			</button>
