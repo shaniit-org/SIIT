@@ -1,5 +1,6 @@
 <script>
 	import { init_autocomplete } from '../../utils/algolia';
+	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import { navs } from '$lib/site/nav';
 	import { getDrawerStore } from '@skeletonlabs/skeleton';
@@ -18,7 +19,7 @@
 </script>
 
 <header
-	class=" backdrop-blur z-[9999] w-full bg-opacity-50 h-[5em] border-b border-b-surface-200 dark:border-b-surface-500 flex items-center"
+	class=" sticky top-0 left-0 z-[9999] w-full bg-opacity-50 h-[3.5em] border-b border-b-surface-200 dark:border-b-surface-500 flex items-center backdrop-blur-xl"
 >
 	<div class="section-container w-full box flex items-center">
 		<a href="/" class="grid place-items-center overflow-hidden">
@@ -28,7 +29,13 @@
 			<ul class="flex items-center gap-4">
 				{#each navs as nav}
 					<li>
-						<a href={nav.path} class="variant-soft px-2 py-2 button no-underline">
+						<a
+							href={nav.path}
+							class="px-2 py-2 button no-underline
+                            {nav.path === $page.url.pathname
+								? 'variant-glass-primary'
+								: 'variant-glass-surface'}"
+						>
 							{nav.name}
 						</a>
 					</li>

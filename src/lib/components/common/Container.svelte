@@ -28,15 +28,13 @@
 </script>
 
 <AppShell class="relative">
-	<svelte:fragment slot="header">
-		<Header />
-	</svelte:fragment>
 	<!-- (sidebarLeft) -->
 	<!-- (pageHeader) -->
 
 	<!-- Router Slot -->
 
 	<div class="relative z-1 font-san content w-full min-h-screen">
+		<Header />
 		<slot />
 	</div>
 	<!-- ---- / ---- -->

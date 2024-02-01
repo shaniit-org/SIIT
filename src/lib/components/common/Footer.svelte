@@ -19,9 +19,6 @@
 
 	$: {
 		if (browser) {
-			const storedTheme = localStorage.getItem('theme');
-			const currentTheme = storedTheme || 'siit';
-			localStorage.setItem('theme', currentTheme);
 			document.body.setAttribute('data-theme', currentTheme);
 		}
 	}
@@ -46,7 +43,7 @@
 					<li>
 						<select class="select max-w-max" bind:value={currentTheme}>
 							{#each themes as theme}
-								<option value={theme}>{theme}</option>
+								<option value={theme} class="capitalize">{theme}</option>
 							{/each}
 						</select>
 					</li>
