@@ -19,7 +19,7 @@
 </script>
 
 <header
-	class=" sticky top-0 left-0 z-[9999] w-full bg-opacity-50 h-[3.5em] border-b border-b-surface-200 dark:border-b-surface-500 flex items-center backdrop-blur-xl"
+	class=" sticky top-0 left-0 z-[20] w-full bg-opacity-50 h-[3.5em] border-b border-b-surface-200 dark:border-b-surface-500 flex items-center backdrop-blur-xl"
 >
 	<div class="section-container w-full box flex items-center">
 		<a href="/" class="grid place-items-center overflow-hidden">
