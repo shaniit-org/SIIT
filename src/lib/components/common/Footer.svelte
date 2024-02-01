@@ -1,9 +1,8 @@
 <script>
 	import { navs } from '$lib/site/nav';
 	import { browser } from '$app/environment';
-	import { LightSwitch } from '@skeletonlabs/skeleton';
 	let formID = 'mrgwbjkb';
-	let currentTheme = 'crimson';
+	let currentTheme = 'siit';
 	const themes = [
 		'skeleton',
 		'rocket',
@@ -15,11 +14,14 @@
 		'crimson',
 		'sahara',
 		'hamlindigo',
-		'customDark'
+		'siit'
 	];
 
 	$: {
 		if (browser) {
+			const storedTheme = localStorage.getItem('theme');
+			const currentTheme = storedTheme || 'siit';
+			localStorage.setItem('theme', currentTheme);
 			document.body.setAttribute('data-theme', currentTheme);
 		}
 	}
@@ -47,9 +49,6 @@
 								<option value={theme}>{theme}</option>
 							{/each}
 						</select>
-					</li>
-					<li>
-						<LightSwitch />
 					</li>
 				</ul>
 			</div>

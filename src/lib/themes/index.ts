@@ -1,7 +1,7 @@
 import type { CustomThemeConfig } from '@skeletonlabs/tw-plugin';
 
 export const customDarkTheme: CustomThemeConfig = {
-	name: 'customDark',
+	name: 'siit',
 	properties: {
 		// =~= Theme Properties =~=
 		'--theme-font-family-base': `system-ui`,
