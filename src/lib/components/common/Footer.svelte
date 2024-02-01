@@ -1,6 +1,27 @@
 <script>
 	import { navs } from '$lib/site/nav';
+	import { browser } from '$app/environment';
 	let formID = 'mrgwbjkb';
+	let currentTheme = 'crimson';
+	const themes = [
+		'skeleton',
+		'rocket',
+		'modern',
+		'wintry',
+		'vintage',
+		'seafoam',
+		'gold-nouveau',
+		'crimson',
+		'sahara',
+		'hamlindigo',
+		'customDark'
+	];
+
+	$: {
+		if (browser) {
+			document.body.setAttribute('data-theme', currentTheme);
+		}
+	}
 </script>
 
 <footer class="card rounded-none border-none p-2">
@@ -13,11 +34,19 @@
 				<ul class="grid grid-cols-2 gap-y-4 justify-center gap-x-10">
 					{#each navs as nav}
 						<li>
-							<a href={nav.path} class="text-theme-light hover:text-blue-500 text-base"
-								>{nav.name}</a
-							>
+							<a href={nav.path} class="variant-soft px-2 py-2 button no-underline">
+								{nav.name}
+							</a>
 						</li>
 					{/each}
+
+					<li>
+						<select class="select max-w-max" bind:value={currentTheme}>
+							{#each themes as theme}
+								<option value={theme}>{theme}</option>
+							{/each}
+						</select>
+					</li>
 				</ul>
 			</div>
 			<form

@@ -66,7 +66,7 @@
 				</select>
 			</div>
 		</div>
-		<div class="p-4 card variant-soft-surface">
+		<div class="p-4 card variant-glass">
 			<span class="text-lg mb-2 block">Category</span>
 			<div class="flex flex-row md:flex-wrap gap-x-4 gap-y-4 w-full overflow-x-scroll">
 				{#each categories as item}

@@ -1,5 +1,6 @@
 <script>
 	import { init_autocomplete } from '../../utils/algolia';
+	import { LightSwitch } from '@skeletonlabs/skeleton';
 	import { onMount } from 'svelte';
 	import { navs } from '$lib/site/nav';
 	import { getDrawerStore } from '@skeletonlabs/skeleton';
@@ -18,7 +19,7 @@
 </script>
 
 <header
-	class="bg-surface-50-900-token backdrop-blur z-[9999] w-full bg-opacity-50 h-[5em] border-b border-b-surface-200 dark:border-b-surface-500 flex items-center"
+	class=" backdrop-blur z-[9999] w-full bg-opacity-50 h-[5em] border-b border-b-surface-200 dark:border-b-surface-500 flex items-center"
 >
 	<div class="section-container w-full box flex items-center">
 		<a href="/" class="grid place-items-center overflow-hidden">
@@ -28,7 +29,7 @@
 			<ul class="flex items-center gap-4">
 				{#each navs as nav}
 					<li>
-						<a href={nav.path} class="variant-ghost px-2 py-2 button no-underline">
+						<a href={nav.path} class="variant-soft px-2 py-2 button no-underline">
 							{nav.name}
 						</a>
 					</li>
@@ -36,6 +37,7 @@
 			</ul>
 		</nav>
 		<div class="flex ml-auto items-center gap-2">
+			<LightSwitch />
 			<button class=" grid place-items-center">
 				<div id="autocomplete" />
 			</button>

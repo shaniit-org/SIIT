@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicons/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		%sveltekit.head%
+	</head>
 
-<head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%sveltekit.assets%/favicons/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    %sveltekit.head%
-</head>
-
-<!--preset: 
+	<!--preset: 
                     'skeleton',
                     'rocket',
                     'modern',
@@ -21,10 +20,9 @@
                     'hamlindigo'
     -->
 
-<body data-sveltekit-preload-data="hover" data-theme="crimson">
-    <div style="display: contents" class="h-full overflow-hidden ring-outline-token text-token">
-        %sveltekit.body%
-    </div>
-</body>
-
+	<body data-sveltekit-preload-data="hover" data-theme="customDark">
+		<div style="display: contents" class="h-full overflow-hidden ring-outline-token text-token">
+			%sveltekit.body%
+		</div>
+	</body>
 </html>

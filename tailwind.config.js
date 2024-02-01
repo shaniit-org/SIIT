@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import { join } from 'path';
-
+import { customDarkTheme } from './src/lib/themes';
 // 1. Import the Skeleton plugin
 import { skeleton } from '@skeletonlabs/tw-plugin';
 export default {
@@ -36,7 +36,8 @@ export default {
 					'crimson',
 					'sahara',
 					'hamlindigo'
-				]
+				],
+				custom: [customDarkTheme]
 			}
 		})
 	]

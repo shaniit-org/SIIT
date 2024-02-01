@@ -24,7 +24,7 @@
 </script>
 
 <div
-	class="w-full relative card text-white min-h-[400px] flex justify-end flex-col overflow-hidden rounded-none box"
+	class="w-full relative card min-h-[400px] flex justify-end flex-col overflow-hidden rounded-none box"
 >
 	<div class="section-container box w-full">
 		<div class="flex gap-2 flex-col">
@@ -47,10 +47,10 @@
 							/>
 						</div>
 						<div class="flex flex-col">
-							<span class="uppercase mb-1 text-sm"> {aut.name} </span>
+							<span class="uppercase mb-1 font-bold text-sm"> {aut.name} </span>
 							<div class="flex flex-col md:flex-row md:items-center md:gap-4">
-								<span class="text-gray-500">{readingTime} min read</span>
-								<span class="text-sm text-gray-500"> {moment(publishedAt).format('LL')}</span>
+								<span>{readingTime} min read</span>
+								<span> {moment(publishedAt).format('LL')}</span>
 							</div>
 						</div>
 					</div>
