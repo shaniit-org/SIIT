@@ -1,5 +1,4 @@
 <script>
-	import { Warning } from 'carbon-icons-svelte';
 	import NewsCard from '$lib/components/common/NewsCard.svelte';
 	import { searchByTitle, sortByDate, filterByCategory } from '$lib/utils/search-by-title';
 
@@ -37,7 +36,9 @@
 	<div class="col-start-1 lg:col-start-1">
 		{#if res.length === 0}
 			<div class="text-center flex items-center gap-4 justify-center mt-32 text-xl w-full">
-				<Warning size={24} />
+				<span class="text-2xl">
+					<iconify-icon icon="material-symbols:warning" />
+				</span>
 				Article not found
 			</div>
 		{/if}

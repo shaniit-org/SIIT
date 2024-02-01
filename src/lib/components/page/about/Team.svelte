@@ -1,6 +1,5 @@
 <script>
 	import SanityImage from '$lib/sanity/image/SanityImage.svelte';
-	import { Tile } from 'carbon-components-svelte';
 
 	/**
 	 * @type {import('$lib/types').Author[]}
@@ -8,7 +7,7 @@
 	export let data;
 </script>
 
-<Tile class="bg-theme-muted bg-opacity-50">
+<div>
 	<div class="section-container box">
 		<h2 class="h2 mb-8 md:mb-12">Our Awesome Team</h2>
 		<div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 mt-6">
@@ -28,4 +27,4 @@
 			{/each}
 		</div>
 	</div>
-</Tile>
+</div>

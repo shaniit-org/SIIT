@@ -1,4 +1,3 @@
-import { optimizeImports } from 'carbon-preprocess-svelte';
 import sveltePreprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-netlify';
 
@@ -8,8 +7,7 @@ const config = {
 		sveltePreprocess({
 			scss: true,
 			preserve: ['ld+json']
-		}),
-		optimizeImports()
+		})
 	],
 	kit: {
 		adapter: adapter({
