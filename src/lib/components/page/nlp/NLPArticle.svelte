@@ -1,28 +1,33 @@
 <script>
+	import moment from 'moment';
 	import SanityImage from '$lib/sanity/image/SanityImage.svelte';
-	import { Button } from 'carbon-components-svelte';
-	import { Link } from 'carbon-icons-svelte';
-	/** @type {import('$lib/types').News}*/
+	/**
+	 * @type {import('../../../types').Event}
+	 */
 	export let data;
 </script>
 
-<div class="cursor-pointer flex flex-col gap-8 md:flex-row md:gap-12">
-	<div class="w-full h-full aspect-video md:max-w-[260px] shrink-0">
-		<SanityImage image={data.coverImage} className="w-full " />
+<a
+	href={`/blogs/${data.slug}`}
+	class=" card card-hover p-6 cursor-pointer flex flex-col gap-8 md:flex-row md:gap-6 items-center"
+>
+	<div class="w-full h-full basis-[20%] aspect-video md:max-w-[330px] shrink-0 overflow-hidden">
+		<SanityImage
+			className="rounded-xl w-full h-full object-cover"
+			maxWidth={300}
+			image={data.coverImage}
+			alt={data.title}
+		/>
 	</div>
-	<div class="flex flex-col justify-center">
-		<h2 class="text-2xl mb-2 md:mb-2">
+	<div class="flex flex-col mt-4">
+		<h3 class="h3 font-bold md:mb-2">
 			{data.title}
-		</h2>
-		<span class=" mb-4"> May 15th, 2023 </span>
-		<p class="mb-4 text-sm">
+		</h3>
+		<span class="md:mb-2 block text-base mt-2 mb-4">
+			{moment(data.publishedAt).format('LL')}
+		</span>
+		<p class="leading-relaxed line-clamp-3">
 			{data.description}
 		</p>
-		<Button
-			size="field"
-			href="/blogs/{data.slug}"
-			class="text-white border border-blue-500  max-w-max"
-			icon={Link}>Read More</Button
-		>
 	</div>
-</div>
+</a>

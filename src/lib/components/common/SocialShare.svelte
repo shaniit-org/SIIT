@@ -1,7 +1,5 @@
 <script>
-	import { Button } from 'carbon-components-svelte';
 	import { onMount } from 'svelte';
-	import LogoFacebook from 'carbon-icons-svelte/lib/LogoFacebook.svelte';
 
 	/** @type string */
 	let url;
@@ -15,10 +13,10 @@
 	}
 </script>
 
-<Button
-	kind="primary"
-	iconDescription="Delete"
-	icon={LogoFacebook}
-	class="mt-4 bg-blue-500 max-w-max"
+<button
 	on:click={shareOnFacebook}
-/>
+	aria-label="Share"
+	class="text-xl btn-icon variant-soft-primary grid place-items-center"
+>
+	<iconify-icon icon="ri:facebook-fill" />
+</button>

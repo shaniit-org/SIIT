@@ -1,10 +1,12 @@
 <script>
-	import 'carbon-components-svelte/css/g10.css';
 	import '@algolia/autocomplete-theme-classic';
-	import '@carbon/charts-svelte/styles.css';
 	import '$lib/styles/onedark.css';
 	import '$lib/styles/app.css';
+	import 'iconify-icon';
+
+	import { initializeStores } from '@skeletonlabs/skeleton';
 	import Container from '$lib/components/common/Container.svelte';
+	initializeStores();
 </script>
 
 <Container>

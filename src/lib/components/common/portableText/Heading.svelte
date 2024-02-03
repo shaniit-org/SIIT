@@ -8,22 +8,19 @@
 </script>
 
 {#if style === 'h1'}
-	<h1
-		class="font-bold text-3xl cursor-pointer lg:text-4xl lg:leading-[1.2] flex gap-2"
-		id={anchorId}
-	>
+	<h1 class="h1 font-bold mb-4 mt-4" id={anchorId}>
 		<slot />
 	</h1>
 {:else if style === 'h2'}
-	<h2 class="text-xl md:text-3xl font-bold" id={anchorId}>
+	<h2 class="h2 font-bold mb-4 mt-4" id={anchorId}>
 		<slot />
 	</h2>
 {:else if style === 'h3'}
-	<h3 class="text-lg md:text-2xl font-bold" id={anchorId}>
+	<h3 class="h3 font-bold mb-4 mt-4" id={anchorId}>
 		<slot />
 	</h3>
 {:else}
-	<h4 class="text-base md:text-xl font-bold" id={anchorId}>
+	<h4 class="h4 font-bold mb-4 mt-4" id={anchorId}>
 		<slot />
 	</h4>
 {/if}

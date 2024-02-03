@@ -10,15 +10,23 @@
 	--font-family-base: 'GreatHorKham Yangon', sans-serif;
 	--aa-primary-color-rgb: white;
 	--aa-font-family: var(--font-family-base);
-	font-display: swap;
 	@apply scroll-smooth;
+}
+
+html,
+body {
+	@apply h-full overflow-hidden  dark:bg-surface-50-900-token;
 }
 
 @layer utilities {
 	.box {
-		@apply p-6 md:p-10 lg:p-16 my-12;
+		@apply p-4 md:p-8 lg:p-16;
 	}
 	.section-container {
-		@apply md:max-w-[1300px] lg:max-w-[1400px] mx-auto;
+		@apply md:max-w-[1000px] lg:max-w-[1400px] mx-auto isolate;
+	}
+
+	.gradient-mask {
+		mask-image: radial-gradient(rgba(0, 0, 0, 1) 50%, transparent 100%);
 	}
 }

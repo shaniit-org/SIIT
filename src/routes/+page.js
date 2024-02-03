@@ -3,8 +3,12 @@ import { error } from '@sveltejs/kit';
 
 const query = `{
   "homePage" : *[_id == 'homePage'][0]{
-       ...,
-      'term': *[_type == 'term'][0]{title,description,slug,_createdAt},
+          ...,
+      termsOfTheDay->{
+          title,
+          description,
+          "slug":slug.current,
+      },
        sections[] {
       	...,
         _type == 'Hero' => @->{
@@ -13,6 +17,7 @@ const query = `{
             heroImage,
             title,
         },
+
         _type == 'Highlight' => @->{
           "slug":slug.current,
           title,
@@ -21,14 +26,14 @@ const query = `{
         },
       },
   },
-  "events":*[_type =="event"] | order(publishedAt desc) [0...6] {
+  "events":*[_type =="event"] | order(publishedAt desc) [0...7] {
           "slug":slug.current,
           title,
           description,
           publishedAt,
           coverImage ,
     },
-  "news":*[_type =="news"] | order(publishedAt desc)[0...6]  {
+  "news":*[_type =="news"] | order(publishedAt desc)[0...7]  {
           "slug":slug.current,
           title,
           description,

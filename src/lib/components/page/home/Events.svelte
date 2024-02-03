@@ -11,17 +11,17 @@
 </script>
 
 <div class="section-container box">
-	<div class="flex flex-col mb-6">
-		<h3 class="text-4xl my-4 text-theme-dark cursor-pointer">
+	<div class="flex flex-col mb-8">
+		<h3 class="h2 mb-3">
 			{section.title}
 		</h3>
 		{#if section.description}
-			<p class="text-lg">
+			<p class="">
 				{section.description}
 			</p>
 		{/if}
 	</div>
-	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-6">
+	<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 my-6">
 		{#each data as item}
 			<HomeEventCard data={item} />
 		{/each}

@@ -1,8 +1,6 @@
 <script>
-	import { Warning } from 'carbon-icons-svelte';
 	import NewsCard from '$lib/components/common/NewsCard.svelte';
 	import { searchByTitle, sortByDate, filterByCategory } from '$lib/utils/search-by-title';
-	import { Search, Select, SelectItem, Tag } from 'carbon-components-svelte';
 
 	/**
 	 * @type {import('../../../types').News[]} - data
@@ -38,7 +36,9 @@
 	<div class="col-start-1 lg:col-start-1">
 		{#if res.length === 0}
 			<div class="text-center flex items-center gap-4 justify-center mt-32 text-xl w-full">
-				<Warning size={24} />
+				<span class="text-2xl">
+					<iconify-icon icon="material-symbols:warning" />
+				</span>
 				Article not found
 			</div>
 		{/if}
@@ -48,26 +48,34 @@
 			{/each}
 		</div>
 	</div>
-	<div class="row-start-1 md:col-start-2 lg:col-start-3 flex flex-col gap-6">
-		<div class="flex items-end md:flex-row flex-col-reverse justify-between gap-6">
-			<Search labelText="SortBy" placeholder="Search ..." bind:value={input} />
+	<div class="row-start-1 md:col-start-2 lg:col-start-3 flex flex-col gap-4">
+		<div class="flex flex-row md:flex-col gap-4">
+			<input
+				aria-label="SortBy"
+				placeholder="Search ..."
+				bind:value={input}
+				class="input px-2 py-2 basis-1/2 rounded-xl variant-soft-surface"
+			/>
+			<div class="flex basis-1/2 flex-row gap-1 item-center justify-end">
+				<select
+					class="select rounded-xl variant-soft-surface"
+					aria-label="Sort By"
+					bind:value={selected}
+				>
+					<option value="Latest">Latest</option>
+					<option value="Oldest">Oldest</option>
+				</select>
+			</div>
 		</div>
-		<div class="flex flex-row gap-1 item-center justify-end">
-			<Select bind:selected labelText="SortBy" class="w-full ">
-				<SelectItem value="Oldest" />
-				<SelectItem value="Latest" />
-			</Select>
-		</div>
-		<div>
-			<span class="text-[#525252] text-[12px] mb-2 block">Category</span>
-			<div class="flex flex-row md:flex-wrap gap-x-4 gap-y-1 w-full overflow-x-scroll">
+		<div class="p-4 card variant-glass">
+			<span class="text-lg mb-2 block">Category</span>
+			<div class="flex flex-row md:flex-wrap gap-x-4 gap-y-4 w-full overflow-x-scroll">
 				{#each categories as item}
-					<Tag
-						filter={selected_category.includes(item.title)}
+					<button
 						on:click={() => handleClick(item.title)}
-						class="leading-relaxed cursor-pointer shrink-0 flex items-center"
-						type={selected_category.includes(item.title) ? 'blue' : 'cool-gray'}
-						size="default">{item.title}</Tag
+						class={`pt-2 px-2 text-[12px] font-light chip cursor-pointer  ${
+							!selected_category.includes(item.title) ? 'variant-ghost' : 'variant-soft-primary'
+						}`}>{item.title}</button
 					>
 				{/each}
 			</div>

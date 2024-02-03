@@ -13,6 +13,16 @@ export default {
 			type: 'seo'
 		},
 		{
+			title: 'Terms Of The Day',
+			name: 'termsOfTheDay',
+			type: 'reference',
+			to: [
+				{
+					type: 'term'
+				}
+			]
+		},
+		{
 			title: 'Sections',
 			name: 'sections',
 			type: 'array',
@@ -21,6 +31,7 @@ export default {
 					name: 'Hero',
 					type: 'homePage.hero'
 				},
+
 				{
 					title: 'Highlight',
 					name: 'Highlight',

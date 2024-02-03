@@ -12,11 +12,11 @@
 				maxWidth={600}
 				image={data.image}
 				alt="image"
-				className="w-full aspect-video object-cover"
+				className="w-full aspect-video object-cover rounded-token"
 			/>
 		</div>
 		<div class="basis-1/2 grow flex justify-center flex-col">
-			<h2 class="text-4xl leading-[1.1] md:text-4xl my-6">{data.title}</h2>
+			<h2 class="h2 mb-2">{data.title}</h2>
 			<div class="w-full">
 				<PortableText value={data.description} />
 			</div>

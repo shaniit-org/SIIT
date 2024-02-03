@@ -1,13 +1,11 @@
 <script>
-	import { Link, Tile } from 'carbon-components-svelte';
-	import { Link as LinkIcon } from 'carbon-icons-svelte';
 	/**
 	 * @type {import('../../../types/homePage').HomePageDonate} - data
 	 */
 	export let data;
 </script>
 
-<Tile class="bg-theme-secondary">
+<div class="card">
 	<div class="section-container box grid grid-cols-1 md:grid-cols-3 gap-6">
 		<h3 class="text-xl md:text-2xl md:leading-relaxed">
 			{data.title}
@@ -16,9 +14,7 @@
 			<p class="mb-4 text-sm lg:text-xl lg:leading-[2]">
 				{data.description}
 			</p>
-			<Link href={data.link.url} icon={LinkIcon} class="cursor-pointer text-theme-dark underline "
-				>{data.link.title}</Link
-			>
+			<a href={data.link.url} class="cursor-pointer anchor no-underline">{data.link.title}</a>
 		</div>
 	</div>
-</Tile>
+</div>

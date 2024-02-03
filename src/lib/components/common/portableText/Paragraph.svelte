@@ -4,6 +4,6 @@
 	 */
 </script>
 
-<p class="text-base md:text-lg md:leading-[1.8] my-2">
+<p class="text-lg leading-relaxed">
 	<slot />
 </p>

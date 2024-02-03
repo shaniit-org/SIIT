@@ -5,10 +5,8 @@
 	export let title = '';
 </script>
 
-<div
-	class="w-full bg-gradient-to-b from-black to-gray-900 text-white min-h-[300px] flex justify-end flex-col"
->
-	<div class="section-container border p-6 md:p-12 w-full">
-		<h1 class="text-3xl leading-[1.5] md:text-4xl mb-4">{title}</h1>
+<div class="w-full relative card box rounded-none bg-opacity-50 backdrop-filter backdrop-blur-lg">
+	<div class="section-container lg:px-12 py-10 text-6xl">
+		<h1 class="h1 font-bold">{title}</h1>
 	</div>
 </div>

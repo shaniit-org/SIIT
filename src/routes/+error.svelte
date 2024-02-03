@@ -1,8 +1,6 @@
 <script>
 	import { page } from '$app/stores';
 	import SubHero from '$lib/components/common/SubHero.svelte';
-	import { Link } from 'carbon-icons-svelte';
-	import { Button } from 'carbon-components-svelte';
 	$: meta = {
 		title: 'SIIT - Shan Institute of Information Technology',
 		description: $page && $page?.error?.message
@@ -35,8 +33,6 @@
 			Page you are looking does not exist or has been removed.
 		</p>
 
-		<Button size="field" href="/" class="text-white border border-blue-500  max-w-max" icon={Link}
-			>Go to Home</Button
-		>
+		<a href="/" class="btn variant-soft-primary">Go to Home</a>
 	</div>
 </div>

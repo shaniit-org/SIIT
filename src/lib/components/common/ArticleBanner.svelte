@@ -24,14 +24,14 @@
 </script>
 
 <div
-	class="w-full bg-gradient-to-b from-black to-gray-900 relative text-white min-h-[300px] flex justify-end flex-col overflow-hidden"
+	class="w-full relative card min-h-[400px] flex justify-end flex-col overflow-hidden rounded-none box"
 >
 	<div class="section-container box w-full">
-		<div class="flex gap-2 flex-col mb-8">
-			<h1 class="text-4xl font-bold lg:text-5xl lg:leading-[1.2] leading-[1.5]">
+		<div class="flex gap-2 flex-col">
+			<h1 class="h1 mb-2">
 				{title}
 			</h1>
-			<p class="text-theme-muted text-sm md:w-3/4 leading-relaxed mt-4">
+			<p class="my-4 leading-loose text-lg">
 				{description}
 			</p>
 		</div>
@@ -47,10 +47,10 @@
 							/>
 						</div>
 						<div class="flex flex-col">
-							<span class="uppercase mb-1 text-sm"> {aut.name} </span>
+							<span class="uppercase mb-1 font-bold text-sm"> {aut.name} </span>
 							<div class="flex flex-col md:flex-row md:items-center md:gap-4">
-								<span class="text-gray-500">{readingTime} min read</span>
-								<span class="text-sm text-gray-500"> {moment(publishedAt).format('LL')}</span>
+								<span>{readingTime} min read</span>
+								<span> {moment(publishedAt).format('LL')}</span>
 							</div>
 						</div>
 					</div>
@@ -58,4 +58,11 @@
 			{/if}
 		</div>
 	</div>
+
+	<div
+		class="z-[-11] card rounded-full backdrop-blur w-[30%] blur-[200px] aspect-square absolute top-0 right-0 translate-y-[-90%] bg-gradient-to-tl opacity-20 variant-gradient-success-error"
+	/>
+	<div
+		class="z-[-13] card rounded-full backdrop-blur w-[40%] blur-[200px] aspect-square absolute top-0 left-1/2 translate-x-[-50%] translate-y-[-90%] variant-gradient-primary-secondary bg-gradient-to-tl opacity-40"
+	/>
 </div>

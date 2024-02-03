@@ -1,5 +1,4 @@
 <script>
-	import { UnorderedList, ListItem, Link } from 'carbon-components-svelte';
 	import { parseOutline } from '$lib/utils/generate-toc';
 
 	/** @type {PortableText} */
@@ -16,23 +15,22 @@
 
 {#if outline.length > 0}
 	<div
-		class="text-md cursor-pointer border-l-2 sticky top-20 flex gap-2 flex-col lg:min-w-[300px] pl-4 py-2 border-solid border-theme-muted"
+		class="text-md cursor-pointer card rounded-xl p-4 sticky top-20 flex gap-2 flex-col lg:min-w-[300px] border-solid border-theme-muted"
 	>
 		<button on:click={toggle_toc} class="text-left outline-none border-none">
-			<span class="text-lg">On this page</span>
+			<span class="h5">On this page</span>
 		</button>
 		{#if toggle}
-			<UnorderedList class=" pl-4 flex flex-col gap-2">
+			<ul class="flex flex-col gap-2">
 				{#each outline as item}
-					<ListItem>
-						<Link class=" hover:text-blue-500" href={`#${item.children[0]._key}`}>
-							<span class="text-theme-dark">
-								{item.children[0].text}
-							</span>
-						</Link>
-					</ListItem>
+					<li class="flex items-center gap-2">
+						<iconify-icon icon="basil:caret-right-outline" />
+						<a class="flex items-center anchor no-underline" href={`#${item.children[0]._key}`}>
+							{item.children[0].text}
+						</a>
+					</li>
 				{/each}
-			</UnorderedList>
+			</ul>
 		{/if}
 	</div>
 {/if}

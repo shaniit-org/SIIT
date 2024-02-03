@@ -1,8 +1,8 @@
 <script>
+	import Prism from 'prismjs';
 	import { PortableText } from '@portabletext/svelte';
 	import { components } from './components';
 	import { onMount } from 'svelte';
-	import Prism from 'prismjs';
 	import 'prismjs/components/prism-typescript';
 	import 'prismjs/components/prism-javascript';
 	import 'prismjs/components/prism-css';
@@ -19,6 +19,6 @@
 	});
 </script>
 
-<div class="prose lg:prose-xl">
+<div class="leading-relaxed mb-4">
 	<PortableText {value} {components} />
 </div>

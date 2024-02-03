@@ -20,7 +20,7 @@
 	<div class="flex gap-12 flex-col mt-12">
 		<div>
 			<div class="flex flex-col gap-2">
-				<h2 class="text-3xl my-4 text-theme-dark cursor-pointer">Tools</h2>
+				<h2 class="h3 mb-4">Tools</h2>
 			</div>
 			<div class="grid gap-4 grid-cols-1 md:grid-cols-2 max-w-[900px]">
 				{#each data.data.tools as tool}
@@ -30,9 +30,9 @@
 		</div>
 		<div>
 			<div class="flex items-center gap-2">
-				<h2 class="text-3xl my-4 text-theme-dark cursor-pointer">Articles</h2>
+				<h2 class="h3 mb-4">Articles</h2>
 			</div>
-			<div class="flex flex-col gap-12 mt-2">
+			<div class="flex flex-col gap-4 mt-2">
 				{#each data.data.news as tol}
 					<NlpArticle data={tol} />
 				{/each}

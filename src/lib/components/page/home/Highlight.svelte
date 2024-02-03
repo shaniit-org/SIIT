@@ -1,7 +1,4 @@
 <script>
-	import { ClickableTile, Button } from 'carbon-components-svelte';
-	import { Link as LinkIcon } from 'carbon-icons-svelte';
-
 	import moment from 'moment';
 	/**
 	 * @type {import('../../../types/homePage').HighLightNews} - data
@@ -13,44 +10,35 @@
 	export let term;
 </script>
 
-<div class="bg-theme-primary w-full">
-	<div class="grid grid-cols-1 md:grid-cols-2 relative">
-		<div class="flex flex-col justify-center">
-			{#if term}
-				<ClickableTile
-					href="/terms/{term.slug.current}"
-					class=" p-4 md:p-12 lg:p-18 xl:p-24 w-full h-full space-y-2 mt-auto  relative"
-				>
-					<div class="p-4">
-						<h2 class="text-2xl md:text-4xl mb-4">{term.title}</h2>
-						<div class="text-sm md:text-base flex text-gray-800 items-center justify-between mb-4">
-							<span class="italic">Term Of The Day</span>
-							<span class="italic">
-								{moment(new Date()).format('LL')}
-							</span>
-						</div>
-						<p class="text-sm mb-4 md:text-base leading-relaxed lg:text-xl lg:leading-[2]">
-							{term.description}
-						</p>
+<div class="section-container box z-10">
+	<div class="grid grid-cols-1 md:grid-cols-2 relative gap-4">
+		{#if term}
+			<div class="card card-hover overflow-hidden flex items-center p-4 md:p-8">
+				<a href="/terms/{term.slug}" class=" p-4 w-full max-h-max space-y-2 mt-auto relative">
+					<h2 class="h2 mb-4">{term.title}</h2>
+					<div class=" flex items-center mb-4 gap-4">
+						<span class="font-semibold">Term Of The Day </span>
+						<span class="italic">
+							{moment(new Date()).format('LL')}
+						</span>
 					</div>
-				</ClickableTile>
-			{/if}
-		</div>
+					<p class="leading-relaxed mt-2">
+						{term.description}
+					</p>
+				</a>
+			</div>
+		{/if}
 
-		<div class="p-8 md:p-12 lg:p-18 xl:p-24 flex flex-col justify-center">
-			<h3 class="text-xl md:text-3xl md:leading-relaxed mb-4">
+		<a
+			href={data.authors ? `/blogs/${data.slug}` : `/events/${data.slug}`}
+			class=" p-4 md:p-8 card card-hover overflow-hidden flex flex-col justify-center"
+		>
+			<h3 class="h3 font-sans md:leading-loose mb-4">
 				{data.title}
 			</h3>
-			<p class="mb-6 text-sm md:text-base leading-relaxed lg:text-xl lg:leading-[2]">
+			<p class="mb-6 md:text-base leading-loose text-lg">
 				{data.description}
 			</p>
-			<Button
-				kind="secondary"
-				href={data.authors ? `/blogs/${data.slug}` : `/events/${data.slug}`}
-				icon={LinkIcon}
-				class="cursor-pointer  max-w-max"
-				>Read More
-			</Button>
-		</div>
+		</a>
 	</div>
 </div>

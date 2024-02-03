@@ -1,5 +1,4 @@
 <script>
-	import { OrderedList, UnorderedList } from 'carbon-components-svelte';
 	/**
 	 *  @type {import("@portabletext/svelte").BlockComponentProps}>
 	 */
@@ -8,12 +7,12 @@
 </script>
 
 {#if value.listItem === 'number'}
-	<OrderedList class="not-prose pl-4 my-4 leading-loose flex flex-col gap-2">
+	<ol class="pl-4 md:pl-8 py-2 list-decimal">
 		<slot />
-	</OrderedList>
+	</ol>
 {/if}
 {#if value.listItem === 'bullet'}
-	<UnorderedList class="not-prose pl-4 my-4 leading-loose flex flex-col gap-2">
+	<ul class="pl-4 md:pl-8 py-2 list-decimal">
 		<slot />
-	</UnorderedList>
+	</ul>
 {/if}

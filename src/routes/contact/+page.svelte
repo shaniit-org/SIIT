@@ -1,6 +1,5 @@
 <script>
 	import SubHero from '$lib/components/common/SubHero.svelte';
-	import { Location, PhoneVoice, Email } from 'carbon-icons-svelte';
 	import Meta from '$lib/components/common/Meta.svelte';
 	/**
 	 * @type {{data:import('$lib/types/contactPage').ContactPageData}}
@@ -10,8 +9,8 @@
 
 <Meta data={data.data.seo} />
 <SubHero title={data.data.title} />
-<div class="min-h-screen section-container box">
-	<div class="w-full h-full bg-theme-muted aspect-video max-h-[600px]">
+<div class="min-h-screen section-container box my-12">
+	<div class="w-full card h-full overflow-hidden aspect-video max-h-[600px]">
 		<iframe
 			title="location of siit"
 			class="w-full h-full"
@@ -19,46 +18,53 @@
 		/>
 	</div>
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-12">
-		<div class="bg-white">
-			<div class="p-2 bg-theme-dark max-w-max text-white">
-				<Location size={24} />
-			</div>
-			<div class="flex flex-col p-4">
-				<span class="text-lg mb-1 font-bold">Location</span>
-				<ul>
+		<div class="card p-4">
+			<div class="flex flex-col py-4 px-4 md:px-4">
+				<div class="h3 mb-4 flex items-center gap-4">
+					<div class="badge text-2xl variant-soft-primary aspect-square">
+						<iconify-icon icon="material-symbols:location-on-outline" />
+					</div>
+					Location
+				</div>
+				<ul class="list">
 					<li>Waeponglaa Shan Kyaung</li>
 					<li>Yepawsitekwin Qt, Pyi Kyi Thagon Tsp</li>
 					<li>Mandalay, Myanmar</li>
 				</ul>
 			</div>
 		</div>
-		<div class="bg-white">
-			<div class="p-2 bg-theme-dark max-w-max text-white">
-				<Email size={24} />
-			</div>
-			<div class="flex flex-col p-4">
-				<span class="text-lg mb-1 font-bold">Email</span>
-				<ul>
+
+		<div class="card p-4">
+			<div class="flex flex-col py-4 px-4">
+				<div class="h3 mb-4 flex items-center gap-4">
+					<div class="badge text-2xl variant-soft-primary aspect-square">
+						<iconify-icon icon="material-symbols:mail-outline-rounded" />
+					</div>
+					Email
+				</div>
+				<ul class="list">
 					<li>
-						<a href="mailto:contact@shaniit.org" class="hover:text-blue-700">
+						<a href="mailto:contact@shaniit.org" class="anchor no-underline">
 							contact@shaniit.org
 						</a>
 					</li>
 				</ul>
 			</div>
 		</div>
-		<div class="bg-white">
-			<div class="p-2 bg-theme-dark max-w-max text-white">
-				<PhoneVoice size={24} />
-			</div>
-			<div class="flex flex-col p-4">
-				<span class="text-lg mb-1 font-bold">Phone</span>
-				<ul>
+		<div class="card p-4">
+			<div class="flex flex-col py-4 px-6">
+				<div class="h3 mb-4 flex items-center gap-4">
+					<div class="badge text-2xl variant-soft-primary aspect-square">
+						<iconify-icon icon="material-symbols:phone-enabled-outline-sharp" class="rotate-90" />
+					</div>
+					Phone
+				</div>
+				<ul class="list">
 					<li>
-						<a href="tel:+959-527-5238" class="hover:text-blue-700"> +959-527-5238 </a>
+						<a href="tel:+959-527-5238" class="anchor no-underline"> +959-527-5238 </a>
 					</li>
 					<li>
-						<a href="tel:+959-797-469-924" class="hover:text-blue-700"> +959-797-469-924 </a>
+						<a href="tel:+959-797-469-924" class="anchor no-underline"> +959-797-469-924 </a>
 					</li>
 				</ul>
 			</div>

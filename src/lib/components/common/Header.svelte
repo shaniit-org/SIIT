@@ -1,54 +1,61 @@
 <script>
 	import { init_autocomplete } from '../../utils/algolia';
+	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
-	import {
-		Header,
-		HeaderUtilities,
-		HeaderGlobalAction,
-		HeaderNav,
-		HeaderNavItem,
-		SideNav,
-		SideNavItems,
-		SideNavLink,
-		SkipToContent
-	} from 'carbon-components-svelte';
-	import { Search } from 'carbon-icons-svelte';
 	import { navs } from '$lib/site/nav';
-
-	let isSideNavOpen = false;
+	import { getDrawerStore } from '@skeletonlabs/skeleton';
+	const drawerStore = getDrawerStore();
 	onMount(() => {
 		init_autocomplete();
 	});
+
+	const drawerSettings = {
+		id: 'navigation',
+		// Provide your property overrides:
+		width: 'w-[280px] md:w-[480px] ',
+		padding: 'p-4',
+		rounded: 'rounded-xl'
+	};
 </script>
 
-<Header bind:isSideNavOpen expandedByDefault={false}>
-	<a href="/" slot="platform" class="grid place-items-center overflow-hidden">
-		<img loading="eager" src={'/logo.svg'} alt="SIIT Logo" class="logo" />
-	</a>
-	<svelte:fragment slot="skip-to-content">
-		<SkipToContent />
-	</svelte:fragment>
-	<HeaderNav>
-		{#each navs as nav}
-			<HeaderNavItem href={nav.path} text={nav.name} />
-		{/each}
-		<Search size={32} />
-	</HeaderNav>
-	<HeaderUtilities>
-		<HeaderGlobalAction
-			id="autocomplete"
-			kind="ghost"
-			class="grid place-items-center text-white border-none mr-1 cursor-pointer"
-		/>
-	</HeaderUtilities>
-</Header>
-<SideNav bind:isOpen={isSideNavOpen} default={false}>
-	<SideNavItems>
-		{#each navs as nav}
-			<SideNavLink text={nav.name} href={nav.path} />
-		{/each}
-	</SideNavItems>
-</SideNav>
+<header
+	class=" sticky top-0 left-0 z-[90] w-full bg-opacity-50 h-[3.5em] border-b border-b-surface-200 dark:border-b-surface-500 flex items-center backdrop-blur-xl"
+>
+	<div class="section-container w-full box flex items-center">
+		<a href="/" class="grid place-items-center overflow-hidden">
+			<img loading="eager" src={'/logo.svg'} alt="SIIT Logo" class="logo" />
+		</a>
+		<nav class="hidden mx-auto max-w-max pointer-events-none md:flex md:pointer-events-auto">
+			<ul class="flex items-center gap-4">
+				{#each navs as nav}
+					<li>
+						<a
+							href={nav.path}
+							class="px-2 py-2 button no-underline
+                            {nav.path === $page.url.pathname
+								? 'variant-glass-primary'
+								: 'variant-glass-surface'}"
+						>
+							{nav.name}
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</nav>
+		<div class="flex ml-auto items-center gap-2">
+			<button class=" grid place-items-center">
+				<div id="autocomplete" />
+			</button>
+
+			<button
+				on:click={() => drawerStore.open(drawerSettings)}
+				class="lg:hidden btn w-full h-full text-xl p-3 variant-soft-surface rounded-xl aspect-square grid place-items-center"
+			>
+				<iconify-icon icon="material-symbols:menu" />
+			</button>
+		</div>
+	</div>
+</header>
 
 <style>
 	.logo {
@@ -57,11 +64,12 @@
 		object-fit: cover;
 	}
 	:global(.aa-input-d) {
-		border: solid 1px #393939;
-		border-radius: 0px;
+		background: rgb(var(--color-surface-500) / 0.2);
+		border-radius: 0.75rem;
+		border: none;
 	}
 	:global(.aa-input-d):hover {
-		border: solid 1px white;
+		border: solid 1px rgb(var(--color-surface-500) / 0.9);
 		cursor: pointer;
 	}
 	:global(.aa-input-d-i) {

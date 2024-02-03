@@ -1,33 +1,35 @@
 <script>
-	import { Button } from 'carbon-components-svelte';
-	import { Launch, Tools } from 'carbon-icons-svelte';
 	/**
 	 * @type {import('$lib/types/nlpPage').Tools} - data
 	 */
 	export let data;
 </script>
 
-<div class="bg-white min-h-[160px] flex justify-between flex-col">
-	<div class="flex flex-col p-4">
-		<h2 class="text-xl mb-2">{data.title}</h2>
-		<p class="text-sm">
+<div class="card variant-soft-surface p-8 min-h-[160px] flex justify-between flex-col">
+	<div class="flex gap-2 flex-col">
+		<h2 class="h3 mb-2">{data.title}</h2>
+		<p class="leading-relaxed">
 			{data.description}
 		</p>
 	</div>
 	<div class="w-full flex flex-col">
 		<div class="flex justify-between">
-			<div class="aspect-square grid items-center p-4">
-				<Tools size={20} />
+			<div class="aspect-square grid items-center">
+				<iconify-icon
+					icon="material-symbols:tools-pliers-wire-stripper"
+					class="text-3xl rotate-45"
+				/>
 			</div>
-			<Button
-				size="lg"
+
+			<a
 				href={data.downloadlink}
-				icon={Launch}
 				target="_blank"
-				aria-label="More"
-				iconDescription="More"
-				class="bg-theme-dark "
-			/>
+				aria-label="Download"
+				class="button variant-filled-primary rounded-xl text-sm mt-4 px-4 flex items-center gap-2 py-2 max-w-max"
+			>
+				<span class=""> More </span>
+				<iconify-icon icon="formkit:arrowright" class="" />
+			</a>
 		</div>
 	</div>
 </div>

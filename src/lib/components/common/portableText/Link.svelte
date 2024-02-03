@@ -1,6 +1,4 @@
 <script>
-	import { Link } from 'carbon-components-svelte';
-	import { Link as LinkIcon } from 'carbon-icons-svelte';
 	/**
 	 *  @type {import("@portabletext/svelte").CustomBlockComponentProps}>
 	 */
@@ -8,4 +6,4 @@
 	const { value } = portableText;
 </script>
 
-<Link href={value.href} icon={LinkIcon} class="mt-2 mx-2 "><slot /></Link>
+<a href={value.href} class="anchor"><slot /></a>
