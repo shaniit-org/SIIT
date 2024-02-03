@@ -1,27 +1,6 @@
 <script>
 	import { navs } from '$lib/site/nav';
-	import { browser } from '$app/environment';
 	let formID = 'mrgwbjkb';
-	let currentTheme = 'siit';
-	const themes = [
-		'skeleton',
-		'rocket',
-		'modern',
-		'wintry',
-		'vintage',
-		'seafoam',
-		'gold-nouveau',
-		'crimson',
-		'sahara',
-		'hamlindigo',
-		'siit'
-	];
-
-	$: {
-		if (browser) {
-			document.body.setAttribute('data-theme', currentTheme);
-		}
-	}
 </script>
 
 <footer class="card rounded-none border-none p-2">
@@ -39,14 +18,6 @@
 							</a>
 						</li>
 					{/each}
-
-					<li>
-						<select class="select max-w-max" bind:value={currentTheme}>
-							{#each themes as theme}
-								<option value={theme} class="capitalize">{theme}</option>
-							{/each}
-						</select>
-					</li>
 				</ul>
 			</div>
 			<form
