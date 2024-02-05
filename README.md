@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="320" height="320" src="https://github.com/shaniit-org/SIIT/blob/docs/readme/static/images/siit.png">
+  <img width="150" height="150" src="https://github.com/shaniit-org/SIIT/blob/docs/readme/static/images/siit.png">
 </p>
 
 # Shan Institute of Information Technology website
