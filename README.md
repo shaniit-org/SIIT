@@ -1,6 +1,10 @@
+<p align="center">
+  <img width="320" height="320" src="https://github.com/shaniit-org/SIIT/blob/docs/readme/static/images/siit.png">
+</p>
+
 # Shan Institute of Information Technology website
 
-Hello! Glad to be a part of your SvelteKit project! We're using SvelteKit to make our web applications work really well.
+We're using SvelteKit to make our web applications work really well.
 For styling, we've got Tailwind CSS, and for managing content, we're using Sanity.io as our Content Management System (CMS).
 If you have any questions or need help, feel free to ask!
 
@@ -29,7 +33,7 @@ If you have any questions or need help, feel free to ask!
 
 - **SvelteKit:** A powerful framework for building web applications with a focus on simplicity and ease of use.
 
-- **Tailwind CSS:** A utility-first CSS framework for rapid UI development. Styles can be easily customized in the `src/global.css` file.
+- **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
 
 - **Sanity.io CMS:** A headless CMS that provides a flexible and structured way to manage content. Content models and data are stored in Sanity.io, and the app fetches data from the CMS to dynamically render content.
 
