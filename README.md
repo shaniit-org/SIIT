@@ -1,39 +1,54 @@
-# create-svelte
+<p align="center">
+  <img width="150" height="150" src="https://github.com/shaniit-org/SIIT/blob/docs/readme/static/images/siit.png">
+</p>
 
-Svelte powered web
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+# Shan Institute of Information Technology
 
-## Creating a project
+We're using SvelteKit to make our web applications work really well.
+For styling, we've got Tailwind CSS, and for managing content, we're using Sanity.io as our Content Management System (CMS).
+If you have any questions or need help, feel free to ask!
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Getting Started
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+1. **Clone the Repository:**
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+   ```
+   git clone https://github.com/shaniit-org/SIIT
+   cd SIIT
+   ```
 
-## Developing
+2. **Install Dependencies:**
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+   ```
+   pnpm install
+   ```
 
-```bash
-npm run dev
+3. **Run the Development Server:**
+   ```
+   pnpm run dev
+   ```
+   This will start the development server. Open [http://localhost:5432](http://localhost:5432) in your browser to see the app.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Features
 
-## Building
+- **SvelteKit:** A powerful framework for building web applications with a focus on simplicity and ease of use.
 
-To create a production version of your app:
+- **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
 
-```bash
-npm run build
-```
+- **Sanity.io CMS:** A headless CMS that provides a flexible and structured way to manage content. Content models and data are stored in Sanity.io, and the app fetches data from the CMS to dynamically render content.
 
-You can preview the production build with `npm run preview`.
+## Customize Sanity.io CMS
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+If you are a contributor looking to modify the Sanity.io CMS:
+
+- **Reach Out to Maintainers:**
+  - If you have ideas for improvements or want to modify the CMS schema, please reach out to the project maintainers.
+  - Create an issue on GitHub or contact maintainers through their preferred communication channels.
+
+## Contributing
+
+We welcome contributions to enhance the project! Please check the [Contributing Guidelines](CONTRIBUTING.md) for more information on how to get involved.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE.md).
