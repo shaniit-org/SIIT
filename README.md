@@ -2,7 +2,7 @@
   <img width="150" height="150" src="https://github.com/shaniit-org/SIIT/blob/docs/readme/static/images/siit.png">
 </p>
 
-# Shan Institute of Information Technology website
+# Shan Institute of Information Technology
 
 We're using SvelteKit to make our web applications work really well.
 For styling, we've got Tailwind CSS, and for managing content, we're using Sanity.io as our Content Management System (CMS).
@@ -27,7 +27,7 @@ If you have any questions or need help, feel free to ask!
    ```
    pnpm run dev
    ```
-   This will start the development server. Open [http://localhost:5000](http://localhost:5000) in your browser to see the app.
+   This will start the development server. Open [http://localhost:5432](http://localhost:5432) in your browser to see the app.
 
 ## Features
 
