@@ -65,7 +65,7 @@
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-icons": "^4.12.0",
-		"sanity": "^3.21.0",
+		"sanity": "^3.30.0",
 		"sanity-plugin-asset-source-unsplash": "^1.1.2",
 		"sanity-plugin-graph-view": "^2.0.1",
 		"svelte-preprocess": "^5.1.1"
