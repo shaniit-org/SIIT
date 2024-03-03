@@ -4,7 +4,7 @@
 	import TermHero from '$lib/components/common/TermHero.svelte';
 	import SocialShare from '$lib/components/common/SocialShare.svelte';
 	/**
-	 * @type {{data: import('../../../lib/types/termPage').Term}} - data
+	 * @type {{data: import('../../../../lib/types/termPage').Term}} - data
 	 */
 	export let data;
 	/**
