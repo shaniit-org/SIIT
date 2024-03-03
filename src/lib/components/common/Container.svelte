@@ -27,7 +27,7 @@
 	});
 </script>
 
-<AppShell class="relative">
+<AppShell class="relative font-san">
 	<!-- (sidebarLeft) -->
 	<!-- (pageHeader) -->
 
