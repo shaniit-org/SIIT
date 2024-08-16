@@ -11,16 +11,15 @@
 
 <Meta data={seo} />
 <SubHero title="FAQs" />
-<div class="min-h-screen section-container box">
+<div class="min-h-screen section-container box ">
 	{#if faqs?.length > 0}
-		<Accordion spacing="space-y-4">
+		<Accordion spacing="space-y-4 mx-auto max-w-4xl">
 			{#each faqs as item}
 				<AccordionItem class="mt-4">
 					<svelte:fragment slot="summary">
-						<h3 class="text-lg my-2">{item.category}</h3>
+              <h3 class="text-lg font-domine border-b border-surface-600/40 pb-4">{item.category}</h3>
 					</svelte:fragment>
 					<svelte:fragment slot="content">
-						<div class="text-lg">
 							<ul class="list md:pl-4 flex flex-col gap-4">
 								{#each item.qanda as itm}
 									<li class="text-left gap-2">
@@ -35,7 +34,6 @@
 									</li>
 								{/each}
 							</ul>
-						</div>
 					</svelte:fragment>
 				</AccordionItem>
 			{/each}

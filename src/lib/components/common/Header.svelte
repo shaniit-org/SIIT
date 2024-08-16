@@ -19,19 +19,19 @@
 </script>
 
 <header
-	class=" sticky top-0 left-0 z-[90] w-full bg-opacity-50 h-[3.5em] border-b border-b-surface-200 dark:border-b-surface-500 flex items-center backdrop-blur-xl"
+	class=" sticky top-0 left-0 z-[90] w-full  h-[3em] flex items-center bg-surface-900/80 backdrop-blur-xl"
 >
 	<div class="section-container w-full box flex items-center">
 		<a href="/" class="grid place-items-center overflow-hidden">
 			<img loading="eager" src={'/logo.svg'} alt="SIIT Logo" class="logo" />
 		</a>
 		<nav class="hidden mx-auto max-w-max pointer-events-none md:flex md:pointer-events-auto">
-			<ul class="flex items-center gap-4">
+			<ul class="flex items-center gap-4 font-domine">
 				{#each navs as nav}
 					<li>
 						<a
 							href={nav.path}
-							class="px-2 py-2 button no-underline
+							class="px-2 py-2 text-sm button no-underline
                             {nav.path === $page.url.pathname
 								? 'variant-glass-primary'
 								: 'variant-glass-surface'}"

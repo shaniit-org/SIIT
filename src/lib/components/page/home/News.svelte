@@ -15,7 +15,7 @@
 		<h2 class="h2 my-4">{section.title}</h2>
 
 		{#if section.description}
-			<p class="text-lg">
+			<p class="text-surface-300 text-lg mt-2">
 				{section.description}
 			</p>
 		{/if}

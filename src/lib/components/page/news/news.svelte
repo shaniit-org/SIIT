@@ -48,7 +48,7 @@
 			{/each}
 		</div>
 	</div>
-	<div class="row-start-1 md:col-start-2 lg:col-start-3 flex flex-col gap-4">
+	<div class="font-domine row-start-1 md:col-start-2 lg:col-start-3 flex flex-col gap-4">
 		<div class="flex flex-row md:flex-col gap-4">
 			<input
 				aria-label="SortBy"

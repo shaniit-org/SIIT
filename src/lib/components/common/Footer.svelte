@@ -3,7 +3,7 @@
 	let formID = 'mrgwbjkb';
 </script>
 
-<footer class="card rounded-none border-none p-2">
+<footer class="font-domine card rounded-none border-none">
 	<div class="section-container box">
 		<div class="flex flex-col gap-4 md:flex-row justify-between">
 			<div class="basis-1/2">
@@ -13,7 +13,7 @@
 				<ul class="grid grid-cols-2 gap-y-4 justify-center gap-x-10">
 					{#each navs as nav}
 						<li>
-							<a href={nav.path} class="variant-soft px-2 py-2 button no-underline">
+							<a href={nav.path} class="variant-soft px-2 py-2 button no-underline hover:variant-glass-primary">
 								{nav.name}
 							</a>
 						</li>
@@ -21,7 +21,7 @@
 				</ul>
 			</div>
 			<form
-				class="flex flex-col p-4 md:p-8 card basis-1/2 md:max-w-lg"
+				class="flex flex-col p-4 basis-1/2 md:max-w-lg"
 				action={`https://formspree.io/f/${formID}`}
 				method="POST"
 			>

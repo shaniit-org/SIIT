@@ -17,14 +17,14 @@
 	<SubHero {title} />
 	<div class="section-container flex flex-col box mb-12">
 		<select
-			class="rounded-xl ml-auto mb-8 select max-w-max"
+			class="rounded-xl ml-auto mb-8 select max-w-max md:max-w-[300px]"
 			aria-label="Sort By"
 			bind:value={selected}
 		>
 			<option value="Latest">Latest</option>
 			<option value="Oldest">Oldest</option>
 		</select>
-		<div class="flex flex-col gap-4">
+		<div class="flex flex-col gap-4  max-w-4xl mx-auto ">
 			{#each res as item}
 				<EventCard data={item} />
 			{/each}

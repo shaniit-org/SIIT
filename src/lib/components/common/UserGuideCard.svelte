@@ -17,10 +17,10 @@
 		<h2 class="h3 mb-1">{data.title}</h2>
 		<div class="mb-4 mt-2">
 			{#each data.categories as cat}
-				<span class="m-0 badge variant-soft-primary pt-2">{cat.title}</span>
+				<span class="m-0 badge text-sm variant-soft-primary pt-2">{cat.title}</span>
 			{/each}
 		</div>
-		<p class=" text-sm line-clamp-3 leading-loose">
+		<p class=" text-sm line-clamp-3 leading-loose text-surface-300">
 			{data.description}
 		</p>
 
@@ -29,7 +29,7 @@
 				href={data.downloadlink}
 				target="_blank"
 				aria-label="Download"
-				class="button variant-filled-primary rounded-token mt-4 px-4 flex items-center gap-2 py-2 max-w-max text-sm"
+				class="button variant-glass-primary rounded-token mt-4 px-4 flex items-center gap-2 py-2 max-w-max text-sm"
 			>
 				<span class="pt-1"> Download </span>
 				<iconify-icon icon="material-symbols:download" class="text-xl" />

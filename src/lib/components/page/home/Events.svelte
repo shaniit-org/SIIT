@@ -12,11 +12,10 @@
 
 <div class="section-container box">
 	<div class="flex flex-col mb-8">
-		<h3 class="h2 mb-3">
-			{section.title}
-		</h3>
+		<h2 class="h2 my-4">{section.title}</h2>
+
 		{#if section.description}
-			<p class="">
+			<p class="text-surface-300 text-lg mt-2">
 				{section.description}
 			</p>
 		{/if}

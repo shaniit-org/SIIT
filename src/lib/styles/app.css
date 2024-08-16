@@ -6,6 +6,31 @@
 	font-family: 'GreatHorKham Yangon';
 	src: url('/fonts/GreatHorKham_Yangon.woff2') format('woff2');
 }
+
+@font-face {
+	font-family: 'Domine-Bold';
+	src: url('/fonts/Domine-Bold.tff') format('ttf');
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'Domine-Medium';
+	src: url('/fonts/Domine-Medium.tff') format('ttf');
+	font-weight: medium;
+}
+
+@font-face {
+	font-family: 'Domine-Regular';
+	src: url('/fonts/Domine-Regular.tff') format('ttf');
+	font-weight: regular;
+}
+
+@font-face {
+	font-family: 'Domine-SemiBold';
+	src: url('/fonts/Domine-SemiBold.tff') format('ttf');
+	font-weight: semibold;
+}
+
 :root {
 	--font-family-base: 'GreatHorKham Yangon', sans-serif;
 	--aa-primary-color-rgb: white;
