@@ -14,6 +14,9 @@ importers:
       '@algolia/autocomplete-theme-classic':
         specifier: ^1.12.2
         version: 1.12.2
+      '@builder.io/partytown':
+        specifier: ^0.10.2
+        version: 0.10.2
       '@floating-ui/dom':
         specifier: ^1.6.1
         version: 1.6.1
@@ -390,6 +393,11 @@ packages:
   '@bjoerge/mutiny@0.5.3':
     resolution: {integrity: sha512-QBEeUmc5K6kzut0uurwBtJhJW2fc/KEdKhST2/71Ln6V3j4b4qzK1/OeDsUHAt/RM2Dxe5TjWNn82r6WzmrAIQ==}
     engines: {node: '>=18'}
+
+  '@builder.io/partytown@0.10.2':
+    resolution: {integrity: sha512-A9U+4PREWcS+CCYzKGIPovtGB/PBgnH/8oQyCE6Nr9drDJk6cMPpLQIEajpGPmG9tYF7N3FkRvhXm/AS9+0iKg==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
 
   '@cloudflare/workers-types@4.20231121.0':
     resolution: {integrity: sha512-+kWfpCkqiepwAKXyHoE0gnkPgkLhz0/9HOBIGhHRsUvUKvhUtm3mbqqoGRWgF1qcjzrDUBbrrOq4MYHfFtc2RA==}
@@ -5271,6 +5279,8 @@ snapshots:
       diff-match-patch: 1.0.5
       hotscript: 1.0.13
       nanoid: 5.0.6
+
+  '@builder.io/partytown@0.10.2': {}
 
   '@cloudflare/workers-types@4.20231121.0': {}
 
