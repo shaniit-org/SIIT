@@ -14,13 +14,15 @@
 		className="w-full h-[380px] aspect-[9/16] object-cover"
 	/>
 	<div class="flex flex-col p-8">
-		<h2 class="h3 mb-1">{data.title}</h2>
+		<h2 class="h3 mb-2 font-semibold dark:text-surface-100 text-2xl leading-relaxed">
+			{data.title}
+		</h2>
 		<div class="mb-4 mt-2">
 			{#each data.categories as cat}
 				<span class="m-0 badge variant-soft-primary pt-2">{cat.title}</span>
 			{/each}
 		</div>
-		<p class=" text-sm line-clamp-3 leading-loose">
+		<p class="text-base line-clamp-3 leading-loose dark:text-surface-300">
 			{data.description}
 		</p>
 

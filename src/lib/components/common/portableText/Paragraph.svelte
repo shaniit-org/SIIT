@@ -4,6 +4,6 @@
 	 */
 </script>
 
-<p class="text-lg leading-relaxed">
+<p class="dark:text-surface-100 text-lg leading-loose">
 	<slot />
 </p>

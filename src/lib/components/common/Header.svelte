@@ -42,15 +42,15 @@
 		</nav>
 		<div class="flex ml-auto items-center gap-2">
 			<button class=" grid place-items-center" aria-label="Search entire site">
-				<div id="autocomplete" ></div>
+				<div id="autocomplete" />
 			</button>
 
 			<button
 				on:click={() => drawerStore.open(drawerSettings)}
 				class="lg:hidden btn w-full h-full text-xl p-3 variant-soft-surface rounded-xl aspect-square grid place-items-center"
-        aria-label="Open Navigation"
+				aria-label="Open Navigation"
 			>
-				<iconify-icon icon="material-symbols:menu" ></iconify-icon>
+				<iconify-icon icon="material-symbols:menu" />
 			</button>
 		</div>
 	</div>

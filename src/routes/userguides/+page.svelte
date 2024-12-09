@@ -20,7 +20,7 @@
 		id="search"
 		bind:value={keyword}
 		placeholder="Search user guides..."
-		class="ml-auto input px-3 py-2 pt-3 rounded-xl max-w-[300px]"
+		class="ml-auto input px-3 py-2 pt-3 rounded-token max-w-[300px]"
 	/>
 	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
 		{#each result as item}

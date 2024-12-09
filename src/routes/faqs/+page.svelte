@@ -28,7 +28,7 @@
 											<span
 												class="shrink-0 flex-auto badge hidden md:flex variant-soft-primary aspect-square"
 											>
-												<iconify-icon icon="formkit:arrowright" ></iconify-icon>
+												<iconify-icon icon="formkit:arrowright" />
 											</span>
 											<a class="flex-auto anchor mt-1" href="/faqs/{itm._id}"> {itm.question}</a>
 										</span>

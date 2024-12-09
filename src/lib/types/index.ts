@@ -11,6 +11,7 @@ export interface RelatedArticle {
 	publishedAt: string;
 	slug: string;
 	_id: string;
+	categories: Category[];
 }
 export interface Author {
 	name: string;
@@ -38,7 +39,9 @@ export interface UserGuide extends Article {
 	categories: Category[];
 }
 
-export interface News extends Article {}
+export interface News extends Article {
+	categories: Category[];
+}
 
 export interface NewsDetail extends News {
 	readingTime: number;
@@ -48,7 +51,9 @@ export interface NewsDetail extends News {
 	related?: News[];
 }
 
-export interface Event extends Article {}
+export interface Event extends Article {
+	categories: Category[];
+}
 
 export interface EventDetail extends Event {
 	body: PortableText;

@@ -14,7 +14,8 @@ const query = `*[_type =="news" && slug.current==$slug][0]{
      _id,
      "slug": slug.current,
      description,
-     coverImage
+     coverImage,
+     categories[]->{ title , _id }
    }
 }`;
 

@@ -11,12 +11,10 @@
 </script>
 
 <div class="section-container box">
-	<div class="flex flex-col mb-8">
-		<h3 class="h2 mb-3">
-			{section.title}
-		</h3>
+	<div class="flex flex-col mb-6">
+		<h2 class="h2 mb-4 md:mb-6">{section.title}</h2>
 		{#if section.description}
-			<p class="">
+			<p class="dark:text-surface-300 text-lg">
 				{section.description}
 			</p>
 		{/if}

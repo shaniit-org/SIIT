@@ -54,12 +54,12 @@
 				aria-label="SortBy"
 				placeholder="Search ..."
 				bind:value={input}
-				class="input px-2 py-2 basis-1/2 rounded-xl variant-soft-surface"
+				class="input px-2 py-2 basis-1/2 rounded-token variant-soft-surface"
 			/>
 			<div class="flex basis-1/2 flex-row gap-1 item-center justify-end">
 				<select
-					class="select rounded-xl variant-soft-surface"
-					aria-label="Sort By"
+					class="select rounded-token variant-soft-surface"
+					aria-label="Sort By "
 					bind:value={selected}
 				>
 					<option value="Latest">Latest</option>

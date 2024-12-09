@@ -13,7 +13,7 @@
 <SubHero title="Natural language processing" />
 <div class="section-container box min-h-screen">
 	<div class="flex flex-col">
-		<p class="text-xl leading-relaxed max-w-[900px]">
+		<p class="text-xl leading-relaxed max-w-[900px] dark:text-surface-300">
 			{data.data.description}
 		</p>
 	</div>

@@ -11,7 +11,7 @@
 	href={`/events/${data.slug}`}
 	class="cursor-pointer card flex flex-col gap-4 p-4 md:p-6 variant-glass"
 >
-	<h3 class="h3 mb-2">
+	<h3 class="h3 mb-2 font-semibold dark:text-surface-100 text-xl">
 		{data.title}
 	</h3>
 
@@ -19,10 +19,10 @@
 		maxWidth={450}
 		image={data.coverImage}
 		alt={data.title}
-		className="  rounded-2xl aspect-video w-full object-cover"
+		className="mb-2 rounded-token aspect-video w-full object-cover"
 	/>
-	<div class="flex flex-col">
-		<p class="mb-2 leading-relaxed line-clamp-2">{data.description}</p>
-		<span> {moment(data.publishedAt).format('LL')}</span>
+	<div class="flex flex-col gap-4">
+		<p class="dark:text-surface-200 leading-relaxed line-clamp-2">{data.description}</p>
+		<span class="mb-4 dark:text-surface-300 text-sm"> {moment(data.publishedAt).format('LL')}</span>
 	</div>
 </a>

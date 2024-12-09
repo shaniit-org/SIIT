@@ -17,7 +17,7 @@
 	<SubHero {title} />
 	<div class="section-container flex flex-col box mb-12">
 		<select
-			class="rounded-xl ml-auto mb-8 select max-w-max"
+			class="rounded-token ml-auto mb-8 select max-w-max"
 			aria-label="Sort By"
 			bind:value={selected}
 		>

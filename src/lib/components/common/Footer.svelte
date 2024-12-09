@@ -1,5 +1,6 @@
 <script>
 	import { navs } from '$lib/site/nav';
+	import { page } from '$app/stores';
 	let formID = 'mrgwbjkb';
 </script>
 
@@ -10,10 +11,15 @@
 				<div class="mb-6">
 					<img class="max-w-[100px] aspect-video" src="/logo.svg" alt="SIIT logo" />
 				</div>
-				<ul class="grid grid-cols-2 gap-y-4 justify-center gap-x-10">
+				<ul class="grid grid-cols-2 gap-y-6 justify-center gap-x-10">
 					{#each navs as nav}
 						<li>
-							<a href={nav.path} class="variant-soft px-2 py-2 button no-underline">
+							<a
+								href={nav.path}
+								class="px-2 py-2 no-underline text-base {nav.path === $page.url.pathname
+									? 'variant-glass-primary'
+									: 'variant-glass-surface text-surface-200'}"
+							>
 								{nav.name}
 							</a>
 						</li>
@@ -25,17 +31,17 @@
 				action={`https://formspree.io/f/${formID}`}
 				method="POST"
 			>
-				<p class=" text-xl mb-4 md:mb-6">Contact Us</p>
+				<p class="font-semibold text-2xl mb-4">Contact Us</p>
 				<label class="label mb-4">
-					<span>Email</span>
+					<span class="dark:text-surface-300">Email</span>
 					<input
-						class=" input px-4 py-2"
+						class="input px-4 py-2 rounded-token"
 						title="Enter your email "
 						type="text"
 						placeholder="Enter your email "
 					/>
 				</label>
-				<p class=" mb-2">Message</p>
+				<p class="dark:text-surface-300 mb-2">Message</p>
 				<textarea
 					placeholder="Enter message"
 					name="message"
@@ -43,7 +49,7 @@
 					class="textarea px-4 py-2"
 					rows="5"
 				/>
-				<button type="submit" class="mt-4 button variant-filled-primary py-2 rounded-token pt-4"
+				<button type="submit" class="mt-4 button variant-filled-primary py-2 rounded-token"
 					>Submit</button
 				>
 			</form>
