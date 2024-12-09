@@ -18,5 +18,5 @@
 	/>
 	<div
 		class="z-[-13] card rounded-full backdrop-blur w-[90%] blur-[300px] aspect-square absolute top-0 left-1/2 translate-x-[-50%] translate-y-[-90%] variant-gradient-primary-secondary bg-gradient-to-tl opacity-40"
-	/>
+	></div>
 </div>

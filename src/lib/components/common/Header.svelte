@@ -11,7 +11,6 @@
 
 	const drawerSettings = {
 		id: 'navigation',
-		// Provide your property overrides:
 		width: 'w-[280px] md:w-[480px] ',
 		padding: 'p-4',
 		rounded: 'rounded-xl'
@@ -19,7 +18,7 @@
 </script>
 
 <header
-	class=" sticky top-0 left-0 z-[90] w-full bg-opacity-50 h-[3.5em] border-b border-b-surface-200 dark:border-b-surface-500 flex items-center backdrop-blur-xl"
+	class="sticky top-0 left-0 z-[90] w-full h-[3.5em] border-b border-b-surface-100 dark:border-b-surface-500 flex items-center bg-surface-800/90 backdrop-blur-lg"
 >
 	<div class="section-container w-full box flex items-center">
 		<a href="/" class="grid place-items-center overflow-hidden">
@@ -31,10 +30,9 @@
 					<li>
 						<a
 							href={nav.path}
-							class="px-2 py-2 button no-underline
-                            {nav.path === $page.url.pathname
+							class="px-2 py-2 no-underline text-base {nav.path === $page.url.pathname
 								? 'variant-glass-primary'
-								: 'variant-glass-surface'}"
+								: 'variant-glass-surface text-surface-200'}"
 						>
 							{nav.name}
 						</a>
@@ -43,15 +41,16 @@
 			</ul>
 		</nav>
 		<div class="flex ml-auto items-center gap-2">
-			<button class=" grid place-items-center">
-				<div id="autocomplete" />
+			<button class=" grid place-items-center" aria-label="Search entire site">
+				<div id="autocomplete" ></div>
 			</button>
 
 			<button
 				on:click={() => drawerStore.open(drawerSettings)}
 				class="lg:hidden btn w-full h-full text-xl p-3 variant-soft-surface rounded-xl aspect-square grid place-items-center"
+        aria-label="Open Navigation"
 			>
-				<iconify-icon icon="material-symbols:menu" />
+				<iconify-icon icon="material-symbols:menu" ></iconify-icon>
 			</button>
 		</div>
 	</div>

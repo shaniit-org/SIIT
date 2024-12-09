@@ -10,6 +10,7 @@
 	import { navs } from '$lib/site/nav';
 	import { onNavigate } from '$app/navigation';
 	import { storePopup } from '@skeletonlabs/skeleton';
+
 	const drawerStore = getDrawerStore();
 	storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 
@@ -28,16 +29,10 @@
 </script>
 
 <AppShell class="relative font-san">
-	<!-- (sidebarLeft) -->
-	<!-- (pageHeader) -->
-
-	<!-- Router Slot -->
-
 	<div class="relative z-1 font-san content w-full min-h-screen">
 		<Header />
 		<slot />
 	</div>
-	<!-- ---- / ---- -->
 	<svelte:fragment slot="pageFooter">
 		<Scripts />
 		<FloatingDonate />
@@ -71,5 +66,4 @@
 		{/if}
 	</Drawer>
 	<Toast position="br" />
-	<!-- (footer) -->
 </AppShell>

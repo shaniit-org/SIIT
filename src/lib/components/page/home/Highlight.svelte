@@ -14,15 +14,15 @@
 	<div class="grid grid-cols-1 md:grid-cols-2 relative gap-4">
 		{#if term}
 			<div class="card card-hover overflow-hidden flex items-center p-4 md:p-8">
-				<a href="/terms/{term.slug}" class=" p-4 w-full max-h-max space-y-2 mt-auto relative">
-					<h2 class="h2 mb-4">{term.title}</h2>
-					<div class=" flex items-center mb-4 gap-4">
-						<span class="font-semibold">Term Of The Day </span>
-						<span class="italic">
+				<a href="/terms/{term.slug}" class=" p-4 w-full max-h-max mt-auto relative">
+					<h2 class="h3 mb-4 font-semibold dark:text-primary-500">{term.title}</h2>
+					<div class=" flex items-center mb-4 gap-4 text-lg">
+						<span class="font-san">Term Of The Day </span>
+						<span>
 							{moment(new Date()).format('LL')}
 						</span>
 					</div>
-					<p class="leading-relaxed mt-2">
+					<p class="dark:text-surface-100 text-base leading-relaxed">
 						{term.description}
 					</p>
 				</a>
@@ -36,7 +36,7 @@
 			<h3 class="h3 font-sans md:leading-loose mb-4">
 				{data.title}
 			</h3>
-			<p class="mb-6 md:text-base leading-loose text-lg">
+			<p class="text-surface-200 text-base leading-relaxed mt-3">
 				{data.description}
 			</p>
 		</a>

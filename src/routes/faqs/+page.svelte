@@ -24,14 +24,14 @@
 							<ul class="list md:pl-4 flex flex-col gap-4">
 								{#each item.qanda as itm}
 									<li class="text-left gap-2">
-										<a href="/elements/lists" class="flex gap-2">
+										<span class="flex gap-2">
 											<span
 												class="shrink-0 flex-auto badge hidden md:flex variant-soft-primary aspect-square"
 											>
-												<iconify-icon icon="formkit:arrowright" />
+												<iconify-icon icon="formkit:arrowright" ></iconify-icon>
 											</span>
 											<a class="flex-auto anchor mt-1" href="/faqs/{itm._id}"> {itm.question}</a>
-										</a>
+										</span>
 									</li>
 								{/each}
 							</ul>

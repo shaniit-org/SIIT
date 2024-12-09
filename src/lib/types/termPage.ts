@@ -7,9 +7,7 @@ export interface Term {
 	title: string;
 	body: PortableText;
 	character: string;
-	slug: {
-		current: string;
-	};
+	slug: string;
 }
 
 export interface TermPageData {
