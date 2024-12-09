@@ -8,7 +8,7 @@
 </script>
 
 <SanityImage
-	className="card w-auto my-6 max-h-max  mx-auto object-contain rounded-xl"
+	className="card w-auto my-6 max-h-max  mx-auto object-contain rounded-token"
 	{image}
 	alt={image.alt}
 	maxWidth={1000}

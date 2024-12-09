@@ -11,7 +11,7 @@
 <div class="card variant-soft-surface rounded-none">
 	<div class="section-container box grid grid-cols-1 md:grid-cols-3 gap-6">
 		<h2 class="h2">{data.title}</h2>
-		<div class="col-span-2 text-lg">
+		<div class="text-lg dark:text-surface-300 leading-loose">
 			{data.description}
 		</div>
 	</div>

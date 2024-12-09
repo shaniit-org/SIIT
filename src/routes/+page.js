@@ -32,13 +32,15 @@ const query = `{
           description,
           publishedAt,
           coverImage ,
+          categories[]->{ title , _id}
     },
   "news":*[_type =="news"] | order(publishedAt desc)[0...7]  {
           "slug":slug.current,
           title,
           description,
           coverImage ,
-          publishedAt
+          publishedAt,
+          categories[]->{ title , _id}
     },
 }`;
 

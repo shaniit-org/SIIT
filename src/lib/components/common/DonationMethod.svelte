@@ -29,10 +29,10 @@
 		/>
 	</div>
 	<div class="text-center md:text-left flex flex-col mt-4 px-4">
-		<h3 class="h5 font-bold md:mb-2">
+		<h3 class="h5 font-semibold md:mb-2">
 			{data.name}
 		</h3>
-		<p class="leading-relaxed line-clamp-3">
+		<p class="dark:text-surface-300 leading-relaxed line-clamp-3">
 			{data.number}
 		</p>
 	</div>

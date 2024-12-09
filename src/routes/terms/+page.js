@@ -5,7 +5,10 @@ import { groupByChar } from '$lib/utils/group-by-char';
 const query = `
   *[_id == 'termsPage'][0]{
     ...,
-    "terms": *[_type == "term"][0...1000]
+    "terms": *[_type == "term"][0...1000]{
+      ...,
+      "slug": slug.current
+    }
   }
 `;
 

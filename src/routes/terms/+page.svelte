@@ -27,7 +27,7 @@
 							{#if data.data[alphabet]}
 								{#each data.data[alphabet] as item}
 									<li class="list-nav w-full">
-										<a href={`/terms/${item.slug.current}`} class="anchor no-underline">
+										<a href={`/terms/${item.slug}`} class="anchor no-underline">
 											{item.title}
 										</a>
 									</li>

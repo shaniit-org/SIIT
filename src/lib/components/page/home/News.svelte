@@ -12,10 +12,9 @@
 
 <div class="section-container box">
 	<div class="flex flex-col mb-6">
-		<h2 class="h2 my-4">{section.title}</h2>
-
+		<h2 class="h2 mb-4 md:mb-6">{section.title}</h2>
 		{#if section.description}
-			<p class="text-lg">
+			<p class="dark:text-surface-300 text-lg">
 				{section.description}
 			</p>
 		{/if}

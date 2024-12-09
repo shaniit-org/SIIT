@@ -14,11 +14,12 @@ export interface HighLightNews extends News {
 	authors: any;
 }
 
-export interface TermsOfTheDay extends Term {
+export interface TermsOfTheDay extends Omit<Term, 'slug'> {
 	_type: 'termsOfTheDay';
 	title: string;
 	description: string;
 	slug: string;
+	_createdAt: string;
 }
 
 export interface HomePageNews {

@@ -4,7 +4,7 @@ import { customDarkTheme } from './src/lib/themes';
 // 1. Import the Skeleton plugin
 import { skeleton } from '@skeletonlabs/tw-plugin';
 export default {
-	darkMode: 'media', // or 'media' or 'class'
+	darkMode: 'class', // or 'media' or 'class'
 	content: [
 		'./src/**/**/*.{html,js,svelte,ts}',
 		join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')

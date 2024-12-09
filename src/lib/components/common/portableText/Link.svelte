@@ -6,4 +6,4 @@
 	const { value } = portableText;
 </script>
 
-<a href={value.href} class="anchor"><slot /></a>
+<a href={value.href} class="anchor dark:text-primary-500"><slot /></a>

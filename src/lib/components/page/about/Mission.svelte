@@ -17,7 +17,7 @@
 		</div>
 		<div class="basis-1/2 grow flex justify-center flex-col">
 			<h2 class="h2 mb-2">{data.title}</h2>
-			<div class="w-full">
+			<div class="w-full prose-li:dark:text-surface-300 prose-li:my-2">
 				<PortableText value={data.description} />
 			</div>
 		</div>

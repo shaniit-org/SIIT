@@ -26,7 +26,7 @@
 					</div>
 					Location
 				</div>
-				<ul class="list">
+				<ul class="list dark:text-surface-300">
 					<li>Waeponglaa Shan Kyaung</li>
 					<li>Yepawsitekwin Qt, Pyi Kyi Thagon Tsp</li>
 					<li>Mandalay, Myanmar</li>

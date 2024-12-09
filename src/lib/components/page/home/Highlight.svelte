@@ -13,16 +13,18 @@
 <div class="section-container box z-10">
 	<div class="grid grid-cols-1 md:grid-cols-2 relative gap-4">
 		{#if term}
-			<div class="card card-hover overflow-hidden flex items-center p-4 md:p-8">
-				<a href="/terms/{term.slug}" class=" p-4 w-full max-h-max space-y-2 mt-auto relative">
-					<h2 class="h2 mb-4">{term.title}</h2>
-					<div class=" flex items-center mb-4 gap-4">
-						<span class="font-semibold">Term Of The Day </span>
-						<span class="italic">
+			<div class="card card-hover overflow-hidden flex items-center">
+				<a href="/terms/{term.slug}" class="p-8 w-full max-h-max mt-auto relative">
+					<h2 class="h3 font-semibold tracking-wider text-3xl">{term.title}</h2>
+					<div class="dark:text-surface-100 flex items-center my-4 gap-2 md:mb-5">
+						<span class="badge variant-ghost-surface font-san text-xs px-4 pt-2 rounded-sm"
+							>Term Of The Day
+						</span>
+						<span class="text-xs pt-1">
 							{moment(new Date()).format('LL')}
 						</span>
 					</div>
-					<p class="leading-relaxed mt-2">
+					<p class="dark:text-surface-300 text-lg leading-relaxed">
 						{term.description}
 					</p>
 				</a>
@@ -31,12 +33,12 @@
 
 		<a
 			href={data.authors ? `/blogs/${data.slug}` : `/events/${data.slug}`}
-			class=" p-4 md:p-8 card card-hover overflow-hidden flex flex-col justify-center"
+			class="p-8 card card-hover overflow-hidden flex flex-col justify-center"
 		>
-			<h3 class="h3 font-sans md:leading-loose mb-4">
+			<h3 class="leading-[1.5] h3 mb-4 font-semibold tracking-wider text-3xl md:mb-6">
 				{data.title}
 			</h3>
-			<p class="mb-6 md:text-base leading-loose text-lg">
+			<p class="dark:text-surface-300 text-base leading-relaxed">
 				{data.description}
 			</p>
 		</a>

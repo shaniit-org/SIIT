@@ -24,21 +24,21 @@
 </script>
 
 <div
-	class="w-full relative card min-h-[400px] flex justify-end flex-col overflow-hidden rounded-none box"
+	class="w-full relative card min-h-[400px] flex justify-end flex-col overflow-hidden rounded-none"
 >
 	<div class="section-container box w-full">
 		<div class="flex gap-2 flex-col">
-			<h1 class="h1 mb-2">
+			<h1 class="h1 mb-2 font-semibold dark:text-surface-100 leading-relaxed">
 				{title}
 			</h1>
-			<p class="my-4 leading-loose text-lg">
+			<p class="dark:text-surface-300 my-4 leading-loose text-lg">
 				{description}
 			</p>
 		</div>
 		<div class="flex gap-4 md:flex-row flex-col">
 			{#if authors}
 				{#each authors as aut}
-					<div class="flex items-center gap-4 flex-row">
+					<div class="flex items-center gap-4 flex-row card p-2 card-filled-surface px-4">
 						<div class="w-[60px] aspect-square bg-gray-800 h-[60px] rounded-full">
 							<SanityImage
 								maxWidth={80}
@@ -47,8 +47,12 @@
 							/>
 						</div>
 						<div class="flex flex-col">
-							<span class="uppercase mb-1 font-bold text-sm"> {aut.name} </span>
-							<div class="flex flex-col md:flex-row md:items-center md:gap-4">
+							<span class="uppercase mb-1 font-bold text-sm dark:text-surface-300">
+								{aut.name}
+							</span>
+							<div
+								class="flex flex-col md:flex-row md:items-center md:gap-4 text-sm dark:text-surface-300"
+							>
 								<span>{readingTime} min read</span>
 								<span> {moment(publishedAt).format('LL')}</span>
 							</div>

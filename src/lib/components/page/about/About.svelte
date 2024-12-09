@@ -11,7 +11,7 @@
 >
 	<div class="basis-1/2 grow flex justify-center flex-col">
 		<h2 class="h2 mb-4">{data.title}</h2>
-		<p class="leading-loose">
+		<p class="text-lg dark:text-surface-300 leading-relaxed">
 			{data.description}
 		</p>
 	</div>

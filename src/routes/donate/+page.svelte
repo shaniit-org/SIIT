@@ -19,7 +19,7 @@
 		image={data.data.coverImage}
 		maxWidth={1000}
 		alt={data.data.title}
-		className="rounded-xl w-full h-full "
+		className="rounded-token w-full h-full "
 	/>
 	<div class="w-full grid place-items-center mt-6">
 		<div class="leading-loose md:max-w-[80%]">
@@ -39,7 +39,7 @@
 					action={`https://formspree.io/f/${formID}`}
 					method="POST"
 				>
-					<p class="h4 mb-4">Contact Us</p>
+					<p class="font-semibold text-2xl mb-4">Contact Us</p>
 					<label class="label mb-4">
 						<span>Email</span>
 						<input
@@ -57,7 +57,7 @@
 						class="textarea px-4 py-2"
 						rows="5"
 					/>
-					<button type="submit" class="mt-4 button variant-filled-primary py-2 rounded-token pt-4"
+					<button type="submit" class="mt-4 button variant-filled-primary py-2 rounded-token"
 						>Submit</button
 					>
 				</form>

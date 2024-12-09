@@ -22,7 +22,10 @@
 							className="aspect-video object-cover w-full h-full group-hover:scale-105 transition-all duration-500 cursor-pointer"
 						/>
 					</div>
-					<h3 class="h3 font-bold">{dat.role}</h3>
+
+					<h3 class="dark:text-surface-300 h3 mb-2 text-xl">
+						{dat.role}
+					</h3>
 				</div>
 			{/each}
 		</div>
