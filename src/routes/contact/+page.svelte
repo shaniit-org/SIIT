@@ -61,10 +61,10 @@
 				</div>
 				<ul class="list">
 					<li>
-						<a href="tel:+959-527-5238" class="anchor no-underline"> +959-527-5238 </a>
+						<a href="tel:+6680-425-4419"  class="anchor no-underline"> +6680-425-4419 </a>
 					</li>
 					<li>
-						<a href="tel:+959-797-469-924" class="anchor no-underline"> +959-797-469-924 </a>
+						<a href="tel:+1716-239-9092" class="anchor no-underline"> +959-797-469-924</a>
 					</li>
 				</ul>
 			</div>
